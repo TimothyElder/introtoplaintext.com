@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction to Plaintext for Research and Writing</title>
+    <link>https://example.com/docs/example/table-of-contents/</link>
+    <description>Recent content on Introduction to Plaintext for Research and Writing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://example.com/docs/example/table-of-contents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>With ToC</title>
+      <link>https://example.com/docs/example/table-of-contents/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/example/table-of-contents/with-toc/</guid>
+      <description>What? Why? How? # Figure 1: A fancy pie chart.
+What # Academic writing in general, and scientific and social scientific writing in particular, requires that we use empirical data to mount an argument. There are many conventions that have become sacrosanct that we both need to use and find quite helpful for fulfilling the task of providing convincing data and a tight argument, grounded in a long line of other worthwhile research.</description>
+    </item>
+    
+    <item>
+      <title>Without ToC</title>
+      <link>https://example.com/docs/example/table-of-contents/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/example/table-of-contents/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus # Tanto oblite # Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+  </channel>
+</rss>
