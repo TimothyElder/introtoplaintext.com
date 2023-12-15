@@ -17,7 +17,7 @@
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a85b86f82c42881ad07b7a8efbb10a52424cca0f2fe061e41d348cb4806131f1.js" integrity="sha256-qFuG&#43;CxCiBrQe3qO&#43;7EKUkJMyg8v4GHkHTSMtIBhMfE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d9de9ebec6974d19aaee94c34b454c0541fa85aacf58a9c87aa37a2b64f33ebd.js" integrity="sha256-2d6evsaXTRmq7pTDS0VMBUH6harPWKnIeqN6K2TzPr0=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -95,7 +95,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/book/chapter-1/" class="">What? Why? How?</a>
+    <a href="/docs/book/chapter-1/" class="">What? Why? Who? How?</a>
   
 
         </li>
@@ -472,7 +472,8 @@ https://github.com/alex-shpak/hugo-book
   Project Organization
   <a class="anchor" href="#sec:project">#</a>
 </h1>
-<p>Working with the terminal requires and instructs you about the file structure of your computer, knowledge of which is important for keeping things organized while you do your research and writing. Project organization refers to two separate and sometimes competing tasks: one is organizing the material you need to learn about the world in a way that is conceptually coherent and helpful to you. The second task is organizing actual computer files in such a way that they are accessible to you and to the software you are working with. These are distinct tasks and sometimes they compete with one another, as the first is meant to help you <em>think better</em> and the second is meant to help you <em>do things faster</em>. For example, it makes sense to keep distinct activities related to your research in different directories (sort of like keeping one notebook of notes for one class, and another notebook for another class). This organization is in part a matter of taste but there are certain organizing principles you should almost certainly avoid. For example, you could just have one directory that has all the files for your project in a flat structure, which makes remembering the paths to each file pretty simple (it would just be <code>/Users/timothyelder/Documents/project-dir/FILENAMEHERE.txt</code>). That makes everything accessible but doesn&rsquo;t help to keep conceptually or practically separable parts of your project organized. On the other extreme, you could have a byzantine file structure, where edits to documents are organized by activity (such as having folders for <code>interview_transcripts</code>, <code>field_notes</code>, <code>field_notes_reflections</code>, <code>interview_notes</code>, <code>draft_papers</code>), and then subdirectories organized by the date in which the files in that directory were edited or created. That would certainly heep thins organized but fairly messy when it came time to put them altogether in a write-up.</p>
+<p>Working with the terminal requires and instructs you about the file structure of your computer, knowledge of which is important for keeping things organized while you do your research and writing. Project organization refers to two separate and sometimes competing tasks: one is organizing the material you need to learn about the world in a way that is conceptually coherent and helpful to you. The second task is organizing actual computer files in such a way that they are accessible to you and to the software you are working with. These are distinct tasks and sometimes they compete with one another, as the first is meant to help you <em>think better</em> and the second is meant to help you <em>do things faster</em>. For example, it makes sense to keep distinct activities related to your research in different directories (sort of like keeping one notebook of notes for one class, and another notebook for another class). This organization is in part a matter of taste but there are certain organizing principles you should almost certainly avoid.</p>
+<p>For example, you could just have one directory that has all the files for your project in a flat structure, which makes remembering the paths to each file pretty simple (it would just be <code>/Users/timothyelder/Documents/project-dir/FILENAMEHERE.txt</code>). That makes everything accessible but doesn&rsquo;t help to keep conceptually or practically separable parts of your project organized. On the other extreme, you could have a byzantine file structure, where edits to documents are organized by activity (such as having folders for <code>interview_transcripts</code>, <code>field_notes</code>, <code>field_notes_reflections</code>, <code>interview_notes</code>, <code>draft_papers</code>), and then subdirectories organized by the date in which the files in that directory were edited or created. That would certainly keep thins organized but fairly messy when it came time to put them altogether in a write-up.</p>
 <p>Finding a healthy compromise between the conceptual ordering of research material and the organization of computer files will be a matter of personal preference. With that said, I have a few principles that I find helpful and encourage you to emulate:</p>
 <h3 id="each-project-should-have-its-own-directory">
   Each project should have its own directory.
@@ -509,7 +510,11 @@ https://github.com/alex-shpak/hugo-book
 <p>&mdash; Phil Karlton</p>
 </blockquote>
 <p>When you are naming directories and files, it is always best to make things explicit. If the directory holds data call it <code>data</code>. If the directory contains images of documents from the Florida Office of Insurance Regulation in Tallahassee, call the directory <code>images_florida_insurance_regulation</code>. If the file is your dissertation latex file call it <code>dissertation.tex</code>. Choosing symbolic names, or anything cryptic makes parsing files difficult, particularly if you take a break from a project for a few weeks and need to get back to it.</p>
-<p><strong>IMPORTANT NOTE:</strong> It is really important that when you are naming things, including files and directories, that you don&rsquo;t use spaces or slashes in the names. This is because spaces and other characters like slashes are read by your computer as meaningful to how it reads different files. If you use them then errors will be raised and things won&rsquo;t work.</p>
+<blockquote class="book-hint warning">
+  <strong>Naming Things:</strong>
+It is really important that when you are naming things, including files and directories, that you don&rsquo;t use spaces or slashes in the names. This is because spaces and other characters like slashes are read by your computer as meaningful to how it reads different files. If you use them then errors will be raised and things won&rsquo;t work.
+</blockquote>
+
 <h2 id="some-examples">
   Some Examples
   <a class="anchor" href="#some-examples">#</a>
@@ -534,8 +539,8 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>pol_gss_multiimput_v2_2_No_REally_THIS_ONE_final.R
 </span></span></code></pre></div><p>He spent weeks and lots of tireless hours figuring out what was what. Instead of being like my friend, be more like me and do something like you see in Figure <a href="#fig:soc-of-soc-dir">3</a>. This is a directory for a project that I am working on that includes lots of different scripts and data. Code for processing the data is kept separate from code for doing analyses and files are given explicit and non-redundant names. Certainly, this takes some amount of effort and energy to do and my project directories don&rsquo;t always look like this while working on them, but it is worth cultivating good habits like this to do your research and writing. You will thank yourself later if you are ever in the same position as my poor sweet friend being harassed by pesky Reviewer #3.</p>
 <div class="figure">
-<img src="../../../../../../../images/soc_of_soc_code_dir.png" alt="[A more orderly directory."  />
-<p class="caption"><span id="fig:soc-of-soc-dir"></span>Figure 3: [A more orderly directory.</p>
+<img src="../../../../../../../images/soc_of_soc_code_dir.png" alt="A more orderly directory."  />
+<p class="caption"><span id="fig:soc-of-soc-dir"></span>Figure 3: A more orderly directory.</p>
 </div>
 <h2 id="summary">
   Summary

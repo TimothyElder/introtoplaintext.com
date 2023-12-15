@@ -17,7 +17,7 @@
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a85b86f82c42881ad07b7a8efbb10a52424cca0f2fe061e41d348cb4806131f1.js" integrity="sha256-qFuG&#43;CxCiBrQe3qO&#43;7EKUkJMyg8v4GHkHTSMtIBhMfE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d9de9ebec6974d19aaee94c34b454c0541fa85aacf58a9c87aa37a2b64f33ebd.js" integrity="sha256-2d6evsaXTRmq7pTDS0VMBUH6harPWKnIeqN6K2TzPr0=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -95,7 +95,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/book/chapter-1/" class="">What? Why? How?</a>
+    <a href="/docs/book/chapter-1/" class="">What? Why? Who? How?</a>
   
 
         </li>
@@ -463,6 +463,11 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#bash"><code>bash</code></a></li>
           </ul>
         </li>
+        <li><a href="#document-templates-class-files-and-fonts">Document Templates, Class Files, and Fonts</a>
+          <ul>
+            <li><a href="#what-are-we-installing">What are we installing?</a></li>
+          </ul>
+        </li>
         <li><a href="#summary">Summary</a></li>
       </ul>
     </li>
@@ -570,6 +575,119 @@ https://github.com/alex-shpak/hugo-book
 <li>Save the <code>.bash_profile</code> file by exiting <code>vim</code> with <code>:wq</code>.</li>
 <li>Restart your terminal.</li>
 </ol>
+<h2 id="document-templates-class-files-and-fonts">
+  Document Templates, Class Files, and Fonts
+  <a class="anchor" href="#document-templates-class-files-and-fonts">#</a>
+</h2>
+<p>There are a few more bells and whistles that you can install that will help you customize the look of documents. I have packaged these together for your use, <strong>but</strong> installing them will be different between macOS and Windows users. Instructions for both are included below. This step is a little more intricate but these steps should make it simple.</p>
+<h3 id="what-are-we-installing">
+  What are we installing?
+  <a class="anchor" href="#what-are-we-installing">#</a>
+</h3>
+<p>We are going to be installing two collections of files: the first is a set of templates that we use to take in our raw plain text files and typeset them into beautiful PDF, HTML, and (to satisfy your Word dependent colleagues) Word Documents. These templates are what <code>pandoc</code> uses to make pretty output, but the templates themselves rely upon what are called LaTeX class and style files. These are the second collection of files we are installing. A quick preview of how to use this software: when you are done writing your document or you want to see what it ultimately will look like, you will go to your terminal and tell <code>pandoc</code> essentially &ldquo;take my plain text Markdown file and make it into a PDF document&rdquo; by typing in a few commands.</p>
+<p><code>pandoc</code> then converts the plain text data (the prose, tables, and figures you&rsquo;ve written and created) into a PDF using LaTeX as the software to typeset it. It isn&rsquo;t the case that LaTeX understands what Markdown is, but <code>pandoc</code> is super nifty and actually does an intermediate step that you don&rsquo;t see where it converts your Markdown formatted plain text file into a LaTeX file before then typesetting it. Because these are, strictly speaking, two different processes which are done by two different pieces of software that are talking to one another, we need to install the templates into two different places on your computer, where LaTeX and <code>pandoc</code>, respectively, look for files.</p>
+<p>We are going to be installing the two collections of templates for typesetting documents from my GitHub page using <code>Git</code>. This is actually a very straight forward and easy process but feels really overwhelming at first. All you need to do is open a terminal, <code>cd</code> to the place that we want the template files to be and tell <code>Git</code> to download them.</p>
+<p>The first set of templates is in a repository called 
+  <a href="https://github.com/TimothyElder/pandoc-templates">pandoc-templates</a> and includes the templates that take in our Markdown files and convert them into LaTeX files. The second is a set of document class and style files that include all the details for how the software will typeset our documents with LaTeX. These can be found in the repository 
+  <a href="https://github.com/TimothyElder/latex-custom-te">latex-custom-te</a>. Finally, we will also install a template directory, 
+  <a href="https://github.com/TimothyElder/md-starter">md-starter</a>, which includes template Markdown and <code>Make</code> files which you can use for pretty much any document. Don&rsquo;t worry about what these are yet, we will cover that shortly when we start using them.</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
+  <label for="tabs-uniqueid-0">macOS</label>
+  <div class="book-tabs-content markdown-inner"><h1 id="macos">
+  macOS
+  <a class="anchor" href="#macos">#</a>
+</h1>
+<p>Ensure that the software you need is installed by running the following code in a terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pandoc --version
+</span></span><span style="display:flex;"><span>latex --version
+</span></span><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>Each of these commands, if the software is installed, will print out version information. If you the software is not installed then your terminal will say something like <code>python: command not found</code> or <code>latex: command not found</code> which means something has gone wrong and you will have to attempt to install the software again. <em><strong>NOTE</strong></em>: Go to the appendix below for learning out how to add to your PATH variable which could solve your problem for you.</p>
+<p>You need to make sure that you create a directory and a sub-directory the custom LaTeX templates, class and style files. Run the following code (changing the paths for your machine):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir -p ~/Library/texmf/tex/latex
+</span></span></code></pre></div><p>This creates a directory where you install the custom class and style files for LaTeX. With those directories made you can install the templates into their proper locations with the following code (again, make sure you change the paths for your machine):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd ~
+</span></span><span style="display:flex;"><span>git clone https://github.com/TimothyElder/pandoc-templates/
+</span></span><span style="display:flex;"><span>mv pandoc-templates .pandoc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd ~/Library/texmf/tex/latex
+</span></span><span style="display:flex;"><span>git clone https://github.com/TimothyElder/latex-custom-te/
+</span></span></code></pre></div><p>Next there are a few fonts that you might want to have that are referenced in some of these templates. You can download and install them using this code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd ~/Documents
+</span></span><span style="display:flex;"><span>git clone https://github.com/TimothyElder/open-fonts.git
+</span></span><span style="display:flex;"><span>cd open-fonts
+</span></span><span style="display:flex;"><span>chmod +x install_fonts.sh
+</span></span><span style="display:flex;"><span>./install_fonts.sh
+</span></span></code></pre></div><p>If you did everything above right, Congratulations! You are one step closer to making beautiful and reproducible documents in plain text.</p>
+</div><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
+  <label for="tabs-uniqueid-1">Windows</label>
+  <div class="book-tabs-content markdown-inner"><h1 id="windows">
+  Windows
+  <a class="anchor" href="#windows">#</a>
+</h1>
+<p>Now that you have LaTeX and <code>pandoc</code> installed you are ready to start using plain text software for your research and writing. But if you want to have nicely formatted documents that handle all the bells and whistles that you need for your scientific and social scientific writing then you need to do just a few more steps. This is the harder part of the installation process but I will take you step by step through it.</p>
+<p>Ensure that the software you need is installed by running the following code in a terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pandoc --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>latex --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>Each of these commands, if the software is installed, will print out version information. If you the software is not installed then your terminal will say something like <code>python: command not found</code> or <code>latex: command not found</code> which means something has gone wrong and you will have to attempt to install the software again. <em><strong>NOTE</strong></em>: Go to Section @sec:windows_path below for learning out how to add to your PATH variable which could solve your problem for you.</p>
+<p>You need to make sure that you create a directory and a sub-directory the custom LaTeX templates, class and style files. Run the following code (changing the paths for your machine):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir C:<span style="color:#ae81ff">\t</span>exmf <span style="color:#f92672">&amp;&amp;</span> mkdir C:<span style="color:#ae81ff">\t</span>exmf<span style="color:#ae81ff">\t</span>ex <span style="color:#f92672">&amp;&amp;</span> mkdir C:<span style="color:#ae81ff">\t</span>exmf<span style="color:#ae81ff">\t</span>ex<span style="color:#ae81ff">\l</span>atex
+</span></span></code></pre></div><p>This creates a directory where you install the custom class and style files for LaTeX. With those directories made you can install the templates into their proper locations with the following code (make sure to change the paths to match your computer):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\T</span>imot<span style="color:#ae81ff">\A</span>ppData<span style="color:#ae81ff">\R</span>oaming
+</span></span><span style="display:flex;"><span>git clone https://github.com/TimothyElder/pandoc-templates.git
+</span></span><span style="display:flex;"><span>ren <span style="color:#e6db74">&#34;pandoc-templates&#34;</span> <span style="color:#e6db74">&#34;.pandoc&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd C:<span style="color:#ae81ff">\t</span>exmf<span style="color:#ae81ff">\t</span>ex<span style="color:#ae81ff">\l</span>atex
+</span></span><span style="display:flex;"><span>git clone https://github.com/TimothyElder/latex-custom-te.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\T</span>imot<span style="color:#ae81ff">\D</span>ocuments
+</span></span><span style="display:flex;"><span>git clone https://github.com/timothyelder/md-starter
+</span></span></code></pre></div><p>Windows has an extra step which includes you adding a directory to your LaTeX installation so it knows where to look. To do that do the following steps:</p>
+<ol>
+<li>Start MiKTeX Console (either find it in the Start menu or search for it in the search bar) and open the Settings page.</li>
+<li>Click the Directories tab.</li>
+<li>Click the Add button and browse to the texmf root directory created earlier (<code>C:\texmf</code>).</li>
+</ol>
+<p>Make sure that you change all the paths to match your machine otherwise you get lots of errors and nothing will work. If you did everything above right, Congratulations! You are one step closer to making beautiful and reproducible documents in plain text.</p>
+<p>There are a few key pieces of software that Windows does not come installed with that you will need to take the extra step of installing.</p>
+<h2 id="winget-package-manager">
+  <code>winget</code> Package Manager
+  <a class="anchor" href="#winget-package-manager">#</a>
+</h2>
+<p><code>winget</code> is a command line based package manager for Windows that helps with installing other pieces of software. It is part of App Installer which you can download and install 
+  <a href="https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&amp;gl=us&amp;rtc=1">here</a>.</p>
+<h2 id="make">
+  Make
+  <a class="anchor" href="#make">#</a>
+</h2>
+<p>Make is a tool that handles the creation of files from some source material and is super helpful when you need to repetitively run the same programs in the same order over and over again, such as when you are editing and typesetting your next paper. With <code>winget</code> installed, Make is super easy to get, just run this line of code in a command prompt on your computer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>winget install GnuWin32.Make
+</span></span></code></pre></div><h2 id="python">
+  Python
+  <a class="anchor" href="#python">#</a>
+</h2>
+<p>Python is a modern general computing language that is very common in the sciences and social sciences. Though we are not going to be actively using it in the working group, some of the software that we use relies upon it. It doesn&rsquo;t take up much space and can be downloaded and installed 
+  <a href="https://www.python.org/downloads/">here</a>.</p>
+<p>Alternatively, you can install python with <code>winget</code> using the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>winget install python
+</span></span></code></pre></div><p>If you do use <code>winget</code> you may have to update your PATH variable manually, so the command prompt can find it (See Section @sec:windows_path below for help adding to PATH in Windows).</p>
+<h2 id="pandoc-xnos">
+  pandoc-xnos
+  <a class="anchor" href="#pandoc-xnos">#</a>
+</h2>
+<p>
+  <a href="https://github.com/tomduck/pandoc-fignos"><code>pandoc-xnos</code></a> is for cross-referencing figures, tables, equations, sections and pretty much anything else that can be written in a Markdown file. This helps for automatically handling the labelling of different parts of your document, so you can move the position of a figure or table or equations without having to change the reference to it in the body of your text. Install with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install pandoc-fignos pandoc-eqnos pandoc-tablenos <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>            pandoc-secnos --user
+</span></span></code></pre></div><p>And then use it with <code>--filter pandoc-xnos</code> as a flag for the <code>pandoc</code> command in your <code>Makefile</code> recipe. <strong>NOTE</strong>: Whenever using <code>pandoc-fignos</code> or <code>pandoc-xnos</code>, they need to be invoked before the <code>--citeproc</code> filter as they both use the @ symbol to identify references and they will get confused otherwise.</p>
+</div></div>
+
 <h2 id="summary">
   Summary
   <a class="anchor" href="#summary">#</a>
@@ -642,6 +760,11 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#zsh"><code>zsh</code></a></li>
             <li><a href="#bash"><code>bash</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#document-templates-class-files-and-fonts">Document Templates, Class Files, and Fonts</a>
+          <ul>
+            <li><a href="#what-are-we-installing">What are we installing?</a></li>
           </ul>
         </li>
         <li><a href="#summary">Summary</a></li>

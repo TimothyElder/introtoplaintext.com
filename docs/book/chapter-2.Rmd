@@ -105,8 +105,18 @@ There is nothing special about any given directory that you can navigate to on y
 
 ## A Few Helpful Hints and A Warning
 
-When using the terminal if you ever need help with a command you can look up what's called a `man` page, or manual page simply by typing in `man <command of interest>`.^[**Windows Users**: Use `help` instead of `man`.] So if you want to read about everything the `ls` or `cd` commands can do simply type in `man ls` or `man cd` and the terminal prints out information that you can navigate through with the directional keys. If you need to exit a `man` page hit the `q` key on your keyboard.
+When using the terminal if you ever need help with a command you can look up what's called a `man` page, or manual page simply by typing in `man <command of interest>`. So if you want to read about everything the `ls` or `cd` commands can do simply type in `man ls` or `man cd` and the terminal prints out information that you can navigate through with the directional keys. If you need to exit a `man` page hit the `q` key on your keyboard.
+
+{{< hint info >}}
+**Windows Users**  
+ Use `help` instead of `man`.
+{{< /hint >}}
 
 Also, for the `cd` command, you can navigate into the parent directory of your working directory by typing in `cd ..`. For example, above we created a sub-directory called `plaintext` in our `Documents` directory with two files in it. If you were in the `plaintext` directory and typed `cd ..` that would take you one level up to the `Documents` directory. Doing the `cd ..` command one more time takes you up another level into your home directory where we started out.
+
+{{< hint danger >}}
+**Deletion Warning**  
+When you delete things on the terminal, be certain you won't ever need them again.
+{{< /hint >}}
 
 Lastly, the terminal is intimidating but hopefully some of its mystery has been resolved now that you can navigate around it, list files out and make them all from the terminal. *But*, the terminal was made by computer scientists and engineers who were very technically capable and knew what they were doing, so when they typed in a command they knew what it meant and what it would do. Sometimes we can get ourselves into trouble on the terminal because we are not computer scientists and engineers and we don't always know what we are doing. For example, the `rm` and `del` commands (in macOS and Windows respectively) delete files, and when you run them they don't ask you to confirm that you really want to delete the file `only_copy_of_my_thesis_do_not_delete_no_backups.tex` and it doesn't go to the Trash folder for you to restore it later. It just gets [deleted](https://www.reddit.com/r/funny/comments/8ell2r/college_student_has_a_mental_breakdown_after/). So use caution on the terminal but for the most part you can't get into too much trouble.
