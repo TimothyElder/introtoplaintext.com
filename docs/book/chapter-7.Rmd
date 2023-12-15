@@ -2,18 +2,17 @@
 title: Version Control
 weight: 7
 bookToc: false
-bibliography: ["/Users/timothyelder/Documents/bibs/plaintext.bib"]
 ---
 
 ```{r setup, include=FALSE}
 source('../../../setup.R') 
 ```
 
-# Version Control and Collaboration with `git` and GitHub {#sec:git}
+# Version Control and Collaboration with `git` and GitHub
 
 A key part of doing research is being able to account for how you got from your data to you findings, and being able to inspect how your project has changed over time is important to that process of accounting. Whatmore, we all want peace of mind as we do our research so that if we make a mistake, we can go back and do it over again. Version Control is a term for the process of developing a set of files and accounting for how they have changed over time. Software engineers need it as they are developing code and releasing it to users, they need to be able to ensure that it is compatible with other software. There are manual ways of doing version control, such as keeping all the old copies of documents in an archived folder, but adopting some software can help automate the process and ensure that there are no hiccups, while also allowing you to keep an elegant organization to your project directory without endless copies of nearly the same documents.
 
-Modern Version Control software also allows you collaborate on files with others and then distribute them as well. In this chapter I will cover how to use this version control software, which runs on the terminal, so be prepared to open a terminal and type in commands. We are also going to try to collaborate on some documents together using GitHub. To do that, and to take full advantage of `git` for version control and backing up your work, you will need to sign up for a GitHub account. If you followed along in Chapter @sec:install you should have `git` already installed but if you didn't you can install it from [here](https://github.com/git-guides/install-git).
+Modern Version Control software also allows you collaborate on files with others and then distribute them as well. In this chapter I will cover how to use this version control software, which runs on the terminal, so be prepared to open a terminal and type in commands. We are also going to try to collaborate on some documents together using GitHub. To do that, and to take full advantage of `git` for version control and backing up your work, you will need to sign up for a GitHub account. If you followed along in [Chapter 4](chapter-4) you should have `git` already installed but if you didn't you can install it from [here](https://github.com/git-guides/install-git).
 
 GitHub is free to use and allows you to have several private repos for free (we will cover what a repo is shortly, but it is just a directory of files you are tracking). You can pay to get unlimited private repos and some other bells and whistles. You can even [host your website](https://pages.github.com/) on GitHub. If you are worried about the security of your code or data on GitHub you can review their data use policies [here](https://docs.github.com/en/get-started/privacy-on-github/about-githubs-use-of-your-data). To sign up for a free account follow this [link](https://github.com/join).
 
@@ -33,13 +32,13 @@ With all that said, it is important to note that version control is a *tool* in 
 
 There are two varieties of version control: local and distributed. You can see an example of local version control in Figure \@ref(fig:vcs1). Version control keeps a snapshot of your file overtime (Version 1, 2, and 3 in the figure) and you are typically working on the latest version. You decide when to take a snapshot so there is some discretion in the process. It is not like a google doc that is constantly looking at every key stroke and edit you make. Local version control is limited in that if you lose your laptop that has the version history on it, then you lose everything. There would no backup unless you kept backups of your files remotely on something like iCloud or Google Drive. Also, if you are collaborating with some colleagues, you would still have to pass around files via email.
 
-Distributed Version Control is a system for keeping a log of all the changes that have occurred to a set of files, and storing copies on a remote server, as is shown in \@ref(fig:vcs2).
+Distributed Version Control is a system for keeping a log of all the changes that have occurred to a set of files, and storing copies on a remote server, as is shown in Figure \@ref(fig:vcs2).
 
-```{r vcs1, fig.heght=2, fig.width=2, fig.cap='Local version control.'}
+```{r vcs1, out.width='50%', fig.align='center', fig.cap='Local version control.'}
 knitr::include_graphics("/images/vcs_1.png", error = F) 
 ```
 
-```{r vcs2, fig.cap='Distributed version control.'}
+```{r vcs2, out.width='50%', fig.align='center', fig.cap='Distributed version control.'}
 knitr::include_graphics("/images/vcs_2.png", error = F)
 ```
 
@@ -63,7 +62,7 @@ staging area
 
 Now you are ready to start to learn by doing. So follow along with the next few steps on a repository that you can try this out on. One that has a couple of subdirectories of plain text files that you can experiment with, and not one of the directories you have installed from the templates, as those are already `git` repositories.
 
-To get started you first initialize a directory with a `git` repository by opening a terminal, changing the directory to whatever directory you want to track and running `git init`. The terminal should return `Initialized empty Git repository in /Users/timothyelder/Documents/YOUR-DIRECTORY/.git/`. That is the path to the specific `.git` repo directory within your directory that will store all the information about the files you track. If you remember what we learned in Chapter @sec:terminal, directories and files that begin with a period are hidden from view in a regular Finder or File Explorer windor. You can now run `git status` to ensure that it is running and it should print out all the flles in the directory and its subdirectories. They should all be in red because you haven't added anything yet to the repository.
+To get started you first initialize a directory with a `git` repository by opening a terminal, changing the directory to whatever directory you want to track and running `git init`. The terminal should return `Initialized empty Git repository in /Users/timothyelder/Documents/YOUR-DIRECTORY/.git/`. That is the path to the specific `.git` repo directory within your directory that will store all the information about the files you track. If you remember what we learned in [Chapter 2](chapter-2), directories and files that begin with a period are hidden from view in a regular Finder or File Explorer windor. You can now run `git status` to ensure that it is running and it should print out all the flles in the directory and its subdirectories. They should all be in red because you haven't added anything yet to the repository.
 
 When you are working on a project with plain text software like LaTeX, they generate lots of extra files that you don't really need but that help the software typeset your documents. Sometimes you also have `.log` files that you don't want to be tracked in your version history. Luckily, `git` has a system for ignoring specific file names and file types. To do that we are going to create another hidden file. You can create this file using a text editor or directly in your terminal with `vim`. We are going to cerate a `.gitignore` file which `git` recognizes and uses to ignore certain files.
 
@@ -113,13 +112,13 @@ git commit -m ”init commit”   # creates a snapshot of the project
 ```
 Now when you work on your files you should start to get into the habit of making commits on a regular basis. If you are working on your project every day, all day, then one or two commits a day is not a bad idea. If you are only working on one file in your project on any given week and not much else is happening, then a commit a week is just as good. It is up to how conservative you want to be in your versioning. It is free, so you can be as fastidious as you want to be.
 
-After you have a group of files being tracked and a few commits made you'll have a version history that looks a little like Figure \@ref(fig:vcs3). In this figure we have a repository with three files and five commits. `git` prizes efficiency so it does two important things: first, it doesn't keep exact copies of the files that you are tracking but a complete log of all the changes, so the full information about the file is conserved while the size is not. Second, it only stores new information when a file is changed. So in Figure @fig:vcs3 between the first and second commits, only files A and C had any changes and the delta between the two files are sotred while no new information is lofgged in file B because no changes ocurred. Between commmits 2 and 3 changes only occurred in file C. File B only gets a change at commit 4 and so it is updated from the initial version.
+After you have a group of files being tracked and a few commits made you'll have a version history that looks a little like Figure \@ref(fig:vcs3). In this figure we have a repository with three files and five commits. `git` prizes efficiency so it does two important things: first, it doesn't keep exact copies of the files that you are tracking but a complete log of all the changes, so the full information about the file is conserved while the size is not. Second, it only stores new information when a file is changed. So in Figure \@ref(fig:vcs3) between the first and second commits, only files A and C had any changes and the delta between the two files are sotred while no new information is lofgged in file B because no changes ocurred. Between commmits 2 and 3 changes only occurred in file C. File B only gets a change at commit 4 and so it is updated from the initial version.
 
 ```{r vcs3, fig.cap='How versions are stored over time as you make `commits`'}
 knitr::include_graphics("/images/vcs_3.png", error = F)
 ```
 
-Another way of visualizing this can be found in Figure \@ref(fig:vcs4), where instead of showing the changes between different commits across files, it shows the snapshots of the repository, as it might appear in your finder, but with the extra time dimension to show changes over the commits. As you can see in each of the commits all the files appear because none of them get deleted. You should note that their version numbers change to reflect the changes that occurred in Figure @fig:vcs3. Files A nd C become files A1 and C1 between commit 1 and 2 while file B remains unchanged. File C1 becomes File C2 between commit 2 and 3, and so on and so forth.
+Another way of visualizing this can be found in Figure \@ref(fig:vcs4), where instead of showing the changes between different commits across files, it shows the snapshots of the repository, as it might appear in your finder, but with the extra time dimension to show changes over the commits. As you can see in each of the commits all the files appear because none of them get deleted. You should note that their version numbers change to reflect the changes that occurred in Figure \@ref(fig:vcs3). Files A nd C become files A1 and C1 between commit 1 and 2 while file B remains unchanged. File C1 becomes File C2 between commit 2 and 3, and so on and so forth.
 
 This is in part indicative of the underlying strengths of `git`: rather than copying files endlessly, `git` compares files and their changes, storing the deltas between versions so there is a complete history of the files and how they have changed over time. There is some cryptography under the hood that ensures everything is as it should be and generates a key for each commit and allows you to retrieve files from commits using these keys. It can be a little confusing to deal with this kind of system at first but it quickly becomes second nature once you start using it regulalry.
 
@@ -174,7 +173,7 @@ You can list your current `config` settings by running `git config --list`. To g
 
 For me, I set these settings using the following commands.
 
-```
+```sh
 git config --global user.name "TimothyElder"
 git config --global user.email "timothyelder@uchicago.edu"
 ```
@@ -189,7 +188,12 @@ A personal access token is a little piece of cryptography I think that verifies 
 
 Make sure that you have already installed git to your computer and signed up for a github account via the links above. To make sure that git is installed (it will not appear that in your applications folder) open up a terminal and run the following code: `git --version`. If git is installed then it will return something like `git version 2.21.0 (Apple Git-122)`. If git is not installed then it will return something like `git: command not found`.
 
-1. go to the home page of your github profile and on the upper right hand corner click the icon that has a picture, at the bottom click settings as in Figure @fig:settings.
+{{< hint warning >}}
+**Save Personal Access Token**  
+Be sure to save your Personal Access Token somewhere on your computer because you won't be able to see it again after making it.
+{{< /hint >}}
+
+1. go to the home page of your github profile and on the upper right hand corner click the icon that has a picture, at the bottom click settings as in Figure \@ref(fig:settings).
 
 ```{r settings, fig.cap='A GitHub profile page with publicly available repos.'}
 knitr::include_graphics("/images/git_settings.png", error = F)
@@ -206,3 +210,12 @@ knitr::include_graphics("/images/pat_git.png", error = F)
 ```
 
 5. Give the token a name in the "Note" field, mine is "my_access_token", set the expiration to "90 Days" and then click through all the options below that. Then generate the token and **note** the token that is returned to you. *You must note down this token* as you will not be able to see it again and you will need it. But do not fear, if you forget it, lose it or fail to write it down, you can regenerate the token. It will be redundant, but far from catastrophic.
+
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        {{< button relref="chapter-6" >}}Previous{{< /button >}}
+    </div>
+    <div>
+        {{< button relref="chapter-8" >}}Next{{< /button >}}
+    </div>
+</div>

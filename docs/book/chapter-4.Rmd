@@ -225,4 +225,14 @@ And then use it with `--filter pandoc-xnos` as a flag for the `pandoc` command i
 
 ## Summary
 
-Congratulations! You have actually just done a lot of the work of getting started using plain text for your research and writing. This is an onerous task and you should be commended for your effort. If you have managed to get this far then you are likely somewhat invested in adopting the plain text paradigm but if this effort has inspired skepticism or reticence about diving deeper I think it is important to note that installing the software is something that you only have to do once on any given computer. So you won't have to endlessly tinker with things. Once these tools are installed they are very dependable
+Congratulations! You have actually just done a lot of the work of getting started using plain text for your research and writing. This is an onerous task and you should be commended for your effort. If you have managed to get this far then you are likely somewhat invested in adopting the plain text paradigm but if this effort has inspired skepticism or reticence about diving deeper I think it is important to note that installing the software is something that you only have to do once on any given computer. So you won't have to endlessly tinker with things. Once these tools are installed they are very dependable.
+
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        {{< button relref="chapter-3" >}}Previous{{< /button >}}
+    </div>
+    <div>
+        {{< button relref="chapter-5" >}}Next{{< /button >}}
+    </div>
+</div>
+

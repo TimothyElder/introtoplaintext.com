@@ -12,3 +12,7 @@ Now that you have an understanding of the conventions of markup languages includ
 
 Using plain text tools you can pursue a variety of different avenues to further communicate your work to a wide audience. You can author books and technical documents using RMarkdown and the bookdown package, create websites with Hugo and blogdown, or integrate code into your slides using sweave.
 
+<div style="text-align: left;">
+{{< button relref="chapter-7" >}}Next{{< /button >}}
+</div>
+

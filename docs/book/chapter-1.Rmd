@@ -31,9 +31,14 @@ To give just a brief introduction to why you should make the effort to switch to
 
 3. They Make Your Work Accessible: You'll make documents that are reproducible and allow you to distribute the means to replicate your work with ease.
 
-These tools are not just for quantitative scientists and social scientists.\marginnote{You might be surprised to learn that I am actually a qualitative sociologist who specializes in interviews and ethnographic data collection.} They were originally written for scientists who needed to use a lot of math, but they are now quite useful to scientists and social scientists of any methodological commitment, particularly considering the other important feature of a plain text workflow, its synergy with reproducibility and openness.
+These tools are not just for quantitative scientists and social scientists. They were originally written for scientists who needed to use a lot of math, but they are now quite useful to scientists and social scientists of any methodological commitment, particularly considering the other important feature of a plain text workflow, its synergy with reproducibility and openness.
 
-Several other social scientists have noted the usefulness and superiority of plain text tools for research and writing. My extended introduction is hardly a substitute for some canonical texts on the subject. I myself became an acolyte when I found Kieran Healy's *The Plain Person's Guide to Plain Text Social Science* [-@healy_plain_2020] in my second year of graduate school. I recommend reading it as it outlines in a far more parsimonious and convincing way the *why* of why make the switch to a set of software that is a little more onerous at first to use but rewarding once it is mastered. The document you are looking at here is superior in only one regard: it takes you step by step through some of the more dizzying steps in the process of switching to this tool-kit, and is geared toward the graduate student who knows how to use their computer but hasn't made a lot of effort to learn the more archaic and powerful tools already available to them.
+{{< hint info >}}
+**Trivia**  
+You might be surprised to learn that I am actually a qualitative sociologist who specializes in interviews and ethnographic data collection.
+{{< /hint >}}
+
+Several other social scientists have noted the usefulness and superiority of plain text tools for research and writing. My extended introduction is hardly a substitute for some canonical texts on the subject. I myself became an acolyte when I found Kieran Healy's [*The Plain Person's Guide to Plain Text Social Science*](https://plain-text.co/) in my second year of graduate school. I recommend reading it as it outlines in a far more parsimonious and convincing way the *why* of why make the switch to a set of software that is a little more onerous at first to use but rewarding once it is mastered. The document you are looking at here is superior in only one regard: it takes you step by step through some of the more dizzying steps in the process of switching to this tool-kit, and is geared toward the graduate student who knows how to use their computer but hasn't made a lot of effort to learn the more archaic and powerful tools already available to them.
 
 ## Who
 
@@ -41,6 +46,10 @@ Adopting this work flow and taking advantage of this book in particular to do so
 
 ## How
 
-For complete beginners, people who are proficient at using their computer but have never opened up a terminal, review Chapter @sec:terminal and @sec:project, before going to Chapter @sec:install. If you are familiar with how to use the terminal then you can briefly checkout Chapter @sec:project before going to Chapter @sec:install to install the software that we are going to be using. Installing the software is the first big jump to adopting plain text software for your research and writing and it is a little complicated.
+For complete beginners, people who are proficient at using their computer but have never opened up a terminal, review [Chapter 2, "The Terminal"](chapter-2) and [Chapter 3, "Project Organization"](chapter-3), before going to [Chapter 4, "Installation"](chapter-4). If you are familiar with how to use the terminal then you can briefly checkout [Chapter 3](chapter-3) before going to [Chapter 4](chapter-4) to install the software that we are going to be using. Installing the software is the first big jump to adopting plain text software for your research and writing and it is a little complicated.
 
-Once you have the software installed you will be ready to start learning how to actually use it in Chapter @sec:usage, where I will show you all the most important conventions in LaTeX and Markdown before showing you how to typeset your first document. After that you can proceed to Chapter @sec:beaut to learn how to use dynamics documents and RMarkdown in particular. At that point you will be ready to learn how to keep a record of everything you've done and make it available to others using `git` and Github in Chapter @sec:git.
+Once you have the software installed you will be ready to start learning how to actually use it in [Chapter 5, "Document Composition"](chapter-5), where I will show you all the most important conventions in LaTeX and Markdown before showing you how to typeset your first document. After that you can proceed to [Chapter 6, "Dynamic Documents",](chapter-6) to learn how to use dynamics documents and RMarkdown in particular. At that point you will be ready to learn how to keep a record of everything you've done and make it available to others using `git` and Github in [Chapter 7, "Version Control"](chapter-7).
+
+<div style="text-align: right;">
+{{< button relref="chapter-2" >}}Next{{< /button >}}
+</div>

@@ -252,3 +252,12 @@ dissertation.pdf: dissertation.md
 To typeset the `dissertation.pdf` file given the recipe in the Makefile, you would simply type into the terminal with the Makefile, `make dissertation.pdf` and the recipe runs. Make will check to see if any changes have been made in the name of the prerequisite file (the `dissertation.md` file) which is used to make the PDF. If no change has been made to the Markdown file, then Make will let you know and say `make: Nothing to be done for 'dissertation.pdf'.`
 
 When you run "pdf", a couple of python scripts get run in a particular order, then an R script, and then a `pandoc` line runs and then a shell command. That would be a lot of keystrokes on your own but make does it auto-magically. This is actually a recipe that I have because I have a project where we generate all the data from optical character recognition of JPEGs, and then carving up big plaintext files with regular expressions. Sometimes the underlying data changes because we notice there is some error in the plaintext file and we have to regenerate a whole bunch of CSVs from the plaintext files. What make does is it checks the various pieces of data that you are asking it to use and that you want it to make, and checks whether or not they have changed at all since you last ran Make, and it only runs precesses to update pieces of data as needed. So if you keep running Make without changing anything it will tell you "nothing to update".
+
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        {{< button relref="chapter-4" >}}Previous{{< /button >}}
+    </div>
+    <div>
+        {{< button relref="chapter-6" >}}Next{{< /button >}}
+    </div>
+</div>

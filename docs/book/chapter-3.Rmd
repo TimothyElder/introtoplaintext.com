@@ -96,3 +96,12 @@ The wisdom then for organizing a directory in a way that successfully achieves t
 4. Literal names are always favored over cryptic or symbolic names
 
 This is an area that is going to be much more dependent on your particular disposition to doing work, but at a certain point you will run up against the need to typeset documents and keep conceptually distinct areas actually digitally distinct, so if you don't buy into my dogma that is fine, but adopt some other regular process of your own and stick to it as you do your work.
+
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        {{< button relref="chapter-2" >}}Previous{{< /button >}}
+    </div>
+    <div>
+        {{< button relref="chapter-4" >}}Next{{< /button >}}
+    </div>
+</div>

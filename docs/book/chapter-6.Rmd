@@ -2,7 +2,6 @@
 title: Dynamic Documents
 weight: 6
 bookToc: false
-bibliography: ["/Users/timothyelder/Documents/bibs/plaintext.bib"]
 ---
 
 ```{r setup, include=FALSE}
@@ -363,5 +362,3 @@ There is a convention in computer science to include "comments" in your code, pr
 ## What is Beautiful is Reproducible
 
 Summary of the Chapter.
-
-# References
