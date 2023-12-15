@@ -1,6 +1,7 @@
 ---
 title: Dynamic Documents
 weight: 6
+bookToc: false
 bibliography: ["/Users/timothyelder/Documents/bibs/plaintext.bib"]
 ---
 
