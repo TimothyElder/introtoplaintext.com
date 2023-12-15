@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Using LaTeX, Markdown, pandoc # Now that you are familiar with the Terminal and have installed the software we are going to be using you are ready to begin addressing the core competencies of working with plain text software for your research and writing. The essential workflow that we are adopting here is writing in Markdown, a simple markup langauge with a few extra bells and whistles, and then using the pandoc program to convert these into HTML, PDF, ad Word files.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Using LaTeX, Markdown, `pandoc`" />
+<meta property="og:description" content="Using LaTeX, Markdown, pandoc # Now that you are familiar with the Terminal and have installed the software we are going to be using you are ready to begin addressing the core competencies of working with plain text software for your research and writing. The essential workflow that we are adopting here is writing in Markdown, a simple markup langauge with a few extra bells and whistles, and then using the pandoc program to convert these into HTML, PDF, ad Word files." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/chapter-5/" /><meta property="article:section" content="docs" />
+
+
+<title>Using LaTeX, Markdown, `pandoc` | Introduction to Plaintext for Research and Writing</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.9a000e8ae9be6867a65f65fb1050907e926230040b8b84610af17ddc06523a78.js" integrity="sha256-mgAOium&#43;aGemX2X7EFCQfpJiMAQLi4RhCvF93AZSOng=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Introduction to Plaintext for Research and Writing</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Introduction</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-1/" class="">What? Why? How?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-2/" class="">The Terminal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-3/" class="">Project Organization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-4/" class="">Installation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-5/" class="active">Using LaTeX, Markdown, `pandoc`</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle"  />
+    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
+      <a role="button" class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/timothyelder"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://timothyelder.com"  target="_blank" rel="noopener">
+        Timothy Elder
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Using LaTeX, Markdown, `pandoc`</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-latex-markdown-pandoc">Using LaTeX, Markdown, <code>pandoc</code></a>
+      <ul>
+        <li><a href="#latex">LaTeX</a></li>
+        <li><a href="#markdown">Markdown</a></li>
+        <li><a href="#pandoc"><code>pandoc</code></a></li>
+        <li><a href="#document-composition-with-markdown">Document Composition with Markdown</a>
+          <ul>
+            <li><a href="#writing-the-document">Writing the Document</a></li>
+            <li><a href="#headers-and-metadata">Headers and Metadata</a></li>
+            <li><a href="#figures">Figures</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#math">Math</a></li>
+          </ul>
+        </li>
+        <li><a href="#make">Make</a></li>
+        <li><a href="#an-example-project">An Example Project</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="using-latex-markdown-pandoc">
+  Using LaTeX, Markdown, <code>pandoc</code>
+  <a class="anchor" href="#using-latex-markdown-pandoc">#</a>
+</h1>
+<p>Now that you are familiar with the Terminal and have installed the software we are going to be using you are ready to begin addressing the core competencies of working with plain text software for your research and writing. The essential workflow that we are adopting here is writing in Markdown, a simple markup langauge with a few extra bells and whistles, and then using the <code>pandoc</code> program to convert these into HTML, PDF, ad Word files. To establish why this is the appropriate workflow to adopt I will outline what markup langauges are and how they work, as well as the conventions used in LaTeX and then Markdown.</p>
+<h2 id="latex">
+  LaTeX
+  <a class="anchor" href="#latex">#</a>
+</h2>
+<p>Though you won’t need to write with LaTeX you will need to know what a LaTeX document looks like and how to work with one. Once you have a feel for the LaTeX document setup, you will be able to create your own document templates for pretty much any use. For example, I have LaTeX templates for memos, letters with my contact and university affiliation, article drafts, class handouts, single columned general prose, double column general prose, and even the documentation you are looking at right now was created using this workflow.</p>
+<p>LaTeX at bottom is something called a <em>markup language</em>, or a means of encoding text where different characters are used to designate structure, formatting and style. In a Word document, all that appears on your screen is the text you are composing, and its style and structure are handled by the program. If you want to change the type face, or the margin, or the line spacing, you go to the top bar and click through menus to change the style. There is a lot of behind the scenes action going in a Word file as the means by which document is styled is hidden from you. In a markup language, all that information is present in the document itself as you explicitly declare the style and structure using the conventions of that particular language. To give a specific example, where in Word you would click the italics button to make text <em>italics</em>, in a markup language like LaTeX you wrap the text you want to be italicized with the command <code>\textit{}</code>. There is a lot more that goes into it, and diving into practical examples will help to give you an idea of how markup languages work and LaTeX in particular.</p>
+<p>LaTeX is notorious for being unintuitive and hard to pickup and is the bane of any graduate students existence when they take STATS102 for the first time. The thing about LaTeX is that it <em>is</em> complicated and unintuitive but there are only a few complicated and unintuitive conventions to understand before LaTeX seems a lot clearer. Below is an example of the simplest LaTeX document you can make, and examining it helps us to begin to understand how markup langauges are different from something like Word and what LaTeX in particular looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Hello World!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>In LaTeX, anything that begins with a backlash “\” is a command, and commands usually have brackets at the end to take in some arguments. You can think of working with a LaTeX document like working in narrower and narrower environments. In any file, you first need to declare the kind of document you are creating with <code>\documentclass</code> and then declare the beginning of the document with <code>\begin{document}</code>. The <code>\documentclass</code> command creates the underlying environment with some associated styles in which you will be composing prose, before the <code>\begin{document}</code> command creates the environment in which the prose and content of your document go.</p>
+<p>The convention of open and closing environments applies to most features of a LaTeX document. We open a document with <code>\begin{docuemnt}</code> declare the end of the document with <code>\end{document}</code> while figures or images in your document need to be between the commands <code>\begin{figure}</code> and <code>\end{figure}</code> and the same is true of tables, which go between<code>\begin{table}</code> and <code>\end{table}</code>. The body of your document can be 2 words or 200 pages worth of content, and I simply use the “Hello World!” document as an example. You could make that document your self in a matter of seconds.</p>
+<p>The <code>\documentclass</code> command specifies how the document will be formatted and loads a set of default settings. There are a variety of options to choose from depending on your need including <code>article</code>, <code>book</code>, <code>report</code>, <code>slides</code>, and <code>letter</code>. A very common document class that you’ll see is <code>memoir</code> which is used for general prose writing. This command can take in arguments to further specify the formatting of your document and usually includes things like the paper size, whether it is one or two sided, font size, line spacing, among many other things. Here is an example where we are setting a document to have 11pt font, to be one sided and use formatting for an article type document, using all the bells and whistles from the memoir document class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[11pt,article,oneside]</span>{memoir}
+</span></span></code></pre></div><p>Another convention in LaTeX is to declare metadata and other information in the <em>preamble</em> of the document. The preamble is the part of the file that is above the <code>\begin{document}</code> command. In the above example the preamble includes only the <code>\documentclass</code> command but you can do a lot more here including telling LaTeX about all the formatting of your document as well as loading any packages that you will be using to create your document. Also, you can declare metadata in the preamble that then will appear in your document such as the author name, title of the document, abstract, date, and pretty much anything else. Here is another simple example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span>{article}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\title</span>{My First <span style="color:#66d9ef">\LaTeX</span> Document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\date</span>{1/1/1597}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\author</span>{William Shakespeare}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\maketitle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hello World!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>The <code>\title</code>, <code>\date</code> and <code>\author</code> commands are components of the <code>\maketitle</code> command that you can invoke after you begin the document to create a well formatted title block for your document. The above code renders a document that looks like Figure (<strong>fig:hello-world-tex?</strong>).</p>
+<figure id="fig:hello-world-tex">
+<img src="/Users/timothyelder/Documents/plaintext_workshop/figures/hello-world-tex.png" alt="A document made with LaTeX" />
+<figcaption aria-hidden="true">A document made with LaTeX</figcaption>
+</figure>
+<p>As mentioned above, the body of the document (here it is just “Hello World!”) can be as long as you want and encompass all sorts of different things that are particularly helpful to social scientists who write documents that use data to make an argument. For example, and we will cover all of these shortly, you can include tables, figures, citations, theorems, proofs, equations, diagrams, code blocks, and any number of other information that you want typeset in a beautiful way.</p>
+<p>To summarize here are the important parts for understanding a LaTeX document and markup languages in general. Remember to:</p>
+<ol>
+<li>Declare the beginnings and ends of environments in which different formatting or content is located.</li>
+<li>Include metadata and package calls in the <em>preamble</em> of the document.</li>
+<li>Render formatting using commands like <code>\textit{}</code> or <code>\textbf{}</code></li>
+</ol>
+<p>Learning the exact conventions of LaTeX is a task that is worth exploring. If you want to be a truly autonomous plain text writer and researcher, you will have to learn more about LaTeX so you can create your own templates. <em>But</em>, if you want to stick to thinking and writing then you’ll need to know more about the accessible alternative to LaTeX: Markdown.</p>
+<h2 id="markdown">
+  Markdown
+  <a class="anchor" href="#markdown">#</a>
+</h2>
+<p>Markdown is a much easier to learn and intuitive markup language than LaTeX and is becoming more and more ubiquitous. In Markdown, italicized text is created by wrapping the text in *<em>asterisks</em>*, while bold is done with **<strong>two asterisks</strong>**. There are certain limitations to Markdown; for instance there is no underlining in Markdown so you have to get by with the other ways of styling text. Here is an example of some text in Markdown before being typeset:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Header 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You might have some introductory comments
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Sub-Header
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Some text with different styling such as <span style="font-style:italic">*italics*</span> and <span style="font-weight:bold">**bold**</span>.
+</span></span><span style="display:flex;"><span>Remember there is no underlining which is old fashioned anyways, but
+</span></span><span style="display:flex;"><span>you can insert [<span style="color:#f92672">Hyperlinks</span>](<span style="color:#a6e22e">https://en.wikipedia.org/wiki/Hyperlink</span>)
+</span></span><span style="display:flex;"><span>and create tables:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| Movie          | Actor         |
+</span></span><span style="display:flex;"><span>|----------------|---------------|
+</span></span><span style="display:flex;"><span>| Apocalypse Now | Marlon Brando |
+</span></span><span style="display:flex;"><span>| Wizard of Oz   | Judy Garland  |
+</span></span><span style="display:flex;"><span>| Sound of Music | Julie Andrews |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>There are also other important aspects of academic writing.^[Like footnotes that are rendered at the footer of the page in which they appear.]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">Here is a figure inserted into a Markdown file.</span>](<span style="color:#a6e22e">figures/healy_plaintext_vis.png</span>)
+</span></span></code></pre></div><p>The good thing about Markdown is that it is much easier to use than LaTeX so instead of messing around with a document preamble, document classes, and style files you can get straight to writing your document. I am not going to cover all the different Markdown conventions in this documentation but you can find them 
+  <a href="https://www.Markdownguide.org/cheat-sheet/">here</a>. Markdown is pretty straight forward but you will still want to take advantage of all the fancy features of LaTeX while maintaining the usability and ease of Markdown. Luckily, someone already thought up this idea and created the program <code>pandoc</code>.</p>
+<h2 id="pandoc">
+  <code>pandoc</code>
+  <a class="anchor" href="#pandoc">#</a>
+</h2>
+<p><code>pandoc</code> is a command line based program that allows you to convert files between different file formats. It is a pretty powerful program because it will take the markup conventions from one format and translate them into another. So, when you write your next article in Markdown and really emphasize some part (“And to reiterate <em>again</em>, it is the <em>Lumpenproletariat</em> that ultimately must be motivated by a vanguard party to seize the means of production from the Petty <em>bourgeoisie</em>.”) <code>pandoc</code> will convert the text surrounded by *asterisks* (which indicates italics) and converts them to an <code>\textit{}</code> command. <code>pandoc</code> is the key link in the workflow that allows us to convert our simple Markdown files into LaTeX files and then into PDFs and how we are able to accommodate the different resources we need for academic writing, like bibliographies, footnotes, tables, figures, and diagrams.</p>
+<p>The basic usage of <code>pandoc</code> looks like the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pandoc my_doc.md -o my_doc.pdf
+</span></span></code></pre></div><p>On the left, directly after <code>pandoc</code> is the Markdown file that we want to convert to a PDF file. The <code>-o</code> flag indicates that the <code>my_doc.pdf</code> file is in fact the intended <em>output</em> document from the input. That is pretty simple, but so too will be the output PDF. Compare the line above to this one:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pandoc my_doc.md -o my_doc.pdf --from<span style="color:#f92672">=</span>Markdown --template<span style="color:#f92672">=</span>/Users/timothyelder/.pandoc/templates/eisvogel.latex --listings --filter pandoc-xnos
+</span></span></code></pre></div><p>That is the command for rendering the document your are looking at right now. It does the same thing that we saw above, specifying an input file and then an output file, but it includes all sorts of extra flags that indicate how to handle different attributes of your document and the proper formatting for the output. The <code>--from=</code> flag makes it perfectly explicit to the software what the input format is (in this case it is Markdown), while the <code>--template=</code> flag tells the software where to look and which template to use when rendering the output. The final two flags (<code>--listings</code> and <code>--filter pandoc-xnos</code>) indicate the style for code blocks (those shaded areas that display computer code throughout this document) and how to cross reference different parts of the document respectively.</p>
+<p>It is important to get clear on what is actually going on when we use the <code>pandoc</code> command to create a PDF. What we are doing can be seen in Figure {(<strong>fig:md2tex2pdf?</strong>)}</p>
+<figure id="fig:md2tex2pdf">
+<img src="/Users/timothyelder/Documents/plaintext_workshop/figures/md2tex2pdf.png" alt="Writing in Markdown and typesetting into a pdf with a tex intermediate step." />
+<figcaption aria-hidden="true">Writing in Markdown and typesetting into a pdf with a tex intermediate step.</figcaption>
+</figure>
+<p>We write our files using the conventions of the Markdown format (indicated by the <code>.md</code> file extension) and then use <code>pandoc</code> to typeset these into a PDF. <code>pandoc</code> is not a typesetting software itself <em>per se</em> but relies upon LaTeX to typeset into PDF. When you invoke <code>pandoc</code> to create a PDF, <code>pandoc</code> performs a quiet intermediate step where it creates a LaTeX copy of the Markdown document (the <code>.tex</code> file in Figure {(<strong>fig:md2tex2pdf?</strong>)}) and typesets that into a PDF by invoking the LaTeX program. <code>pandoc</code> is super smart, and understands how to translate the conventions of one markup language into another, and that is how we are able to write in Markdown (with all its simplicity and speed) while still taking advantage of all the power of LaTeX.</p>
+<p>We are able to add a few bells and whistles to <code>pandoc</code> to define the specific formatting of the document. We do this partly by manipulating the characters and conventions in our document directly, but also outside our document, by invoking templates and style files that you can install. This can be seen in Figure {(<strong>fig:md2temp2tex2sty2pdf?</strong>)}.</p>
+<figure id="fig:md2temp2tex2sty2pdf">
+<img src="/Users/timothyelder/Documents/plaintext_workshop/figures/md2temp2tex2sty2pdf.png" alt="There are a few extra little dependencies." />
+<figcaption aria-hidden="true">There are a few extra little dependencies.</figcaption>
+</figure>
+<h2 id="document-composition-with-markdown">
+  Document Composition with Markdown
+  <a class="anchor" href="#document-composition-with-markdown">#</a>
+</h2>
+<p>In this section, I want to explain how you put together the various pieces that we have up to this point only been reading about. We are going to be covering:</p>
+<ol>
+<li>Inserting figures</li>
+<li>Creating tables.</li>
+<li>Including math, both numbered equations and inline math</li>
+</ol>
+<h3 id="writing-the-document">
+  Writing the Document
+  <a class="anchor" href="#writing-the-document">#</a>
+</h3>
+<p>This part is pretty self explanatory. You type characters, which form words, words create phrases and sentences, and you keep doing that until you have something that looks like a defensible argument. Once you have that, you put in all the nifty evidence that you have discovered to support your argument and there are all sorts of things that go into that.</p>
+<h3 id="headers-and-metadata">
+  Headers and Metadata
+  <a class="anchor" href="#headers-and-metadata">#</a>
+</h3>
+<p>Where in a LaTeX document you put metadata such as the author name, date, title, abstract, etc. in the preamble of the document, in Markdown you use what is called a YAML (<em>yam</em>-<em>mul</em>) header. Since you don’t want the metadata being represented in the document as it is, you need to contain it in special characters (sort of like how you create an environment in LaTeX with <code>\begin{}</code> and <code>\end{}</code>). Three dashes opens and closes your YAML metadata header like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">My First Markdown Paper</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#ae81ff">Timothy Elder</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#ae81ff">February 17th, 2023</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>The information that the YAML header contains is arbitrary though there are a few standard entries like “author”, “title”, “date”, and “abstract”. Because <code>pandoc</code> translates your Markdown document into LaTeX before typesetting, you have the full arsenal of LaTeX options available to you, which means you can change the font, margins, headers and footers among many many others. Too many to cover here but you can review the full set of options in the <code>pandoc</code> documentation 
+  <a href="https://pandoc.org/MANUAL.html#custom-styles">here</a> (see the section “Variables for LaTeX”).</p>
+<h3 id="figures">
+  Figures
+  <a class="anchor" href="#figures">#</a>
+</h3>
+<p>A figure or image in a Markdown file can be included with the following notation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Here is where you put your caption.</span>](<span style="color:#a6e22e">/absolute/path/to/image.png</span>){@fig:example-crossref-label}
+</span></span></code></pre></div><p>The image will render on the page around where you insert the line but you will not have exact control over it unless you go edit the intermediate <code>.tex</code> file. In our templates we specify some options that help images render in an attractive way and LaTeX uses an algorithm for image placements when not manually placed. Instead of manually numbering figures and referencing them in the body of your paper, you assign them a label, which follows the call to the image, wrapped in curly brackets with the @fig: prefix. Rather than having to keep track of how your figures are numbered, when you want to reference the figure in the body of your paper, you do so like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Here I am explaining the really impressive figure that I made that is going to definitively demonstrate some strong association between two variables. This can be seen in Figure @fig:example-crossref-label.
+</span></span></code></pre></div><p>This means of cross-referencing figures is really convenient especially when you decide to reorder your paper, and suddenly figure #5 is where figure #1 was and all the labels would have to be manually changed if you were using something like Word. <strong>NOTE</strong>: Whenever using <code>pandoc-xnos</code>, include it with <code>--filter pandoc-xnos</code> as a flag for the <code>pandoc</code> command in.</p>
+<h3 id="tables">
+  Tables
+  <a class="anchor" href="#tables">#</a>
+</h3>
+<p>Tables are pretty easy in Markdown and can be styled different ways. This is a pretty bare bones table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Character</th>
+<th style="text-align:center">Height (cm)</th>
+<th style="text-align:center">Mass (kg)</th>
+<th style="text-align:center">Homeworld</th>
+<th style="text-align:center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Han Solo</td>
+<td style="text-align:center">180</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">Corellia</td>
+<td style="text-align:center">Human</td>
+</tr>
+<tr>
+<td style="text-align:center">Wedge Antilles</td>
+<td style="text-align:center">170</td>
+<td style="text-align:center">77</td>
+<td style="text-align:center">Corellia</td>
+<td style="text-align:center">Human</td>
+</tr>
+<tr>
+<td style="text-align:center">Yoda</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">NA</td>
+<td style="text-align:center">Yoda species</td>
+</tr>
+<tr>
+<td style="text-align:center">Ackbar</td>
+<td style="text-align:center">180</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">Mon Cala</td>
+<td style="text-align:center">Mon Calamari</td>
+</tr>
+<tr>
+<td style="text-align:center">Mace Windu</td>
+<td style="text-align:center">188</td>
+<td style="text-align:center">84</td>
+<td style="text-align:center">Haruun Kal</td>
+<td style="text-align:center">Human</td>
+</tr>
+</tbody>
+</table>
+<p>Some information about Star Wars characters. {#tbl:id}</p>
+<p>This table is created with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>   Character      Height (cm)   Mass (kg)   Homeworld       Species
+</span></span><span style="display:flex;"><span>---------------- ------------- ----------- ------------ ----------------
+</span></span><span style="display:flex;"><span>    Han Solo          180          80        Corellia        Human
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> Wedge Antilles       170          77        Corellia        Human
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      Yoda            66           17           NA       Yoda species
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     Ackbar           180          83        Mon Cala     Mon Calamari
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   Mace Windu         188          84       Haruun Kal       Human
+</span></span><span style="display:flex;"><span>------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Table: Some information about Star Wars characters. {#tbl:id}
+</span></span></code></pre></div><p>You will be able to output from most statistical software into the Markdown format or LaTeX. And tables in Markdown can also be labeled, just like figures, so you can reference them without keeping track of what order they appear in.</p>
+<h3 id="math">
+  Math
+  <a class="anchor" href="#math">#</a>
+</h3>
+<p>If you are a quantitative scholar and need to describe your modeling strategy you can do that in Markdown. This requires a bit of knowledge of LaTeX: as mentioned above, <code>pandoc</code> converts your Markdown to LaTeX before typesetting, you can use LaTeX conventions when we really need to. This is such an instance. So if you want to explain to someone the standard deviation of a population you would write the formula using LaTeX math commands (<code>\sigma</code>, <code>\sum</code>, <code>\frac</code>, <code>\bar</code>, exponents and subscripts, etc.) on its own line and wrap it in double dollar signs ($$) like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>$$\sigma = \sqrt{\frac{ \sum (x_i - \bar{x})^2 } {N - 1}}$$
+</span></span></code></pre></div><p>which renders your math beautifully:</p>
+<p><code>$$\sigma = \sqrt{\frac{ \sum (x_i - \bar{x})^2 } {N - 1}}$$</code></p>
+<p>You can also insert math inline with your text <code>\(\mu = \frac{ \sum_{i=1}^{n} x_i} {n}\)</code> using single dollar signs in line with the rest of your text, like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>When <span style="color:#e6db74">$</span>a \ne <span style="color:#ae81ff">0</span><span style="color:#e6db74">$</span>, there are two solutions to <span style="color:#e6db74">$</span><span style="color:#f92672">(</span>ax^<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> bx <span style="color:#f92672">+</span> c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span> and they are <span style="color:#e6db74">$</span>x <span style="color:#f92672">=</span> {<span style="color:#f92672">-</span>b \pm \sqrt{b^<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>ac} \over <span style="color:#ae81ff">2</span>a}<span style="color:#e6db74">$</span>.
+</span></span></code></pre></div><h2 id="make">
+  Make
+  <a class="anchor" href="#make">#</a>
+</h2>
+<p>It can be very annoying to continually run the same lines of code over and over again, when you are nearing the completion of working on some document, particularly if you are obsessive and neurotic and messing with some minor part of a paper that you want to get perfect. A very helpful resource that computer scientists thought up was to create a system for handling running code called Make. Make automates the process of, for lack of a better word, <em>making</em> things. This is somewhat advanced when it comes to typesetting documents so if you want to skip this part or skim that is totally fine. I will note that this tool will be particularly helpful if you are a quantitative scholar and have different scripts that handle the creation of data, figures, or tables etc. etc.</p>
+<p>Make is particularly powerful because it has a system for checking whether or not a given output file needs to be changed given some change in the input file. For example, say you have a recipe (recipes in Make are the different commands that you want it to run) that creates your document that looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-make" data-lang="make"><span style="display:flex;"><span><span style="color:#75715e">## Location of Pandoc support files.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>PREFIX <span style="color:#f92672">=</span> /Users/timothyelder/.pandoc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Location of your working bibliography file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>BIB <span style="color:#f92672">=</span> /Users/timothyelder/Documents/bibs/socbib-pandoc.bib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## CSL stylesheet (located in the csl folder of the PREFIX directory).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CSL <span style="color:#f92672">=</span> asa
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dissertation.pdf</span><span style="color:#f92672">:</span> dissertation.md
+</span></span><span style="display:flex;"><span>	pandoc -f --pdf-engine<span style="color:#f92672">=</span>xelatex --template<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>PREFIX<span style="color:#66d9ef">)</span>/templates/ucetd.template --top-level-division<span style="color:#f92672">=</span>chapter --filter pandoc-xnos --citeproc --bibliography<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>BIB<span style="color:#66d9ef">)</span> dissertation.md -o  dissertation.pdf
+</span></span></code></pre></div><p>To typeset the <code>dissertation.pdf</code> file given the recipe in the Makefile, you would simply type into the terminal with the Makefile, <code>make dissertation.pdf</code> and the recipe runs. Make will check to see if any changes have been made in the name of the prerequisite file (the <code>dissertation.md</code> file) which is used to make the PDF. If no change has been made to the Markdown file, then Make will let you know and say <code>make: Nothing to be done for 'dissertation.pdf'.</code></p>
+<p>When you run “pdf”, a couple of python scripts get run in a particular order, then an R script, and then a <code>pandoc</code> line runs and then a shell command. That would be a lot of keystrokes on your own but make does it auto-magically. This is actually a recipe that I have because I have a project where we generate all the data from optical character recognition of JPEGs, and then carving up big plaintext files with regular expressions. Sometimes the underlying data changes because we notice there is some error in the plaintext file and we have to regenerate a whole bunch of CSVs from the plaintext files. What make does is it checks the various pieces of data that you are asking it to use and that you want it to make, and checks whether or not they have changed at all since you last ran Make, and it only runs precesses to update pieces of data as needed. So if you keep running Make without changing anything it will tell you “nothing to update”.</p>
+<h2 id="an-example-project">
+  An Example Project
+  <a class="anchor" href="#an-example-project">#</a>
+</h2>
+<p>We are going to be using an example project that you should have already installed onto your machine when you installed all of the software but in case you forgot run the following line of code to get it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone https://github.com/TimothyElder/pwg-template
+</span></span></code></pre></div><p>In the <code>pwg-template</code> directory there should be a sub-directory called <code>article-markdown</code>. Open that up and take a look at the file called <code>article-template.md</code>. It is an example article about the War of the Roses with some examples of the most commonly used conventions in Markdown. The <code>article-markdown</code> directory should have several files in it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Makefile
+</span></span><span style="display:flex;"><span>article-template.md
+</span></span><span style="display:flex;"><span>/figures
+</span></span><span style="display:flex;"><span>war-of-roses.bib
+</span></span></code></pre></div><p>Go ahead and take a look at the file called <code>article-template.md</code>. It should contain a header that looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">The Implications of the War of the Roses on Anglo-Franco Relations</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Timothy Elder</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">affiliation</span>: <span style="color:#ae81ff">University of Chicago</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">email</span>: <span style="color:#ae81ff">timothyelder@uchicago.edu</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Joe Bloggs</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">affiliation</span>: <span style="color:#ae81ff">Northwestern University</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">email</span>: <span style="color:#ae81ff">joebloggs@northwestern.edu</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#ae81ff">January 2023</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">thanks</span>: <span style="color:#e6db74">&#34;Thank you to the everyone that supported this work.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">abstract</span>: <span style="color:#ae81ff">The War of the Roses was a significant event in English history that had far-reaching implications for the relationships between England and France. This paper explores the impact of the conflict on the political, economic, and cultural ties between the two countries. The war resulted in significant changes to the English monarchy, which had repercussions for the English crown&#39;s relationships with other European powers, including France. This paper provides an in-depth analysis of these impacts, and sheds light on the lasting effects of this important event in English history.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">bibliography</span>: [<span style="color:#ae81ff">war-of-roses.bib]</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>This is a YAML (Yet Another Markup Language) header and it includes metadata about the paper we are typesetting. In this case it is about the War of the Roses and it lists me as the author. It also includes an acknowledgements, and specifies where the bibliography is located. In this case the bibliography is stored in the same directory as the document so the relative path is just the file’s name.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> You could have something much more bare bones than this if you were just writing a draft of a paper such as this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Origins of the War of the Roses --- Draft</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#ae81ff">Tim Elder</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>The paper includes figures, tables, and different styling of the prose. You can use this as a template for other documents so feel free to go ahead and do whatever you want to this file.</p>
+<p>When we are ready to typeset our draft document, we can invoke the <code>pandoc</code> program via Make in the terminal by simply typing in <code>make pdf</code> from the directory with the <code>article-markdown.md</code> file in it. You can inspect the Makefile to see how it works and you’ll quickly notice there are a few extra bells and whistles to the <code>pandoc</code> program.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>You can store your bibliography anywhere on your computer and reference it in your document’s metadata. For instance, for most of my work I keep a single <code>.bib</code> file (stored at <code>/Users/timothyelder/Documents/socbib-pandoc.bib</code>) which has the citation information for everything I am likely to cite and I always reference that <code>.bib</code> file in my documents&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/example/chapter-5.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-latex-markdown-pandoc">Using LaTeX, Markdown, <code>pandoc</code></a>
+      <ul>
+        <li><a href="#latex">LaTeX</a></li>
+        <li><a href="#markdown">Markdown</a></li>
+        <li><a href="#pandoc"><code>pandoc</code></a></li>
+        <li><a href="#document-composition-with-markdown">Document Composition with Markdown</a>
+          <ul>
+            <li><a href="#writing-the-document">Writing the Document</a></li>
+            <li><a href="#headers-and-metadata">Headers and Metadata</a></li>
+            <li><a href="#figures">Figures</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#math">Math</a></li>
+          </ul>
+        </li>
+        <li><a href="#make">Make</a></li>
+        <li><a href="#an-example-project">An Example Project</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

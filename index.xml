@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Introduction to Plaintext for Research and Writing</title>
+    <link>https://introtoplaintext.com/</link>
+    <description>Recent content in Introduction on Introduction to Plaintext for Research and Writing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://introtoplaintext.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What? Why? How?</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-1/</guid>
+      <description>What? Why? How? # What # Academic writing in general, and scientific and social scientific writing in particular, requires that we use empirical data to mount an argument. There are many conventions that have become sacrosanct that we both need to use and find quite helpful for fulfilling the task of providing convincing data and a tight argument, grounded in a long line of other worthwhile research. Citations, figures, tables, equations, proofs, diagrams and prose are all key to this endeavor.</description>
+    </item>
+    
+    <item>
+      <title>The Terminal</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-2/</guid>
+      <description>The Terminal # Switching to a plain text workflow requires that you adjust the way you interact with your computer. Rather than pointing and clicking and navigating through different windows we will be using what is a primitive technology in computing: the Terminal. It was once the case that all interactions with a computer were done with nothing more than a keyboard, not even a mouse. Of course computing has come a long way and most of your interactions with your computer take place with a mouse, touch pad, or touch screen, and it can be intimidating to approach the terminal.</description>
+    </item>
+    
+    <item>
+      <title>Project Organization</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-3/</guid>
+      <description>Project Organization # Working with the terminal requires and instructs you about the file structure of your computer, knowledge of which is important for keeping things organized while you do your research and writing. Project organization refers to two separate and sometimes competing tasks: one is organizing the material you need to learn about the world in a way that is conceptually coherent and helpful to you. The second task is organizing actual computer files in such a way that they are accessible to you and to the software you are working with.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-4/</guid>
+      <description>Installation # In this chapter I will guide you through a tedious and error prone step in the process of adopting plaintext software: installing all the bits and pieces that we are going to be using. When you use something like Word to write, all you need is Word, but the workflow we are going to be using relies upon different pieces of software that all work together. The good thing about this process is that you only have to do it once, and you won&amp;rsquo;t have to fiddle around with it endlessly.</description>
+    </item>
+    
+    <item>
+      <title>Document Composition</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-5/</guid>
+      <description>Using LaTeX, Markdown, pandoc # Now that you are familiar with the Terminal and have installed the software we are going to be using you are ready to begin addressing the core competencies of working with plain text software for your research and writing. The essential workflow that we are adopting here is writing in Markdown, a simple markup langauge with a few extra bells and whistles, and then using the pandoc program to convert these into HTML, PDF, ad Word files.</description>
+    </item>
+    
+    <item>
+      <title>Dynamic Documents</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-6/</guid>
+      <description>Dynamic Documents with RMarkdown # If the last chapter was the heart of the PlainText Working Group, this is the capillaries flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures.</description>
+    </item>
+    
+    <item>
+      <title>Version Control</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-7/</guid>
+      <description>Version Control and Collaboration with git and GitHub # A key part of doing research is being able to account for how you got from your data to you findings, and being able to inspect how your project has changed over time is important to that process of accounting. Whatmore, we all want peace of mind as we do our research so that if we make a mistake, we can go back and do it over again.</description>
+    </item>
+    
+    <item>
+      <title>Conclusion</title>
+      <link>https://introtoplaintext.com/docs/book/chapter-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/chapter-8/</guid>
+      <description>A Larger World # There is more to learn about plaintext, and this book justs gets you started but hopefully it has given you a substantial command over the most important tools for adopting plain text software for your research and writing. It is as good a moment as any to reiterate that plaintext isn’t for everyone; it presents complications to your work that some find to be excessive. Fiddling with the settings of your computer or installing esoteric software and establishing the appropriate workflow for working with these tools can seem to some scholars like a bridge too far, and so they settle for using Word and Google Docs, endlessly copying and pasting figures and tables into their documents and remembering the citation conventions in their fields.</description>
+    </item>
+    
+    <item>
+      <title>Columns Text</title>
+      <link>https://introtoplaintext.com/posts/my_post/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/posts/my_post/</guid>
+      <description>Acerbo datus maxime # Astris ipse furtiva # Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut olivae sensit arma sorori deducit, inesset crudus, ego vetuere aliis, modo arsit? Utinam rapta fiducia valuere litora adicit cursu, ad facies Suis quot vota # Ea furtique risere fratres edidit terrae magis. Colla tam mihi tenebat: miseram excita suadent es pecudes iam. Concilio quam velatus posset ait quod nunc!</description>
+    </item>
+    
+    <item>
+      <title>title</title>
+      <link>https://introtoplaintext.com/post/2023-12-05-title/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/post/2023-12-05-title/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/book/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/book/hidden/</guid>
+      <description>This page is hidden in menu # Quondam non pater est dignior ille Eurotas # Latent te facies # Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor Cum honorum Latona # O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/buttons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/buttons/</guid>
+      <description> Buttons # Buttons are styled links that can lead to local page or external link.
+Example # {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}} Get Home Contribute </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/columns/</guid>
+      <description>Columns # Columns help organize shorter pieces of content horizontally for readability.
+{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example # Left Content # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/details/</guid>
+      <description> Details # Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.
+Example # {{&amp;lt; details &amp;#34;Title&amp;#34; [open] &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} {{&amp;lt; details title=&amp;#34;Title&amp;#34; open=true &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} Title Markdown content # Lorem markdownum insigne&amp;hellip; </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/expand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/expand/</guid>
+      <description>Expand # Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
+Example # Default # {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Expand ↕ Markdown content # Lorem markdownum insigne&amp;hellip; With Custom Label # {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Custom Label ... Markdown content # Lorem markdownum insigne.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/hints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/hints/</guid>
+      <description>Hints # Hint shortcode can be used as hint/alerts/notification block.
+There are 3 colors to choose: info, warning and danger.
+{{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example # Markdown content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa Markdown content</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/katex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/katex/</guid>
+      <description>KaTeX # KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
+Example # {{&amp;lt;/* katex [display] [class=&amp;#34;text-center&amp;#34;] */&amp;gt;}} f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi {{&amp;lt;/* /katex */&amp;gt;}} \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Display Mode Example # Here is some inline example: \(\mu = \frac{ \sum_{i=1}^{n} x_i} {n}\) , rendered in the same line. And below is display example, having display: block \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Text continues here.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/mermaid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/mermaid/</guid>
+      <description>Mermaid Chart # MermaidJS is library for generating svg charts and diagrams from text.
+Override Mermaid Initialization Config
+To override the initialization config for Mermaid, create a mermaid.json file in your assets folder!
+Example # {{&amp;lt;/* mermaid [class=&amp;#34;text-center&amp;#34;]*/&amp;gt;}} stateDiagram-v2 State1: The state with a note note right of State1 Important information! You can write notes. end note State1 --&amp;gt; State2 note left of State2 : This is the note to the left.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/section/first-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/section/first-page/</guid>
+      <description>First page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/section/second-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/section/second-page/</guid>
+      <description>Second Page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/tabs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/tabs/</guid>
+      <description>Tabs # Tabs let you organize content by context, for example installation instructions for each supported platform.
+{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example # MacOS MacOS # This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis!</description>
+    </item>
+    
+  </channel>
+</rss>

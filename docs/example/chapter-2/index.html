@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Terminal # Switching to a plain text workflow requires that you adjust the way you interact with your computer. Rather than pointing and clicking and navigating through different windows we will be using what is a primitive technology in computing: the Terminal. It was once the case that all interactions with a computer were done with nothing more than a keyboard, not even a mouse. Of course computing has come a long way and most of your interactions with your computer take place with a mouse, touch pad, or touch screen, and it can be intimidating to approach the terminal.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="The Terminal" />
+<meta property="og:description" content="The Terminal # Switching to a plain text workflow requires that you adjust the way you interact with your computer. Rather than pointing and clicking and navigating through different windows we will be using what is a primitive technology in computing: the Terminal. It was once the case that all interactions with a computer were done with nothing more than a keyboard, not even a mouse. Of course computing has come a long way and most of your interactions with your computer take place with a mouse, touch pad, or touch screen, and it can be intimidating to approach the terminal." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/chapter-2/" /><meta property="article:section" content="docs" />
+
+
+<title>The Terminal | Introduction to Plaintext for Research and Writing</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.9a000e8ae9be6867a65f65fb1050907e926230040b8b84610af17ddc06523a78.js" integrity="sha256-mgAOium&#43;aGemX2X7EFCQfpJiMAQLi4RhCvF93AZSOng=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Introduction to Plaintext for Research and Writing</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Introduction</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-1/" class="">What? Why? How?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-2/" class="active">The Terminal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-3/" class="">Project Organization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-4/" class="">Installation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/chapter-5/" class="">Using LaTeX, Markdown, `pandoc`</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle"  />
+    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
+      <a role="button" class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/timothyelder"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://timothyelder.com"  target="_blank" rel="noopener">
+        Timothy Elder
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>The Terminal</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sec:terminal">The Terminal</a>
+      <ul>
+        <li><a href="#a-short-tutorial">A Short Tutorial</a></li>
+        <li><a href="#a-few-helpful-hints-and-a-warning">A Few Helpful Hints and A Warning</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="sec:terminal">
+  The Terminal
+  <a class="anchor" href="#sec:terminal">#</a>
+</h1>
+<p>Switching to a plain text workflow requires that you adjust the way you interact with your computer. Rather than pointing and clicking and navigating through different windows we will be using what is a primitive technology in computing: the Terminal. It was once the case that all interactions with a computer were done with nothing more than a keyboard, not even a mouse. Of course computing has come a long way and most of your interactions with your computer take place with a mouse, touch pad, or touch screen, and it can be intimidating to approach the terminal.</p>
+<p>Using the terminal has some distinct advantages over navigating through the file explorer that comes with your operating system and will help to get you familiar with how to control the software we will be working with. For one, the terminal is actually quite easy to use and straight forward after learning just a few basic principles. Further, navigating your computer with the terminal helps to instruct you in the file structure upon which the programs you interact with relies. Understand this file structure will then help you to both organize your project and typeset documents. Here I will provide a quick tutorial on how to use the terminal with some of the most basic and essential commands.</p>
+<div class="figure">
+<img src="../../../../../../../images/terminal.png" alt="The Terminal in macOS"  />
+<p class="caption"><span id="fig:terminal"></span>Figure 1: The Terminal in macOS</p>
+</div>
+<p>Windows and macOS use different kinds of terminals, and even in macOS there are slightly different versions of the same terminal. This means that you will have to learn commands for your operating system. Also, they are called slightly different things. On Windows it is called &ldquo;Command Prompt&rdquo; and there is a specific program called PowerShell. Don&rsquo;t use PowerShell, use Command Prompt, sometimes referred to as CMD which can be found in the &ldquo;Accessories&rdquo; part of the Start Menu. On macOS you will find the terminal under &ldquo;Other&rdquo; in your Launchpad. Once you have found it and launched it, you&rsquo;ll have something on your screen that looks like Figure  <a href="#fig:terminal">1</a>. Here is a table with commands across operating systems:</p>
+<table>
+<thead>
+<tr>
+<th>Windows CMD</th>
+<th>Task</th>
+<th>macOS Terminal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dir</code></td>
+<td>List files and folders</td>
+<td><code>ls</code></td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Full path of current folder/directory</td>
+<td><code>pwd</code></td>
+</tr>
+<tr>
+<td><code>cd &lt;path to directory&gt;</code></td>
+<td>Change folder/directory</td>
+<td><code>cd &lt;path to directory&gt;</code></td>
+</tr>
+<tr>
+<td><code>cd ..</code></td>
+<td>One directory up in directory tree</td>
+<td><code>cd ..</code></td>
+</tr>
+<tr>
+<td><code>mkdir newFolder</code></td>
+<td>Create new directory in current directory</td>
+<td><code>mkdir myFolder</code></td>
+</tr>
+<tr>
+<td><code>rmdir myFolder</code></td>
+<td>Remove a directory*</td>
+<td><code>rmdir myFolder</code></td>
+</tr>
+<tr>
+<td><code>ren oldFolderName newFolderName</code></td>
+<td>Rename a directory</td>
+<td><code>mv oldFolderName newFolderName</code></td>
+</tr>
+<tr>
+<td><code>robocopy myFolder &lt;path to destination directory&gt;</code></td>
+<td>Copy a directory</td>
+<td><code>cp -r myFolder &lt;path to destination directory&gt;</code></td>
+</tr>
+<tr>
+<td><code>move myFolder &lt;path to destination directory&gt;</code></td>
+<td>Move a directory</td>
+<td><code>mv myFolder &lt;path to destination directory&gt;</code></td>
+</tr>
+<tr>
+<td><code>ren oldFileName newFileName</code></td>
+<td>Rename a file</td>
+<td><code>mv oldFileName newFileName</code></td>
+</tr>
+<tr>
+<td><code>copy myFile &lt;path to destination directory&gt;</code></td>
+<td>Copy a file</td>
+<td><code>cp myFile &lt;path to destination directory&gt;</code></td>
+</tr>
+<tr>
+<td><code>move myFile &lt;path to destination directory&gt;</code></td>
+<td>Move a file</td>
+<td><code>mv myFile &lt;path to destination directory&gt;</code></td>
+</tr>
+<tr>
+<td><code>cls</code></td>
+<td>Clear the terminal screen</td>
+<td><code>clear</code></td>
+</tr>
+</tbody>
+</table>
+<p>Table: Equivalent commands for the terminal in Windows and macOS. {#tbl:terminal-commands}</p>
+<h2 id="a-short-tutorial">
+  A Short Tutorial
+  <a class="anchor" href="#a-short-tutorial">#</a>
+</h2>
+<p>When working in the terminal you will be dealing with <em>Files</em> and <em>Directories</em>. A directory is what is usually called a &ldquo;folder&rdquo;, a container for files. A file is the basic unit for holding data in your computer. A file is the thing that you typically open with your cursor (like a text file, Word document or an image file) by double clicking on it. We will be dealing with programs on the terminal but not in the way you are familiar. We will get there eventually, but just remember files go in directories and directories can themselves have sub-directories with files in them. This is the hierarchical folder structure that is ubiquitous in computing.</p>
+<p>With the terminal open go ahead and type in <code>ls</code> and hit <code>Enter</code>. In macOS you should see something like this print out:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> MacBook-Pro:~ timothyelder$ ls
+</span></span><span style="display:flex;"><span>Applications
+</span></span><span style="display:flex;"><span>Desktop
+</span></span><span style="display:flex;"><span>Documents
+</span></span><span style="display:flex;"><span>Downloads
+</span></span><span style="display:flex;"><span>Library
+</span></span><span style="display:flex;"><span>Movies
+</span></span><span style="display:flex;"><span>Music
+</span></span><span style="display:flex;"><span>Pictures
+</span></span><span style="display:flex;"><span>Public
+</span></span></code></pre></div><p>The <code>ls</code> or &ldquo;list&rsquo; command in macOS lists the contents of the current directory you are in. To determine which directory you are in type in <code>pwd</code> and hit <code>Enter</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> MacBook-Pro:~ timothyelder$ pwd
+</span></span><span style="display:flex;"><span>/Users/timothyelder
+</span></span></code></pre></div><p><code>pwd</code> stands for &ldquo;present working directory&rdquo; and prints out the path to the directory you are in. The &ldquo;working directory&rdquo; just means whatever directory your terminal is open in. On macOS, whenever you open a terminal it automatically opens in what is known as your &ldquo;Home&rdquo; directory which has the files that appear on your Desktop, in your Documents directory and other directories associated with Videos, Music, etc.. A path is the generic way of referring to the address of a directory or file on your computer. Let&rsquo;s start to navigate your computer and manipulate directories and files from the terminal.</p>
+<p>To navigate to another directory from your working directory use the <code>cd</code> or &ldquo;change directory&rdquo; command and specify which other directory you want to change to. Let&rsquo;s change to the Documents directory by typing in <code>cd /Users/timothyelder/Documents</code>. This is the path <em>for me</em>, as my user name on my machine is &ldquo;timothyelder&rdquo;, so you&rsquo;ll have to use <em>your</em> username or whatever is in the path when you use the <code>pwd</code> command. After using the <code>cd</code> command to get to the Documents directory let&rsquo;s create a sub-directory there to store the files related to the PlainText Working Group. To do this you will use the <code>mkdir</code> or make directory command. Type <code>mkdir plaintext</code> into the terminal and hit <code>Enter</code>. Check to see that the new directory has been made by typing in <code>ls</code> again and see that the directory has been made.</p>
+<p>Now, when using the <code>cd</code> command (or any other command that takes in a path as an argument) you can use either <em>absolute</em> or <em>relative</em> paths to specify where you want to go or what file or directory you are specifying. An absolute path uses the full amount of information to describe the address of the file or directory you are referring to (think of them as latitude and longitude), such as <code>/Users/timothyelder/Documents/plaintext</code>. That is the absolute path of the <code>plaintext</code> directory. Using the absolute path makes everything explicit, but takes up a lot of time when you have to type it in over and over again into the terminal. To save yourself time you can use a relative path which is relative to wherever your terminal is open on your computer (think of these as generic indexical directions, &ldquo;around the corner&rdquo;, &ldquo;take a left at the light&rdquo;, or &ldquo;across from the 7/11&rdquo;). For instance, if you did the last set of instructions correctly, you created a directory called <code>plaintext</code> in the <code>Documents</code> directory and we noted the absolute path above. The <code>plaintext</code> directory is immediately accessible to the <code>Documents</code> directory because the former is a sub-directory of the latter, so simply typing in <code>cd plaintext</code> will move your terminal into the <code>plaintext</code> directory.</p>
+<p>Go ahead and <code>cd</code> into the <code>plaintext</code> directory and type <code>ls</code> again. As you&rsquo;ll see, nothing is printed out from the list command because it is a brand new directory with no files or subdirectories. Next thing to do is to create an example text file. To do this we are going to use a built-in text editor to create a new file using the <code>vim</code> command. <code>vim</code> is an ancient text editor that is pretty much built into all machines that are based on UNIX which includes macOS and Linux. Into the terminal type <code>vim my_text_file.txt</code>. The command <code>vim</code> is used to open a text editor in your terminal and you have just used it to open a file called <code>my_text_file.txt</code>, and because the file doesn&rsquo;t yet exist, you are creating it at the same time. This can be very confusing because it looks like an empty terminal window, as can be seen in Figure <a href="#fig:vi">2</a>.</p>
+<div class="figure">
+<img src="../../../../../../../images/vi_empty.png" alt="An instance of an empty file opened with `vim`"  />
+<p class="caption"><span id="fig:vi"></span>Figure 2: An instance of an empty file opened with `vim`</p>
+</div>
+<p>The terminal is now open in an empty text file, and if you start tapping away at your keyboard nothing will happen, which is also pretty mysterious behavior. To edit the file and add content you need to press the <code>i</code> key on your keyboard. This activates &ldquo;insert&rdquo; mode in the <code>vim</code> text editor meaning you can actually type in the window and put content into the file. This will look like Figure <a href="#fig:vi-insert">3</a>. Type in &ldquo;Hello World!&rdquo; then hit the <code>esc</code> or escape key on your keyboard and you will exit the insert mode, then type in <code>:wq</code> (that is hit <code>Shift</code> - <code>;</code> and then type <code>wq</code>). Typing in <code>wq</code> means &ldquo;write-quit&rdquo; which is &ldquo;write the file contents to memory and exit the editor&rdquo;. To exit without saving use <code>:q!</code> instead of <code>:wq</code>. Once back to the normal terminal type in <code>ls</code> to check that the file is there, and then type in <code>cat my_text_file.txt</code> and the file contents will print out. The <code>cat</code> command (besides being a cute reminder of our Feline friends) stands for &ldquo;concatenate and print file contents&rdquo; and allows you inspect plain text files from the command line.</p>
+<div class="figure">
+<img src="../../../../../../../images/vi_insert.png" alt="Insert mode in `vim`"  />
+<p class="caption"><span id="fig:vi-insert"></span>Figure 3: Insert mode in `vim`</p>
+</div>
+<p>Though we are not going to be using <code>vim</code> extensively it is good to know how to use it, particularly considering how disorienting it can be when a program pops you into a <code>vim</code> terminal and you&rsquo;ve never seen one before. All digital writing was once conducted in things like <code>vim</code>, and other text editors, a class of programs that allows the user to create and edit plain text data. You could do nearly everything we are going to do in the working group with <code>vim</code> or an equivalent terminal based text editor. You could write a whole book in it if you wanted, or the documentation that you are looking at now (see Figure <a href="#fig:vi-document">4</a>).</p>
+<div class="figure">
+<img src="../../../../../../../images/vi_document.png" alt="Composing this documentation in `vim`"  />
+<p class="caption"><span id="fig:vi-document"></span>Figure 4: Composing this documentation in `vim`</p>
+</div>
+<p>Lastly, the terminal lets us take a look at <em>hidden</em> files in a directory. Do the exact same thing as you did above (where you created a text file called <code>my_text_file.txt</code> with &ldquo;Hello World!&rdquo; inside it) but this time when you first type in the <code>vim</code> command, instead of <code>my_text_file.txt</code>, type <code>.hidden_file</code>. Make the file contents the &ldquo;Hello World!&rdquo; phrase, same as before and write quit out of the file. Back at the normal terminal type <code>ls</code> again to make sure the file you just created is there. Curiously, you will not see a file called <code>.hidden_file</code> but the <code>my_text_file.txt</code> will be there! You can even check in a normal Finder window or File Explorer and the file will not be there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> MacBook-Pro:plaintext timothyelder$ ls
+</span></span><span style="display:flex;"><span>my_text_file.txt
+</span></span></code></pre></div><p>This is because files that begin with a period are hidden and do not appear without using a special <em>flag</em> or <em>option</em> for the <code>ls</code> command. Typing in <code>ls -a</code> will printout <em>all</em> the files in the directory, even hidden ones.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">(</span>base<span style="color:#f92672">)</span> MacBook-Pro:plaintext timothyelder$ ls -a
+</span></span><span style="display:flex;"><span>.			 .hidden_file
+</span></span><span style="display:flex;"><span>..		 my_text_file.txt
+</span></span></code></pre></div><p>There is nothing special about any given directory that you can navigate to on your computer. They are all generic containers that store generic files and so you can take what you have applied here and move up and down the directory tree, listing out the files and creating files as you please.</p>
+<h2 id="a-few-helpful-hints-and-a-warning">
+  A Few Helpful Hints and A Warning
+  <a class="anchor" href="#a-few-helpful-hints-and-a-warning">#</a>
+</h2>
+<p>When using the terminal if you ever need help with a command you can look up what&rsquo;s called a <code>man</code> page, or manual page simply by typing in <code>man &lt;command of interest&gt;</code>.^[<strong>Windows Users</strong>: Use <code>help</code> instead of <code>man</code>.] So if you want to read about everything the <code>ls</code> or <code>cd</code> commands can do simply type in <code>man ls</code> or <code>man cd</code> and the terminal prints out information that you can navigate through with the directional keys. If you need to exit a <code>man</code> page hit the <code>q</code> key on your keyboard.</p>
+<p>Also, for the <code>cd</code> command, you can navigate into the parent directory of your working directory by typing in <code>cd ..</code>. For example, above we created a sub-directory called <code>plaintext</code> in our <code>Documents</code> directory with two files in it. If you were in the <code>plaintext</code> directory and typed <code>cd ..</code> that would take you one level up to the <code>Documents</code> directory. Doing the <code>cd ..</code> command one more time takes you up another level into your home directory where we started out.</p>
+<p>Lastly, the terminal is intimidating but hopefully some of its mystery has been resolved now that you can navigate around it, list files out and make them all from the terminal. <em>But</em>, the terminal was made by computer scientists and engineers who were very technically capable and knew what they were doing, so when they typed in a command they knew what it meant and what it would do. Sometimes we can get ourselves into trouble on the terminal because we are not computer scientists and engineers and we don&rsquo;t always know what we are doing. For example, the <code>rm</code> and <code>del</code> commands (in macOS and Windows respectively) delete files, and when you run them they don&rsquo;t ask you to confirm that you really want to delete the file <code>only_copy_of_my_thesis_do_not_delete_no_backups.tex</code> and it doesn&rsquo;t go to the Trash folder for you to restore it later. It just gets 
+  <a href="https://www.reddit.com/r/funny/comments/8ell2r/college_student_has_a_mental_breakdown_after/">deleted</a>. So use caution on the terminal but for the most part you can&rsquo;t get into too much trouble.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/example/chapter-2.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sec:terminal">The Terminal</a>
+      <ul>
+        <li><a href="#a-short-tutorial">A Short Tutorial</a></li>
+        <li><a href="#a-few-helpful-hints-and-a-warning">A Few Helpful Hints and A Warning</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
