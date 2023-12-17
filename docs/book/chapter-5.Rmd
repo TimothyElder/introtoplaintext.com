@@ -236,6 +236,14 @@ When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and
 they are $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$.
 ```
 
+### Citations
+
+Another key part of academic writing is including citations to other works that inform your research. To do this you will need to use a `.bib` file which is generated using a bibliographic software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/). I highly recommend using a `.bib` file because it saves a lot of time formatting and creating the proper list of cited references.
+
+To include citations in your `.Rmd` file you will need to specify where your `.bib` file is located by specifying its path in the YAML header at the top of the document. We have an example `.bib` file included in the directory that contains this source file called `plaintext.bib` with just a few sources in it. You then reference an item in that `.bib` file by writing an @ symbol followed by the "citation key" of the item you want to cite, like this `@durkheim_division_2008` which renders a citation like this Durkheim ([1893] 2008). All the citations that you use in your document will appear at the end of your paper, and including a `# References` section at the bottom of your RMarkdown or Markdown document will add a section heading before the bibliography is printed.
+
+There are a variety of ways in which you can customize your bibliography so it matches the proper format of whatever journal you might be submitting to. That will require that you use something called a [`CSL`](https://citationstyles.org/) file, which can also be included in the YAML header at the top of your document. There are a lot of CSL files people have created for the various citation conventions, and there is probably one available for the journal you'll be submitting to. You can find some [here](https://github.com/citation-style-language/styles).
+
 ## Make
 
 It can be very annoying to continually run the same lines of code over and over again, when you are nearing the completion of working on some document, particularly if you are obsessive and neurotic and messing with some minor part of a paper that you want to get perfect. A very helpful resource that computer scientists thought up was to create a system for handling running code called Make. Make automates the process of, for lack of a better word, *making* things. This is somewhat advanced when it comes to typesetting documents so if you want to skip this part or skim that is totally fine. I will note that this tool will be particularly helpful if you are a quantitative scholar and have different scripts that handle the creation of data, figures, or tables etc. etc.

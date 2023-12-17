@@ -11,13 +11,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://introtoplaintext.com/docs/book/chapter-6/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-12-16T17:41:59-06:00" />
+<meta property="article:modified_time" content="2023-12-16T18:21:42-06:00" />
 <title>Dynamic Documents | Introduction to Plaintext for Research and Writing</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d8b1ce1fba5c81cfa1ebf1e69c1c3db5d3075d070d58202e69424dce2097a041.js" integrity="sha256-2LHOH7pcgc&#43;h6/HmnBw9tdMHXQcNWCAuaUJNziCXoEE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a4cb4677d8c12f5916d64ef38a810b10df8e44264c3d4d7cdd73e0882feb4f03.js" integrity="sha256-pMtGd9jBL1kW1k7zioELEN&#43;ORCZMPU183XPgiC/rTwM=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
 
@@ -217,157 +217,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/helpers/buttons/" class="">Buttons</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/columns/" class="">Columns</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/details/" class="">Details</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/expand/" class="">Expand</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/hints/" class="">Hints</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/katex/" class="">Katex</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/mermaid/" class="">Mermaid</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-045f52e557d420dc6b88906503e07a22" class="toggle"  />
-    <label for="section-045f52e557d420dc6b88906503e07a22" class="flex justify-between">
-      <a href="/docs/helpers/section/" class="">Section</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/section/first-page/" class="">First Page</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/section/second-page/" class="">Second Page</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/tabs/" class="">Tabs</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/docs/helpers/vim/" class="">Vim</a>
   
 
@@ -465,7 +314,6 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>I called RMarkdown a &ldquo;dynamic document format&rdquo; which might have been confusing on first pass considering documents aren&rsquo;t static things as we are composing them. That is certainly true, but the information contained in them is meant to remain the same once we are done working on them. The dynamic part comes in the extra bells and whistles that are in the document. RMarkdown and other similar formats (Sweave for LaTeX, jupyter for Python) allow you to embed code along with the prose of your document which means that you are able to keep the means by which you produce your model outputs, tables, figures and diagrams right along with the actual argument. It isn&rsquo;t just that the code is written in your document (in fact you often don&rsquo;t want that) but that the code is included to load data, manipulate it, create figures and models from it and include those figures and model results directly in your document. That means that when the underlying data changes, you don&rsquo;t have to rerun your code to update the figures and copy and paste it into your document. It auto-magically updates.</p>
 <p>The most important thing a document format like this is used for is creating reproducible findings and ensuring that the process you used to get from your data to your insights is reproducible for your friends, colleagues and critics that might have some questions about why your scatter plot looks the way it does, or why a particularly convincing coefficient is both significant and has a large effect size. This has some definitive advantages from the static way of generating documents where you work in some statistical software on the command line or (heaven forbid) a GUI, export figures to an image format like JPEG or PNG and copy and paste your model results into your document. This is bad because copy pasting model findings separates the code that generated the findings from the actual findings, if you get sloppy with your code, it might be hard to figure out how a particularly compelling model result was generated. The same is true for figures.</p>
-<p>The dynamic document lets you create the figure or run the model and create the table of results directly inside the document. That way when, after submitting the document to a journal or your PI or advisor, and they come back and ask why a scatter plot looks the way it does, or how a particular coefficient was generated, you can look at the exact model or figure creation procedures used to make that part of the document. That is important for scientific scrutiny but also helpful for you to save time. If you are working on the code at the same time you are writing your manuscript and want to keep figures up to date with the text, you don&rsquo;t have to keep copy pasting the right figures or models to the proper location. They will automatically update when you change the code.</p>
 <p>Transparency is important: fraud in science is a problem, and I don&rsquo;t doubt the scientific integrity of you the reader, but there may come a time when someone levels an unwarranted broadside against you regarding a paper or finding you published; this has become something of a trope in the field of psychology today with 
   <a href="https://datacolada.org/wp-content/uploads/2016/09/Fiske-presidential-guest-column_APS-Observer_copy-edited.pdf">&ldquo;methodological terrorists&rdquo;</a> and 
   <a href="https://www.vox.com/unexplainable/23945153/how-to-catch-a-scientific-fraud">&ldquo;scientific vigilantes&rdquo;</a>, but overall the trend of ensuring that work is conducted in an ethical way is good. Being able to distribute code that actually generated your findings right along with the prose of your document is a helpful way of encouraging transparency. It will actually make you think about your work differently knowing that someone could download the source files of your project and examine the methodological decisions you made.</p>
@@ -487,9 +335,12 @@ The number of fraudulent or fabricated findings that make it into print is undet
   Code Chunks
   <a class="anchor" href="#code-chunks">#</a>
 </h3>
-<p>The code that you include in your documents goes into what are referred to as &ldquo;code chunks&rdquo;, delimited areas in your document that indicate to your computer that there is code to be run through an interpreter rather than just rendering the alphanumeric characters as prose for your readers to read. The special characters that are used to indicate that you are dealing with a code chunk are three backticks (```) followed by curly brackets which contain an <code>r</code> and then three more back ticks to end the code chunk. It looks like the following code chunk just not with the hastags at the beginning of the line:</p>
+<p>The code that you include in your documents goes into what are referred to as &ldquo;code chunks&rdquo;, delimited areas in your document that indicate to your computer that there is code to be run through an interpreter rather than just rendering the alphanumeric characters as prose for your readers to read. The special characters that are used to indicate that you are dealing with a code chunk are three backticks (```) followed by curly brackets which contain an <code>r</code> and then three more back ticks to end the code chunk, like so:</p>
+<p>```<code>{r}</code></p>
+<p><code>your code goes here</code></p>
+<p>```</p>
 <p>The <code>r</code> tells the computer what language you are writing code in. RMarkdown supports both R and python and I am told 
-  <a href="https://bookdown.org/yihui/rMarkdown-cookbook/eng-stata.html">stata</a> but it should assume that you are running R. Each code chunk has a few basic options you need to decide about including:</p>
+  <a href="https://bookdown.org/yihui/rMarkdown-cookbook/eng-stata.html">stata</a> but it will assume that you are running R. Each code chunk has a few basic options you need to decide about including:</p>
 <ul>
 <li><code>include = FALSE</code> prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.</li>
 <li><code>echo = FALSE</code> prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.</li>
@@ -498,18 +349,12 @@ The number of fraudulent or fabricated findings that make it into print is undet
 <li><code>fig.cap = &quot;...&quot;</code> adds a caption to graphical results.</li>
 </ul>
 <p>As a general rule, particularly when you are dealing with figures you want to set <code>echo</code> to false so that your figure appears but that the code that generates it, does not. Fortunately, we can set the defaults for all our code chunks in a single document within a code chunk at the top of the document (this is separate from your YAML header).</p>
-<p>There are a few things to note about this code chunk. For one it is <em>named</em>: directly after the language is declared with <code>r</code> there is the word <code>Setup</code> which is the name of the code chunk. Then there are the actual options for this &ldquo;Setup&rdquo; code chunk and then the R argument <code>opts_chunk$set</code> which actually sets the default chunk options for the rest of the code chunks, so you don&rsquo;t have to include those arguments later.</p>
-<h3 id="citations">
-  Citations
-  <a class="anchor" href="#citations">#</a>
-</h3>
-<p>Another key part of academic writing is including citations to other works that inform your research. To do this you will need to use a <code>.bib</code> file which is generated using a bibliographic software like 
-  <a href="https://www.zotero.org/">Zotero</a> or 
-  <a href="https://www.mendeley.com/">Mendeley</a>. I highly recommend using a <code>.bib</code> file because it saves a lot of time formatting and creating the proper list of cited references.</p>
-<p>To include citations in your <code>.Rmd</code> file you will need to specify where your <code>.bib</code> file is located by specifying its path in the YAML header at the top of the document. We have an example <code>.bib</code> file included in the directory that contains this source file called <code>plaintext.bib</code> with just a few sources in it. You then reference an item in that <code>.bib</code> file by writing an @ symbol followed by the &ldquo;citation key&rdquo; of the item you want to cite, like this <code>@durkheim_division_2008</code> which renders a citation like this Durkheim ([1893] 2008). All the citations that you use in your document will appear at the end of your paper, and including a <code># References</code> section at the bottom of your RMarkdown or Markdown document will add a section heading before the bibliography is printed.</p>
-<p>There are a variety of ways in which you can customize your bibliography so it matches the proper format of whatever journal you might be submitting to. That will require that you use something called a 
-  <a href="https://citationstyles.org/"><code>CSL</code></a> file, which can also be included in the YAML header at the top of your document. There are a lot of CSL files people have created for the various citation conventions, and there is probably one available for the journal you&rsquo;ll be submitting to. You can find some 
-  <a href="https://github.com/citation-style-language/styles">here</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">require</span>(knitr)
+</span></span><span style="display:flex;"><span>opts_chunk<span style="color:#f92672">$</span><span style="color:#a6e22e">set</span>(echo <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>,
+</span></span><span style="display:flex;"><span>               results <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hide&#34;</span>,
+</span></span><span style="display:flex;"><span>               message <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>,
+</span></span><span style="display:flex;"><span>               warning <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</span></span></code></pre></div><p>This &ldquo;Setup&rdquo; code chunk loads the R package that handles converting the document with <code>pandoc</code> and then the argument <code>opts_chunk$set</code> which actually sets the default chunk options for the rest of the code chunks, so you don&rsquo;t have to include those arguments later.</p>
 <h3 id="loading-data">
   Loading Data
   <a class="anchor" href="#loading-data">#</a>
@@ -520,6 +365,7 @@ The number of fraudulent or fabricated findings that make it into print is undet
 Much of this document, including this sentence, was written on the Brown Line between Harold Washington Library and Damen Ave.
 </blockquote>
 
+<p>A good convention to adopt is to have a single code chunk that has all your data calls, and performs any transformations that need to occur at the top of your document. That way there are not large code chunks cluttering the rest of the document as you write. I won&rsquo;t be abiding by that convention in this document but it is generally good practice. You should also load all the libraries you&rsquo;ll need and define any functions that might be used later in the document. Something like this works well:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggpubr)
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggrepel)
@@ -529,7 +375,7 @@ Much of this document, including this sentence, was written on the Brown Line be
 </span></span><span style="display:flex;"><span>cta_stations <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;~/Documents/plaintext/data/cta_stations.csv&#34;</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>cta_stations<span style="color:#f92672">$</span>north <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(cta_stations<span style="color:#f92672">$</span>north)
-</span></span><span style="display:flex;"><span>cta_stations<span style="color:#f92672">$</span>year  <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(cta_stations<span style="color:#f92672">$</span>year) 
+</span></span><span style="display:flex;"><span>cta_stations<span style="color:#f92672">$</span>year  <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(cta_stations<span style="color:#f92672">$</span>year)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Load CTA Ridership Data</span>
 </span></span><span style="display:flex;"><span>cta_rides <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;~/Documents/plaintext/data/cta_rides.csv&#34;</span>)
@@ -545,10 +391,9 @@ Much of this document, including this sentence, was written on the Brown Line be
   Anscombe&rsquo;s Quartet
   <a class="anchor" href="#anscombes-quartet">#</a>
 </h3>
-<p>We use visualization for a few different purposes: for one, we use visualizations to quickly make a point about our data. It just so happens that human being&rsquo;s dominant sense is vision, and a visualization is an excellent way of mapping numeric values to visual features that can be quickly processed by your reader. We also use visualizations to learn things about our data as we are analyzing it. And we can learn things from visualizations that you can&rsquo;t learn from basic summary statistics.</p>
-<p>A key thing that we use visualizations for is understanding what our data can acutally say, and where it actually <em>is</em>. Anscombe&rsquo;s Quartet powerfully demonstrates the need to actually visualize your data so that you know where it is.</p>
-<p>Francis Anscombe constructed 4 datasets, each of which are composed of eleven obervations of two variables, and across each of the datasets the variables have the same mean values, standard deviations, and correlation coefficients. Despite these nearly identical summary statistics, each of the datasets are composed of very different sets of data, that are only revealed by visualizing them.</p>
-<p>In the first there is a weak linear relationships between the two variables, while in the second the relationship is curvilinear. In the third the relationship is very linear with a single troubling outlier that might be driving a particularly strong correlation. And in the fourth, there seems to be something a little wrong with the data.</p>
+<p>We use visualization for a few different purposes: for one, we use visualizations to quickly make a point about our data. It just so happens that human being&rsquo;s dominant sense is vision, and a visualization is an excellent way of mapping numeric values to visual features that can be quickly processed by your reader. Another key thing that we use visualizations for is understanding what our data can actually say, and where it actually <em>is</em>. Anscombe&rsquo;s Quartet powerfully demonstrates the need to actually visualize your data so that you know where it is, and we can learn things from visualizations that you can&rsquo;t learn from basic summary statistics.</p>
+<p>Francis Anscombe constructed 4 datasets, each of which are composed of eleven observations of two variables, and across each of the datasets the variables have the same mean values, standard deviations, and correlation coefficients. Despite these nearly identical summary statistics, each of the datasets are composed of very different sets of data, that are only revealed by visualizing them.</p>
+<p>In the first there is a weak linear relationships between the two variables, while in the second the relationship is curvilinear. In the third the relationship is very linear with a single troubling outlier that might be driving a particularly strong correlation. And in the fourth, there seems to be something a little wrong with the data, like plotting a categorical variable on the x-axis that can only take on two values.</p>
 <div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Anscombe1-1.png" alt="Anscombe's Quartet" width="3600" />
 <p class="caption"><span id="fig:Anscombe1"></span>Figure 1: Anscombe's Quartet</p>
@@ -559,7 +404,7 @@ Much of this document, including this sentence, was written on the Brown Line be
 </h2>
 <p><code>ggplot</code> is a library in R that was designed on the basis of a book that was written in the 1990s called 
   <a href="https://www.google.com/books/edition/The_Grammar_of_Graphics/ZiwLCAAAQBAJ?hl=en"><em>The Grammar of Graphics</em></a>, thus the &ldquo;gg&rdquo; in <code>ggplot</code>. It is the standard library for figure creation in R and is what we are going to be using here. There are also other libraries that have adopted the <code>ggplot</code> conventions and applied them to other kinds of figures not covered in the original package like <code>ggtree</code> for phylogenetic plots, <code>ggnet</code> for network data, and <code>ggridges</code> for ridge plots.</p>
-<p>There is a <em>grammar</em> to <code>ggplot</code> that once you acquire will allow you to make all sorts of compelling and visually parsimonious plots. The basic setup is thus:</p>
+<p>There is a <em>grammar</em> to <code>ggplot</code> that once you acquire will allow you to make all sorts of compelling and visually parsimonious plots. The basic setups are thus:</p>
 <ol>
 <li>Call the <code>ggplot</code> function and feed it data in the <code>data</code> argument, where the &ldquo;data&rdquo; in the following example is a data frame with all the data you want to plot.</li>
 </ol>
@@ -572,12 +417,12 @@ Much of this document, including this sentence, was written on the Brown Line be
 <li>Call a <code>geom</code> which defines the kind of plot you want to make. For example a line plot is made with <code>geom_line</code>, a histogram with <code>geom_histogram</code>, a scatter plot with <code>geom_point</code>, and a bar plot with <code>geom_bar</code>. You &ldquo;add&rdquo; <code>geoms</code> to the base plot that you defined in step two using a literal addition symbol (+) at the end of the line where the base plot is defined.</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> dataframe, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Variable_X, y <span style="color:#f92672">=</span> Variable_Y)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_line</span>()
-</span></span></code></pre></div><p>That is the fundamental structure of any plot or figure you can make with <code>ggplot</code> and there is a lot more complexity to add using different <code>geoms</code> and aesthetic mappings that we will cover shortly. And we will start that by actually creating some plots to &ldquo;learn by doing&rdquo;.</p>
+</span></span></code></pre></div><p>That is the fundamental structure of any plot or figure you can make with <code>ggplot</code> and there is a lot more complexity to add using different <code>geoms</code> and aesthetic mappings that we will cover shortly. And we will start that by actually creating some plots to learn by doing.</p>
 <h3 id="distributions">
   Distributions
   <a class="anchor" href="#distributions">#</a>
 </h3>
-<p>When we start to look at our data with visualizations we often want to know the distribution of values that the data can take. We usually do this with histograms, to count the number of times a given value appears. We are going to use some data from the Chicago Transit Authority to demonstrate this. The CTA dataset has information about all the &ldquo;L&rdquo; Stations in Chicago and the number of &ldquo;daily entries&rdquo;, the number of times people swiped their metro cards to board the trains.</p>
+<p>When we start to look at our data by visualizing it we often want to know the distribution of values that the data takes. We usually do this with histograms, to count the number of times a given value appears. We are going to use some data from the Chicago Transit Authority to demonstrate this. The CTA dataset has information about all the &ldquo;L&rdquo; Stations in Chicago and the number of &ldquo;daily entries&rdquo;, the number of times people swiped their metro cards to board the trains.</p>
 <p>Here we will use the grammar we learned above to start building a plot, by calling <code>ggplot</code> telling it what data we want to use, and providing an aesthetic mapping for the X and Y axes and calling a <code>geom</code> to create the plot. In this case we are going to be using the <code>geom_histogram</code> function to create a histogram. Because a histogram only counts the values in a single variable at a time, when we tell <code>ggplot</code> an aesthetic mapping with the <code>aes</code> function we only give it an X axis variable.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> cta_rides, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> rides)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_histogram</span>()
 </span></span></code></pre></div><img src="/docs/book/chapter-6_files/figure-html/CTA-Histogram-1.png" width="3600" />
@@ -587,8 +432,14 @@ Much of this document, including this sentence, was written on the Brown Line be
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(text <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>))
 </span></span></code></pre></div><img src="/docs/book/chapter-6_files/figure-html/CTA-Hist-Integers-1.png" width="3600" />
 <p>We can change the colors of the bars and the size of the axis labels by specifying a few more arguments in <code>ggplot</code>  We can increase the text size with the <code>theme</code> function as well as adding color arguments to the <code>geom_histogram</code> function. The fill and color arguments refer to the inside color of the bars and the outline of them respectively. The alpha changes the opacity of the bars which also makes it a little nicer to look at.</p>
+<blockquote class="book-hint warning">
+  <strong>Themes</strong><br>
+The visualizations you see here might look slightly different than ones you make unless you provide an extra &ldquo;theme&rdquo; layer to your <code>ggplot</code>. Themes are ways of changing the visual properties of your plots; for instance the base theme for <code>ggplot</code> has a rather unattractive grey background. Overall I think that the &ldquo;minimal&rdquo; theme is superior and you can use it by adding <code>theme_minimal()</code> to your plot.
+</blockquote>
+
 <p>Another way of visualizing distributions is by using the <code>geom_density</code> function which uses a 
-  <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation">kernel density estimate</a> to produce a smooth curve over the observed frequencies of values in the dataset. When using it the Y axis is a little harder to interpret than in a histogram, where the Y axis is simply the count of the observed value, but it is typically smoother and helps you &ldquo;see&rdquo; the distribution better. It is, in part, a matter of taste.</p>
+  <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation">kernel density estimate</a> to produce a smooth curve over the observed frequencies of values in the dataset.</p>
+<p>Kernel Density Estimation: The kernel density plot is a way to estimate the probability density function of a continuous random variable. It smooths the data points to create a continuous curve. In a density plot, the total area under the curve is equal to 1 and the area under any segment of the curve represents the proportion of the data points that fall within that segment. Visualizing distributions this way helps you &ldquo;see&rdquo; the morphology of the data better.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> cta_rides, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> rides)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">geom_density</span>() <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(text <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>))
 </span></span></code></pre></div><img src="/docs/book/chapter-6_files/figure-html/CTA-Density-1.png" width="3600" />
@@ -596,23 +447,28 @@ Much of this document, including this sentence, was written on the Brown Line be
   Trends Over Time
   <a class="anchor" href="#trends-over-time">#</a>
 </h3>
-<p>One of the primary things we want to look at, particularly with longitudinal data, is what happens as time goes by. To demonstrate this we will be looking at ridership by station. Considering that there are more than 100 stations in the dataset so we are going to only look at the top 20 by mean annual ridership. One thing we are going to be looking at is how the pandemic influenced ridership, which as you might imagine, was quite dramatic. To do this we need to do some data transformation.</p>
-<p>First we need to find out which stations have the most ridership. To do this we take the dataframe which has a row for every station for every day there is data, and columns for the station name, date, and ridership, we extract the year from the date column, group by the station and the year in which the observation occurs, before calculating the mean and standard deviation for each.</p>
+<p>One of the primary things we want to look at, particularly with longitudinal data, is what happens as time goes by. To demonstrate this we will be looking at ridership by station. Considering that there are more than 100 stations in the dataset, we are going to only look at the top 20 stations by mean monthly ridership. One thing we are going to be looking at is how the pandemic influenced ridership, which as you might imagine, was quite dramatic. To do this we need to do some data transformation.</p>
+<p>First, we need to find out which stations have the most ridership. To do this we take the data frame, which has a row for every station for every day there is data, and columns for the station name, date, and ridership, and extract the year from the date column, group by the station and the year in which the observation occurs, before calculating the mean and standard deviation for each.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>summary_df <span style="color:#f92672">&lt;-</span> cta_rides <span style="color:#f92672">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(year <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_extract</span>(date, <span style="color:#e6db74">&#34;\\d{4}&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(stationname, year) <span style="color:#f92672">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(mean_annual <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span>(rides) <span style="color:#f92672">/</span> <span style="color:#ae81ff">12</span>,
 </span></span><span style="display:flex;"><span>            sd_annual <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(rides)) <span style="color:#f92672">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ungroup</span>()
-</span></span></code></pre></div><p>Now we grab the top 20 stations by the number of mean monthly ridership before subsetting the complete dataframe to a smaller one to visualize. We then calculate a rolling mean so it is easier to visualize, otherwise the data would look very chaotic.</p>
-<p>Now we are ready to visualize the daily rate of ridership across the top 20 stations by mean monthly ridership over time. We can do this with a simple line plot, using the <code>geom_line</code> function in <code>ggplot</code>.\marginnote{In R you can arbitrarily break up code across lines to keep it &ldquo;tidy&rdquo;. The style conventions in R is to keep lines under 80 characters long, that way when you view them in a text editor, they are completely visible without scrolling horizontally.} In this first plot we are going to be mapping the rate of organ donation (the column/variable <code>monthly_average</code>) to the Y axis and the year in which the observation occurred (<code>date</code>) to the X axis to show change in rates over time.</p>
+</span></span></code></pre></div><p>Now we grab the top 20 stations by the number of mean monthly riders before sub-setting the complete data frame to a smaller one to visualize. We then calculate a rolling mean so it is easier to visualize, otherwise the data would look very chaotic.</p>
+<blockquote class="book-hint info">
+  <strong>Helpful Hint</strong><br>
+In R you can arbitrarily break up code across lines to keep it &ldquo;tidy&rdquo;. The style conventions in R is to keep lines under 80 characters long, that way when you view them in a text editor, they are completely visible without scrolling horizontally.
+</blockquote>
+
+<p>Now we are ready to visualize the daily rate of ridership across the top 20 stations by mean monthly ridership over time. We can do this with a simple line plot, using the <code>geom_line</code> function in <code>ggplot</code>. In this first plot we are going to be mapping the rate of ridership (the column/variable <code>monthly_average</code>) to the Y axis and the day in which the observation occurred (<code>date</code>) to the X axis to show change in rates over time.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average)) <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_line</span>()
 </span></span></code></pre></div><div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Line-Plot-1.png" alt="Something seems amiss here." width="3600" />
 <p class="caption"><span id="fig:Line-Plot"></span>Figure 2: Something seems amiss here.</p>
 </div>
-<p>This is not as informative as we would have liked it to be because we are looking at daily ridership for 20 stations and all their value&rsquo;s are getting mapped onto the same points, making the plot uninterpretable. What we need to do is use another aesthetic mapping to tell <code>ggplot</code> to group some of the rows of the data frame and plot them across the X axis as single lines. We can do this by adding the <code>group</code> argument to the <code>aes</code> function inside the call to <code>ggplot</code></p>
+<p>This is not as informative as we would have liked it to be because we are looking at daily ridership for 20 stations and all their value&rsquo;s are getting mapped onto the same points, making the plot uninterpretable. What we need to do is use another aesthetic mapping to tell <code>ggplot</code> to group the rows of the data frame and plot them across the X axis as single lines. We can do this by adding the <code>group</code> argument to the <code>aes</code> function inside the call to <code>ggplot</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats,
 </span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average, group <span style="color:#f92672">=</span> stationname)) <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_line</span>()
@@ -620,7 +476,7 @@ Much of this document, including this sentence, was written on the Brown Line be
 <img src="/docs/book/chapter-6_files/figure-html/Grouped-Lines-1.png" alt="This looks better but still needs work" width="3600" />
 <p class="caption"><span id="fig:Grouped-Lines"></span>Figure 3: This looks better but still needs work</p>
 </div>
-<p>This figure is much better because it actually shows the different stations&rsquo; change in rate of ridership over time. As you can see, in early 2020 there was a precipitous decline in ridership across the 20 different stations we are looking at but the lines aren&rsquo;t labeled in any way so we don&rsquo;t know which stations are at which line. To do this we can use a the color aesthetic mapping to label the lines</p>
+<p>This figure is much better because it actually shows the stations&rsquo; change in rate of ridership over time. As you can see, in early 2020 there was a precipitous decline in ridership across the 20 stations we are looking at but the lines aren&rsquo;t labeled in any way so we don&rsquo;t know which stations are at which line. To do this we can use a the color aesthetic mapping to label the lines</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats,
 </span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average,
 </span></span><span style="display:flex;"><span>           group <span style="color:#f92672">=</span> stationname, color <span style="color:#f92672">=</span> stationname)) <span style="color:#f92672">+</span>
@@ -629,7 +485,7 @@ Much of this document, including this sentence, was written on the Brown Line be
 <img src="/docs/book/chapter-6_files/figure-html/Labeled-Lines-1.png" alt="Now we can see who is who and what is what. Sort of." width="3600" />
 <p class="caption"><span id="fig:Labeled-Lines"></span>Figure 4: Now we can see who is who and what is what. Sort of.</p>
 </div>
-Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. It is pretty clear that Spain is not behaving like the other countries in the dataset and that there looks like there is two other distinct groups of countries, with the United States in one and Sweden in another. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle. And again we increase the text size for legiibility.
+Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle. And again we increase the text size for legibility.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats,
 </span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average,
 </span></span><span style="display:flex;"><span>           group <span style="color:#f92672">=</span> stationname, color <span style="color:#f92672">=</span> stationname)) <span style="color:#f92672">+</span>
@@ -638,12 +494,17 @@ Now we can see what is going on a little bit better but interpreting the plot is
 </span></span><span style="display:flex;"><span>       x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
 </span></span><span style="display:flex;"><span>       title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Daily CTA Ridership Over Time&#34;</span>,
 </span></span><span style="display:flex;"><span>       color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Station&#34;</span>) <span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(text <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(text <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>))
 </span></span></code></pre></div><div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Labeled-Plot-1.png" alt="Properly labeled axes and a title help to make the figure more interpretable immediately to the reader" width="3600" />
 <p class="caption"><span id="fig:Labeled-Plot"></span>Figure 5: Properly labeled axes and a title help to make the figure more interpretable immediately to the reader</p>
 </div>
-<p>That looks more like a real plot but we might want to actually take a look at the individual countries to see what is going on in each of them and see if there are any particulalry surprising changes over time. As the figure stands above, that is somewhat obscured. We could do that by breaking up the data using filters and creating one plot per country but that is tedious. Luckily, <code>ggplot</code> has another function that allows you to created a <em>paneled</em> figure, so that a single plot is made for each country. We do this by using the <code>facet_wrap</code> function.\footnote{NOTE: There is a tilde before the variable we are grouping the data by for the panelling. That essentially tells the function to &ldquo;group by&rdquo; that variable and plot the X and Y axis.}</p>
+<p>That looks more like a real plot but we might want to actually take a look at the individual stations to see what is going on in each of them and see if there are any particularly surprising changes over time. As the figure stands above, that is somewhat obscured. We could do that by breaking up the data using filters and create one plot per station but that is tedious. Luckily, <code>ggplot</code> has another function that allows you to create a <em>paneled</em> figure, so that a single plot is made for each station. We do this by using the <code>facet_wrap</code> function.</p>
+<blockquote class="book-hint warning">
+  <strong><code>facet_wrap</code></strong><br>
+There is a tilde before the variable we are grouping the data by for the panelling. That essentially tells the function to &ldquo;group by&rdquo; that variable and plot the X and Y axis.
+</blockquote>
+
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average)) <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_line</span>() <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_wrap</span>(<span style="color:#f92672">~</span>stationname) <span style="color:#f92672">+</span>
@@ -652,27 +513,27 @@ Now we can see what is going on a little bit better but interpreting the plot is
 </span></span><span style="display:flex;"><span>       title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Daily CTA Ridership Over Time&#34;</span>) <span style="color:#f92672">+</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>))
 </span></span></code></pre></div><img src="/docs/book/chapter-6_files/figure-html/Panel-Plot-1.png" width="3600" />
-Now that helps to see hwo organ donation rates vary over time by country with a share range of X and Y values so each individual plot is comparable. What more, each plot is labeled with the country it is displaying so each is clearly identifiable.
+Now that helps to see how ridership rates vary over time for each station with a shared range of X and Y values so each individual plot is comparable. What more, each plot is labeled with the station it is displaying so each is clearly identifiable.
 <h3 id="variation-by-group">
   Variation by Group
   <a class="anchor" href="#variation-by-group">#</a>
 </h3>
-<p>Another thing we will want to check out is the variation in the focal variable, the rate of organ donation in each country, by some categorical difference in those countries. One that immediately comes to mind is whether organ donation programs are something citizens opt in to or out of. My own informal hypothesis would be that there would be higher rates of organ donation in countries that include everyone in organ donation and require that they opt out rather than voluntarily opt in. To do this we would want to check out the mean and variation of organ donation across that category. We can use a &ldquo;box and whisker plot&rdquo; to plot this. This kind of plot displays a few important statistics: the median, lower and upper quartile (the box), and the minimum and maximum (the whiskers). The <code>ggplot</code> does something slightly different in that it shows outliers as individual points so it isn&rsquo;t strictly speaking using the minimum and maximum to the whiskers. We use the <code>geom_boxplot</code> function to do this after specifying the categorical variable in the X axis to plot the two groups and the same Y axis mapping as the plots above.</p>
+<p>Another thing we will want to check out is the variation in the focal variable, the rate riders for each station by some categorical difference in those stations. One that immediately comes to mind is whether the station is located on Chicago&rsquo;s North or Southsides. To do this we will want to check out the mean and variation of riders per station between stations on the north and south side. We can use a &ldquo;box and whisker plot&rdquo; to plot this. This kind of plot displays a few important statistics: the median, lower and upper quartile (the box), and the minimum and maximum (the whiskers). The <code>ggplot</code> does something slightly different in that it shows outliers as individual points so it isn&rsquo;t strictly speaking using the minimum and maximum to the whiskers. We use the <code>geom_boxplot</code> function to do this after specifying the categorical variable in the X axis to plot the two groups and the same Y axis mapping as the plots above.</p>
 <div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Boxplot-1.png" alt="There does seem to be a difference but the relationship is obscured." width="3600" />
 <p class="caption"><span id="fig:Boxplot"></span>Figure 6: There does seem to be a difference but the relationship is obscured.</p>
 </div>
-<p>A few things should jump out to you: there does seem to be a difference between the two focal categories (opting in v. opting out) but the amount of variance in the two is different. What more there is a third inexplicable category. Apparently not every country has data on whether they have an opt in or out policy and so there is missing data. It is also important to note that we are pooling all the data across all the years observations occurred. Whether or not that is a defensible visualization strategy will be a matter of debate.</p>
-<p>A principle that we are going to cover is that making a good figure helps you visualize where your data <em>is</em>. The box and whisker plot obscures where each data point actually is. So let&rsquo;s do two things: drop the missing data, and use a different geom that is going to let us see where each data point is. To do that we use a function that drops missing data (<code>na.omit()</code>) and a different <code>geom</code>. This time we use <code>geom_scatter</code> to make a scatter plot.</p>
-<p>A scatter plot lets you see every data point but the categorical variable makes all the data points line up and we can&rsquo;t see where every data point is. Considering that the X axis is a categorical (really a nominal) level variable and the specific position along that axis is not really meaningful we can &ldquo;jitter&rdquo; the points to let us see where they are along the Y axis. This is another geom that we can add to the plot which will randomly scramble the position along the X axis between a specific range.</p>
-<img src="/docs/book/chapter-6_files/figure-html/unnamed-chunk-5-1.png" width="3600" />
+<p>A few things should jump out to you: there does seem to be a difference between the two focal categories (North and Southside stations) but the amount of variance in the two is different. It is also important to note that we are pooling all the data across all the years observations occurred. Whether or not that is a defensible visualization strategy will be a matter of debate.</p>
+<p>A principle that we are going to cover is that making a good figure helps you visualize where your data <em>is</em>. The box and whisker plot obscures where each data point actually is. So let&rsquo;s use a different geom that is going to let us see where each data point is. To do that we use a different <code>geom</code>, <code>geom_scatter</code>, to make a scatter plot.</p>
+<p>A scatter plot lets you see every data point but the categorical variable makes all the data points line up and we can&rsquo;t see where every data point is. Considering that the X axis is a nominal variable and the specific position along that axis is not really meaningful we can &ldquo;jitter&rdquo; the points to let us see where they are along the Y axis. This is another <code>geom</code> that we can add to the plot which will randomly scramble the position along the X axis between a specific range.</p>
+<img src="/docs/book/chapter-6_files/figure-html/unnamed-chunk-4-1.png" width="3600" />
 <p>This looks much better and we can see some interesting things between the two countries. There does seem to be a difference between the two groups: the countries that require citizens to opt in to organ donation do tend to have a lower rate than those that require citizens to opt out, and they are much more concentrated around what is probably the mean. <em>But</em>, there are only a few observations below the probable mean of the Opt In group. These are what could be driving down the mean value and the difference between the groups.\footnote{I know that I am playing fast and loose here with the comparisons and that a conscientious social scientist, like you, would do a few tests before this visualization and after to interrogate the differences. But we are learning about figure creation so we want to make figures.}</p>
 <p>There is another variable in the dataset that we can use to help interrogate the differences between these two groups. The dataset includes a variable (<code>world</code>) that captures a typology outlined by Esping-Andersen in <em>The Three Worlds of Welfare Capitalism</em> which identifies three types of welfare state regimes by which advanced capitalist democracies can be categorized. These include: liberal, conservative, and social democratic. I&rsquo;m not very familiar with what these specifically mean but we can add this to our plot to learn another feature of figure design. We can color the individual points by which category they fall in to. To do this we add another argument, <code>color</code>, to the aesthetic function in the call to <code>ggplot</code>.</p>
 <div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Jittered-Scatter-Colors-1.png" alt="There are notable differences in terms of the two groups and the different categories of welfare state regimes." width="3600" />
 <p class="caption"><span id="fig:Jittered-Scatter-Colors"></span>Figure 7: There are notable differences in terms of the two groups and the different categories of welfare state regimes.</p>
 </div>
-<p>There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let&rsquo;s clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, legend title and change the plots <em>theme</em>. The theme styles the general appearance of the plot, and in this case we are going to change the plot background from the standard <code>ggplot</code> grey to a clean white.</p>
+<p>There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let&rsquo;s clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, and legend title.</p>
 <img src="/docs/book/chapter-6_files/figure-html/My Label-1.png" width="\textwidth" />
 <h2 id="comments-for-code">
   Comments for Code
@@ -718,7 +579,7 @@ Now that helps to see hwo organ donation rates vary over time by country with a 
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/225e17e9306684445ebfc8b99ec1852381ed57af" title='Last modified by TimothyElder | December 16, 2023' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/1d637749347dbd2bf17319cfc7a43e8cf1709a09" title='Last modified by TimothyElder | December 16, 2023' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>December 16, 2023</span>
     </a>

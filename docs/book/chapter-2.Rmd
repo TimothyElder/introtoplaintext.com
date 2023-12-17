@@ -39,6 +39,11 @@ Table: Equivalent commands for the terminal in Windows and macOS.
 
 ## A Short Tutorial
 
+{{< hint warning >}}
+**Windows Users**  
+This tutorial includes some instruction on using the command line text editor `vim`. Windows doesn't have `vim` preinstalled so to follow along you'll have to install it yourself. Instructions for doing so are available in the [Helper](../helpers/vim) section of this site.
+{{< /hint >}}
+
 When working in the terminal you will be dealing with *Files* and *Directories*. A directory is what is usually called a "folder", a container for files. A file is the basic unit for holding data in your computer. A file is the thing that you typically open with your cursor (like a text file, Word document or an image file) by double clicking on it. We will be dealing with programs on the terminal but not in the way you are familiar. We will get there eventually, but just remember files go in directories and directories can themselves have sub-directories with files in them. This is the hierarchical folder structure that is ubiquitous in computing.
 
 With the terminal open go ahead and type in `ls` and hit `Enter`. In macOS you should see something like this print out:

@@ -17,7 +17,7 @@
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d8b1ce1fba5c81cfa1ebf1e69c1c3db5d3075d070d58202e69424dce2097a041.js" integrity="sha256-2LHOH7pcgc&#43;h6/HmnBw9tdMHXQcNWCAuaUJNziCXoEE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a4cb4677d8c12f5916d64ef38a810b10df8e44264c3d4d7cdd73e0882feb4f03.js" integrity="sha256-pMtGd9jBL1kW1k7zioELEN&#43;ORCZMPU183XPgiC/rTwM=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
 
@@ -217,157 +217,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/helpers/buttons/" class="">Buttons</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/columns/" class="">Columns</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/details/" class="">Details</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/expand/" class="">Expand</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/hints/" class="">Hints</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/katex/" class="">Katex</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/mermaid/" class="">Mermaid</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-045f52e557d420dc6b88906503e07a22" class="toggle"  />
-    <label for="section-045f52e557d420dc6b88906503e07a22" class="flex justify-between">
-      <a href="/docs/helpers/section/" class="">Section</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/section/first-page/" class="">First Page</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/section/second-page/" class="">Second Page</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/helpers/tabs/" class="">Tabs</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/docs/helpers/vim/" class="">Vim</a>
   
 
@@ -467,6 +316,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#figures">Figures</a></li>
             <li><a href="#tables">Tables</a></li>
             <li><a href="#math">Math</a></li>
+            <li><a href="#citations">Citations</a></li>
           </ul>
         </li>
         <li><a href="#make">Make</a></li>
@@ -712,7 +562,18 @@ https://github.com/alex-shpak/hugo-book
  using single dollar signs in line with the rest of your text, like:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span>When <span style="color:#e6db74">$</span>a \ne <span style="color:#ae81ff">0</span><span style="color:#e6db74">$</span>, there are two solutions to <span style="color:#e6db74">$</span><span style="color:#f92672">(</span>ax^<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> bx <span style="color:#f92672">+</span> c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span> and
 </span></span><span style="display:flex;"><span>they are <span style="color:#e6db74">$</span>x <span style="color:#f92672">=</span> {<span style="color:#f92672">-</span>b \pm \sqrt{b^<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>ac} \over <span style="color:#ae81ff">2</span>a}<span style="color:#e6db74">$</span>.
-</span></span></code></pre></div><h2 id="make">
+</span></span></code></pre></div><h3 id="citations">
+  Citations
+  <a class="anchor" href="#citations">#</a>
+</h3>
+<p>Another key part of academic writing is including citations to other works that inform your research. To do this you will need to use a <code>.bib</code> file which is generated using a bibliographic software like 
+  <a href="https://www.zotero.org/">Zotero</a> or 
+  <a href="https://www.mendeley.com/">Mendeley</a>. I highly recommend using a <code>.bib</code> file because it saves a lot of time formatting and creating the proper list of cited references.</p>
+<p>To include citations in your <code>.Rmd</code> file you will need to specify where your <code>.bib</code> file is located by specifying its path in the YAML header at the top of the document. We have an example <code>.bib</code> file included in the directory that contains this source file called <code>plaintext.bib</code> with just a few sources in it. You then reference an item in that <code>.bib</code> file by writing an @ symbol followed by the &ldquo;citation key&rdquo; of the item you want to cite, like this <code>@durkheim_division_2008</code> which renders a citation like this Durkheim ([1893] 2008). All the citations that you use in your document will appear at the end of your paper, and including a <code># References</code> section at the bottom of your RMarkdown or Markdown document will add a section heading before the bibliography is printed.</p>
+<p>There are a variety of ways in which you can customize your bibliography so it matches the proper format of whatever journal you might be submitting to. That will require that you use something called a 
+  <a href="https://citationstyles.org/"><code>CSL</code></a> file, which can also be included in the YAML header at the top of your document. There are a lot of CSL files people have created for the various citation conventions, and there is probably one available for the journal you&rsquo;ll be submitting to. You can find some 
+  <a href="https://github.com/citation-style-language/styles">here</a>.</p>
+<h2 id="make">
   Make
   <a class="anchor" href="#make">#</a>
 </h2>
@@ -823,6 +684,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#figures">Figures</a></li>
             <li><a href="#tables">Tables</a></li>
             <li><a href="#math">Math</a></li>
+            <li><a href="#citations">Citations</a></li>
           </ul>
         </li>
         <li><a href="#make">Make</a></li>
