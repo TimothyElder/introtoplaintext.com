@@ -91,5 +91,17 @@ Example # {{&amp;lt;/* mermaid [class=&amp;#34;text-center&amp;#34;]*/&amp;gt;}}
 Lorem markdownum insigne. Olympo signis Delphis!</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/shortcodes/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/shortcodes/vim/</guid>
+      <description>Installing vim on Windows # vim is a command line based text editor that we are going to be using for doing quick edits to files. Unfortunately, Windows does not come with it pre-installed like it is on macOS and Linux so Windows users should do the following steps to make sure you can use vim during our first session.
+Download the following installer.
+Open the downloaded file.
+Accept the User Agreement.</description>
+    </item>
+    
   </channel>
 </rss>

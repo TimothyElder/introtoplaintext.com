@@ -1,18 +1,21 @@
 ---
-title: Conclusion
+title: A Larger World
 weight: 8
-bibliography: ["/Users/timothyelder/Documents/bibs/plaintext.bib"]
+bookToc: false
 ---
+
+```{r setup, include=FALSE}
+source('../../../setup.R') 
+```
 
 # A Larger World {#sec:conclusion}
 
-There is more to learn about plaintext, and this book justs gets you started but hopefully it has given you a substantial command over the most important tools for adopting plain text software for your research and writing. It is as good a moment as any to reiterate that plaintext isn't for everyone; it presents complications to your work that some find to be excessive. Fiddling with the settings of your computer or installing esoteric software and establishing the appropriate workflow for working with these tools can seem to some scholars like a bridge too far, and so they settle for using Word and Google Docs, endlessly copying and pasting figures and tables into their documents and remembering the citation conventions in their fields. That is all well and good but learning plaintext for authoring papers is only the beginning of what we can use plaintext tools for in communicating our scientific findings. This larger world of plaintext tools is vast but I think there are a few next places you should visit.
+There is more to learn about plain text, and this book just gets you started but hopefully it has given you a substantial command over the most important tools for adopting plain text software for your research and writing. It is as good a moment as any to reiterate that plain text isn't for everyone; it presents complications to your work that some find to be excessive. Fiddling with the settings of your computer or installing esoteric software and establishing the appropriate workflow for working with these tools can seem to some scholars like a bridge too far, and so they settle for using Word and Google Docs, endlessly copying and pasting figures and tables into their documents and remembering the citation conventions in their fields. That is all well and good but learning plain text for authoring papers is only the beginning of what we can use plain text tools for in communicating our scientific findings. This larger world of plaintext tools is vast but I think there are a few next places you should visit.
 
-Now that you have an understanding of the conventions of markup languages including LaTeX, markdown and Rmarkdown, you can take advantage of these to author your own websites. [Hugo](https://gohugo.io/) is a static site generator that allows you to use markdown files to create websites without having an extensive understanding of HTML. Hugo offers customizable templates that have beeen created for a variety of purposes, that are both beautiful and simple to use. You can even go one step further and use Rmarkdown and the [`blogdown`](https://github.com/rstudio/blogdown) package to use dynamic documents to create websites. This will be particularly helpful when authoring documentation for packages you write or for providing resources for reproducing your work to a wide audience. I have used both extensively to create a number of websites including my personal site, [timothyelder.com](https://timothyelder.com) as well as a site for this book, [introtoplaintext.com](https://introtoplaintext.com). Using Hugo you can [host your website on GitHub](https://pages.github.com/) using a custom domain purchased from domain registrars like GoDaddy, Squarespace, or DreamHost.
+Now that you have an understanding of the conventions of markup languages including LaTeX, markdown and Rmarkdown, you can take advantage of these to author your own websites. [Hugo](https://gohugo.io/) is a static site generator that allows you to use markdown files to create websites without having an extensive understanding of HTML. Hugo offers customizable templates that have been created for a variety of purposes, that are both beautiful and simple to use. You can even go one step further and use Rmarkdown and the [`blogdown`](https://github.com/rstudio/blogdown) package to use dynamic documents to create websites. This will be particularly helpful when authoring documentation for packages you write or for providing resources for reproducing your work to a wide audience. I have used both extensively to create a number of websites including my personal site, [timothyelder.com](https://timothyelder.com) as well as a site for this book, [introtoplaintext.com](https://introtoplaintext.com). Using Hugo you can [host your website on GitHub](https://pages.github.com/) using a custom domain purchased from domain registrars like GoDaddy, Squarespace, or DreamHost.
 
 Using plain text tools you can pursue a variety of different avenues to further communicate your work to a wide audience. You can author books and technical documents using RMarkdown and the bookdown package, create websites with Hugo and blogdown, or integrate code into your slides using sweave.
 
 <div style="text-align: left;">
 {{< button relref="chapter-7" >}}Next{{< /button >}}
 </div>
-

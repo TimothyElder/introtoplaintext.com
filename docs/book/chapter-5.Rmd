@@ -56,9 +56,11 @@ Hello World!
 \end{document}
 ```
 
-The `\title`, `\date` and `\author` commands are components of the `\maketitle` command that you can invoke after you begin the document to create a well formatted title block for your document. The above code renders a document that looks like Figure @fig:hello-world-tex.
+The `\title`, `\date` and `\author` commands are components of the `\maketitle` command that you can invoke after you begin the document to create a well formatted title block for your document. The above code renders a document that looks like Figure \@ref(fig:hello-world-tex).
 
-![A document made with LaTeX](/Users/timothyelder/Documents/plaintext_workshop/figures/hello-world-tex.png){#fig:hello-world-tex}
+```{r hello-world-tex, fig.cap='A document made with LaTeX.'}
+knitr::include_graphics("/images/hello-world-tex.png", error = FALSE)
+```
 
 As mentioned above, the body of the document (here it is just "Hello World!") can be as long as you want and encompass all sorts of different things that are particularly helpful to social scientists who write documents that use data to make an argument. For example, and we will cover all of these shortly, you can include tables, figures, citations, theorems, proofs, equations, diagrams, code blocks, and any number of other information that you want typeset in a beautiful way.
 
@@ -118,15 +120,19 @@ pandoc my_doc.md -o my_doc.pdf --from=Markdown --template=/Users/timothyelder/.p
 
 That is the command for rendering the document your are looking at right now. It does the same thing that we saw above, specifying an input file and then an output file, but it includes all sorts of extra flags that indicate how to handle different attributes of your document and the proper formatting for the output. The `--from=` flag makes it perfectly explicit to the software what the input format is (in this case it is Markdown), while the `--template=` flag tells the software where to look and which template to use when rendering the output. The final two flags (`--listings` and `--filter pandoc-xnos`) indicate the style for code blocks (those shaded areas that display computer code throughout this document) and how to cross reference different parts of the document respectively.
 
-It is important to get clear on what is actually going on when we use the `pandoc` command to create a PDF. What we are doing can be seen in Figure {@fig:md2tex2pdf}
+It is important to get clear on what is actually going on when we use the `pandoc` command to create a PDF. What we are doing can be seen in Figure \@ref(fig:md2tex2pdf).
 
-![Writing in Markdown and typesetting into a pdf with a tex intermediate step.](/Users/timothyelder/Documents/plaintext_workshop/figures/md2tex2pdf.png){#fig:md2tex2pdf}
+```{r md2tex2pdf, fig.cap='Writing in Markdown and typesetting into a pdf with a tex intermediate step.'}
+knitr::include_graphics("/images/md2tex2pdf.png", error = FALSE)
+```
 
-We write our files using the conventions of the Markdown format (indicated by the `.md` file extension) and then use `pandoc` to typeset these into a PDF. `pandoc` is not a typesetting software itself *per se* but relies upon LaTeX to typeset into PDF. When you invoke `pandoc` to create a PDF, `pandoc` performs a quiet intermediate step where it creates a LaTeX copy of the Markdown document (the `.tex` file in Figure {@fig:md2tex2pdf}) and typesets that into a PDF by invoking the LaTeX program. `pandoc` is super smart, and understands how to translate the conventions of one markup language into another, and that is how we are able to write in Markdown (with all its simplicity and speed) while still taking advantage of all the power of LaTeX.
+We write our files using the conventions of the Markdown format (indicated by the `.md` file extension) and then use `pandoc` to typeset these into a PDF. `pandoc` is not a typesetting software itself *per se* but relies upon LaTeX to typeset into PDF. When you invoke `pandoc` to create a PDF, `pandoc` performs a quiet intermediate step where it creates a LaTeX copy of the Markdown document (the `.tex` file in Figure \@ref(fig:md2tex2pdf)) and typesets that into a PDF by invoking the LaTeX program. `pandoc` is super smart, and understands how to translate the conventions of one markup language into another, and that is how we are able to write in Markdown (with all its simplicity and speed) while still taking advantage of all the power of LaTeX.
 
-We are able to add a few bells and whistles to `pandoc` to define the specific formatting of the document. We do this partly by manipulating the characters and conventions in our document directly, but also outside our document, by invoking templates and style files that you can install. This can be seen in Figure {@fig:md2temp2tex2sty2pdf}.
+We are able to add a few bells and whistles to `pandoc` to define the specific formatting of the document. We do this partly by manipulating the characters and conventions in our document directly, but also outside our document, by invoking templates and style files that you can install. This can be seen in Figure \@ref(fig:md2temp2tex2sty2pdf).
 
-![There are a few extra little dependencies.](/Users/timothyelder/Documents/plaintext_workshop/figures/md2temp2tex2sty2pdf.png){#fig:md2temp2tex2sty2pdf}
+```{r md2temp2tex2sty2pdf, fig.cap='There are a few extra little dependencies.'}
+knitr::include_graphics("/images/md2temp2tex2sty2pdf.png", error = FALSE) 
+```
 
 ## Document Composition with Markdown
 
@@ -164,7 +170,9 @@ A figure or image in a Markdown file can be included with the following notation
 The image will render on the page around where you insert the line but you will not have exact control over it unless you go edit the intermediate `.tex` file. In our templates we specify some options that help images render in an attractive way and LaTeX uses an algorithm for image placements when not manually placed. Instead of manually numbering figures and referencing them in the body of your paper, you assign them a label, which follows the call to the image, wrapped in curly brackets with the \@fig: prefix. Rather than having to keep track of how your figures are numbered, when you want to reference the figure in the body of your paper, you do so like this:
 
 ```Markdown
-Here I am explaining the really impressive figure that I made that is going to definitively demonstrate some strong association between two variables. This can be seen in Figure @fig:example-crossref-label.
+Here I am explaining the really impressive figure that I made that is going to
+definitively demonstrate some strong association between two variables. This
+can be seen in Figure @fig:example-crossref-label.
 ```
 This means of cross-referencing figures is really convenient especially when you decide to reorder your paper, and suddenly figure #5 is where figure #1 was and all the labels would have to be manually changed if you were using something like Word. **NOTE**: Whenever using `pandoc-xnos`, include it with `--filter pandoc-xnos` as a flag for the `pandoc` command in.
 
@@ -185,8 +193,6 @@ starwars %>%
   kable_styling(position = "center")
 
 ```
-
-
 
 This table is created with the following code:
 

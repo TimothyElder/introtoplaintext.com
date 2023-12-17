@@ -14,7 +14,7 @@ Switching to a plain text workflow requires that you adjust the way you interact
 Using the terminal has some distinct advantages over navigating through the file explorer that comes with your operating system and will help to get you familiar with how to control the software we will be working with. For one, the terminal is actually quite easy to use and straight forward after learning just a few basic principles. Further, navigating your computer with the terminal helps to instruct you in the file structure upon which the programs you interact with relies. Understand this file structure will then help you to both organize your project and typeset documents. Here I will provide a quick tutorial on how to use the terminal with some of the most basic and essential commands.
 
 ```{r terminal, fig.cap='The Terminal in macOS'}
-knitr::include_graphics("/images/terminal.png", error = F)
+knitr::include_graphics("/images/terminal.png", error = FALSE)
 ```
 
 Windows and macOS use different kinds of terminals, and even in macOS there are slightly different versions of the same terminal. This means that you will have to learn commands for your operating system. Also, they are called slightly different things. On Windows it is called "Command Prompt" and there is a specific program called PowerShell. Don't use PowerShell, use Command Prompt, sometimes referred to as CMD which can be found in the "Accessories" part of the Start Menu. On macOS you will find the terminal under "Other" in your Launchpad. Once you have found it and launched it, you'll have something on your screen that looks like Figure  \@ref(fig:terminal). Here is a table with commands across operating systems:
@@ -35,7 +35,7 @@ Windows and macOS use different kinds of terminals, and even in macOS there are 
 | `move myFile <path to destination directory>`       | Move a file                               | `mv myFile <path to destination directory>`      |
 | `cls`                                               | Clear the terminal screen                 | `clear`                                          |
 
-Table: Equivalent commands for the terminal in Windows and macOS. {#tbl:terminal-commands}
+Table: Equivalent commands for the terminal in Windows and macOS.
 
 ## A Short Tutorial
 
@@ -109,14 +109,14 @@ When using the terminal if you ever need help with a command you can look up wha
 
 {{< hint info >}}
 **Windows Users**  
- Use `help` instead of `man`.
+Use `help` instead of `man`
 {{< /hint >}}
 
 Also, for the `cd` command, you can navigate into the parent directory of your working directory by typing in `cd ..`. For example, above we created a sub-directory called `plaintext` in our `Documents` directory with two files in it. If you were in the `plaintext` directory and typed `cd ..` that would take you one level up to the `Documents` directory. Doing the `cd ..` command one more time takes you up another level into your home directory where we started out.
 
 {{< hint danger >}}
-**Deletion Warning**  
-When you delete things on the terminal, be certain you won't ever need them again.
+**Warning**  
+When you delete things on the terminal, be certain you won’t ever need them again.
 {{< /hint >}}
 
 Lastly, the terminal is intimidating but hopefully some of its mystery has been resolved now that you can navigate around it, list files out and make them all from the terminal. *But*, the terminal was made by computer scientists and engineers who were very technically capable and knew what they were doing, so when they typed in a command they knew what it meant and what it would do. Sometimes we can get ourselves into trouble on the terminal because we are not computer scientists and engineers and we don't always know what we are doing. For example, the `rm` and `del` commands (in macOS and Windows respectively) delete files, and when you run them they don't ask you to confirm that you really want to delete the file `only_copy_of_my_thesis_do_not_delete_no_backups.tex` and it doesn't go to the Trash folder for you to restore it later. It just gets [deleted](https://www.reddit.com/r/funny/comments/8ell2r/college_student_has_a_mental_breakdown_after/). So use caution on the terminal but for the most part you can't get into too much trouble.

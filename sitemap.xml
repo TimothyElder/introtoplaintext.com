@@ -3,16 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://introtoplaintext.com/docs/book/chapter-1/</loc>
+    <lastmod>2023-12-16T11:21:53-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-2/</loc>
+    <lastmod>2023-12-16T16:52:32-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-3/</loc>
+    <lastmod>2023-12-16T16:52:32-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-4/</loc>
+    <lastmod>2023-12-16T16:52:32-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-5/</loc>
+    <lastmod>2023-12-16T17:41:59-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-6/</loc>
+    <lastmod>2023-12-16T17:41:59-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/chapter-7/</loc>
   </url><url>
@@ -28,44 +34,36 @@
     <lastmod>2023-12-14T13:36:20-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/</loc>
+    <lastmod>2023-12-16T11:21:53-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/docs/book/hidden/</loc>
+    <lastmod>2023-12-16T11:21:53-06:00</lastmod>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/buttons/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/buttons/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/columns/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/columns/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/details/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/details/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/expand/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/expand/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/hints/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/hints/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/katex/</loc>
-    <lastmod>2023-12-14T19:31:34-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/katex/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/mermaid/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/mermaid/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/section/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/section/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/section/first-page/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/section/first-page/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/section/second-page/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/section/second-page/</loc>
   </url><url>
-    <loc>https://introtoplaintext.com/docs/shortcodes/tabs/</loc>
-    <lastmod>2023-12-05T22:41:33-06:00</lastmod>
+    <loc>https://introtoplaintext.com/docs/helpers/tabs/</loc>
+  </url><url>
+    <loc>https://introtoplaintext.com/docs/helpers/vim/</loc>
   </url><url>
     <loc>https://introtoplaintext.com/posts/</loc>
     <lastmod>2023-12-05T22:41:33-06:00</lastmod>
@@ -73,10 +71,10 @@
     <loc>https://introtoplaintext.com/categories/</loc>
   </url><url>
     <loc>https://introtoplaintext.com/docs/</loc>
-    <lastmod>2023-12-14T19:31:34-06:00</lastmod>
+    <lastmod>2023-12-16T17:41:59-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/</loc>
-    <lastmod>2023-12-14T19:31:34-06:00</lastmod>
+    <lastmod>2023-12-16T11:21:53-06:00</lastmod>
   </url><url>
     <loc>https://introtoplaintext.com/tags/</loc>
   </url>

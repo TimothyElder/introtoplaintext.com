@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Installing vim on Windows # vim is a command line based text editor that we are going to be using for doing quick edits to files. Unfortunately, Windows does not come with it pre-installed like it is on macOS and Linux so Windows users should do the following steps to make sure you can use vim during our first session.
+Download the following installer.
+Open the downloaded file.
+Accept the User Agreement.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Installing vim on Windows # vim is a command line based text editor that we are going to be using for doing quick edits to files. Unfortunately, Windows does not come with it pre-installed like it is on macOS and Linux so Windows users should do the following steps to make sure you can use vim during our first session.
+Download the following installer.
+Open the downloaded file.
+Accept the User Agreement." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://introtoplaintext.com/docs/helpers/vim/" /><meta property="article:section" content="docs" />
+
+
+<title>Vim | Introduction to Plaintext for Research and Writing</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d8b1ce1fba5c81cfa1ebf1e69c1c3db5d3075d070d58202e69424dce2097a041.js" integrity="sha256-2LHOH7pcgc&#43;h6/HmnBw9tdMHXQcNWCAuaUJNziCXoEE=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6J3ELQM30"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-P6J3ELQM30', { 'anonymize_ip': false });
+}
+</script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/android-chrome-512x512.png" alt="Logo" /><span>Introduction to Plaintext for Research and Writing</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Book</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-1/" class="">What? Why? Who? How?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-2/" class="">The Terminal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-3/" class="">Project Organization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-4/" class="">Installation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-5/" class="">Document Composition</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-6/" class="">Dynamic Documents</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-7/" class="">Version Control</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/book/chapter-8/" class="">A Larger World</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Helpers</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-045f52e557d420dc6b88906503e07a22" class="toggle"  />
+    <label for="section-045f52e557d420dc6b88906503e07a22" class="flex justify-between">
+      <a href="/docs/helpers/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/helpers/vim/" class="active">Vim</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/TimothyElder/introtoplaintext.com"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://timothyelder.com"  target="_blank" rel="noopener">
+        Timothy Elder
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Vim</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#installing-vim-on-windows">Installing <code>vim</code> on Windows</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="installing-vim-on-windows">
+  Installing <code>vim</code> on Windows
+  <a class="anchor" href="#installing-vim-on-windows">#</a>
+</h2>
+<p><code>vim</code> is a command line based text editor that we are going to be using for doing quick edits to files. Unfortunately, Windows does not come with it pre-installed like it is on macOS and Linux so Windows users should do the following steps to make sure you can use <code>vim</code> during our first session.</p>
+<ol>
+<li>
+<p>Download the following 
+  <a href="https://ftp.nluug.nl/pub/vim/pc/gvim90.exe">installer</a>.</p>
+</li>
+<li>
+<p>Open the downloaded file.</p>
+</li>
+<li>
+<p>Accept the User Agreement.</p>
+</li>
+<li>
+<p>On the next window (&ldquo;Choose Components&rdquo;) make sure to select the &ldquo;Custom&rdquo; install type from the dropdown menu and that the &ldquo;Vim Console Program&rdquo;, &ldquo;Create .bat files&rdquo; and &ldquo;Create Default Config&rdquo; options are selected with checkboxes.</p>
+</li>
+</ol>
+<p>
+  <img src="/images/vim_setup_custom.png" alt="Check off the proper settings as in this image." /></p>
+<ol start="5">
+<li>Leave the next window (&ldquo;Choose _vimrc settings&rdquo;) as it is.</li>
+</ol>
+<p>
+  <img src="/images/vim_setup_vimrc.png" alt="You can leave this window set to the defaults." /></p>
+<ol start="6">
+<li>Hit &ldquo;Install&rdquo; on the last window and the program will install.</li>
+</ol>
+<p>
+  <img src="/images/vim_setup_install.png" alt="Click install on the final page and you&amp;rsquo;re all set." /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/edit/main/content/docs/helpers/vim.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#installing-vim-on-windows">Installing <code>vim</code> on Windows</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://introtoplaintext.com/docs/book/chapter-1/</guid>
-      <description>What? Why? Who? How? # What # Academic writing in general, and scientific and social scientific writing in particular, requires that we use empirical data to mount an argument. There are many conventions that have become sacrosanct that we both need to use and find quite helpful for fulfilling the task of providing convincing data and a tight argument, grounded in a long line of other worthwhile research. Citations, figures, tables, equations, proofs, diagrams and prose are all key to this endeavor.</description>
+      <description>What? Why? Who? How? # What? # Academic writing in general, and scientific and social scientific writing in particular, requires that we use empirical data to mount an argument. There are many conventions that have become sacrosanct that we both need to use and find quite helpful for fulfilling the task of providing convincing data and a tight argument, grounded in a long line of other worthwhile research. Citations, figures, tables, equations, proofs, diagrams and prose are all key to this endeavor.</description>
     </item>
     
     <item>
@@ -70,12 +70,12 @@
     </item>
     
     <item>
-      <title>Conclusion</title>
+      <title>A Larger World</title>
       <link>https://introtoplaintext.com/docs/book/chapter-8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://introtoplaintext.com/docs/book/chapter-8/</guid>
-      <description>A Larger World # There is more to learn about plaintext, and this book justs gets you started but hopefully it has given you a substantial command over the most important tools for adopting plain text software for your research and writing. It is as good a moment as any to reiterate that plaintext isn’t for everyone; it presents complications to your work that some find to be excessive. Fiddling with the settings of your computer or installing esoteric software and establishing the appropriate workflow for working with these tools can seem to some scholars like a bridge too far, and so they settle for using Word and Google Docs, endlessly copying and pasting figures and tables into their documents and remembering the citation conventions in their fields.</description>
+      <description>A Larger World # There is more to learn about plain text, and this book just gets you started but hopefully it has given you a substantial command over the most important tools for adopting plain text software for your research and writing. It is as good a moment as any to reiterate that plain text isn&amp;rsquo;t for everyone; it presents complications to your work that some find to be excessive.</description>
     </item>
     
     <item>
@@ -108,50 +108,50 @@ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta So
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/buttons/</link>
+      <link>https://introtoplaintext.com/docs/helpers/buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/buttons/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/buttons/</guid>
       <description> Buttons # Buttons are styled links that can lead to local page or external link.
 Example # {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}} Get Home Contribute </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/columns/</link>
+      <link>https://introtoplaintext.com/docs/helpers/columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/columns/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/columns/</guid>
       <description>Columns # Columns help organize shorter pieces of content horizontally for readability.
 {{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example # Left Content # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/details/</link>
+      <link>https://introtoplaintext.com/docs/helpers/details/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/details/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/details/</guid>
       <description> Details # Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.
 Example # {{&amp;lt; details &amp;#34;Title&amp;#34; [open] &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} {{&amp;lt; details title=&amp;#34;Title&amp;#34; open=true &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} Title Markdown content # Lorem markdownum insigne&amp;hellip; </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/expand/</link>
+      <link>https://introtoplaintext.com/docs/helpers/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/expand/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/expand/</guid>
       <description>Expand # Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
 Example # Default # {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Expand ↕ Markdown content # Lorem markdownum insigne&amp;hellip; With Custom Label # {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Custom Label ... Markdown content # Lorem markdownum insigne.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/hints/</link>
+      <link>https://introtoplaintext.com/docs/helpers/hints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/hints/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/hints/</guid>
       <description>Hints # Hint shortcode can be used as hint/alerts/notification block.
 There are 3 colors to choose: info, warning and danger.
 {{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example # Markdown content
@@ -160,20 +160,20 @@ Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat str
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/katex/</link>
+      <link>https://introtoplaintext.com/docs/helpers/katex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/katex/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/katex/</guid>
       <description>KaTeX # KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
 Example # {{&amp;lt;/* katex [display] [class=&amp;#34;text-center&amp;#34;] */&amp;gt;}} f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi {{&amp;lt;/* /katex */&amp;gt;}} \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Display Mode Example # Here is some inline example: \(\mu = \frac{ \sum_{i=1}^{n} x_i} {n}\) , rendered in the same line. And below is display example, having display: block \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Text continues here.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/mermaid/</link>
+      <link>https://introtoplaintext.com/docs/helpers/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/mermaid/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/mermaid/</guid>
       <description>Mermaid Chart # MermaidJS is library for generating svg charts and diagrams from text.
 Override Mermaid Initialization Config
 To override the initialization config for Mermaid, create a mermaid.json file in your assets folder!
@@ -182,33 +182,45 @@ Example # {{&amp;lt;/* mermaid [class=&amp;#34;text-center&amp;#34;]*/&amp;gt;}}
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/section/first-page/</link>
+      <link>https://introtoplaintext.com/docs/helpers/section/first-page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/section/first-page/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/section/first-page/</guid>
       <description>First page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/section/second-page/</link>
+      <link>https://introtoplaintext.com/docs/helpers/section/second-page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/section/second-page/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/section/second-page/</guid>
       <description>Second Page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://introtoplaintext.com/docs/shortcodes/tabs/</link>
+      <link>https://introtoplaintext.com/docs/helpers/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://introtoplaintext.com/docs/shortcodes/tabs/</guid>
+      <guid>https://introtoplaintext.com/docs/helpers/tabs/</guid>
       <description>Tabs # Tabs let you organize content by context, for example installation instructions for each supported platform.
 {{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example # MacOS MacOS # This is tab MacOS content.
 Lorem markdownum insigne. Olympo signis Delphis!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://introtoplaintext.com/docs/helpers/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://introtoplaintext.com/docs/helpers/vim/</guid>
+      <description>Installing vim on Windows # vim is a command line based text editor that we are going to be using for doing quick edits to files. Unfortunately, Windows does not come with it pre-installed like it is on macOS and Linux so Windows users should do the following steps to make sure you can use vim during our first session.
+Download the following installer.
+Open the downloaded file.
+Accept the User Agreement.</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@ bookToc: false
 source('../../../setup.R') 
 ```
 
-# Version Control and Collaboration with `git` and GitHub
+# Version Control and Collaboration with `git` and GitHub {#sec:git}
 
 A key part of doing research is being able to account for how you got from your data to you findings, and being able to inspect how your project has changed over time is important to that process of accounting. Whatmore, we all want peace of mind as we do our research so that if we make a mistake, we can go back and do it over again. Version Control is a term for the process of developing a set of files and accounting for how they have changed over time. Software engineers need it as they are developing code and releasing it to users, they need to be able to ensure that it is compatible with other software. There are manual ways of doing version control, such as keeping all the old copies of documents in an archived folder, but adopting some software can help automate the process and ensure that there are no hiccups, while also allowing you to keep an elegant organization to your project directory without endless copies of nearly the same documents.
 
@@ -34,12 +34,12 @@ There are two varieties of version control: local and distributed. You can see a
 
 Distributed Version Control is a system for keeping a log of all the changes that have occurred to a set of files, and storing copies on a remote server, as is shown in Figure \@ref(fig:vcs2).
 
-```{r vcs1, out.width='50%', fig.align='center', fig.cap='Local version control.'}
-knitr::include_graphics("/images/vcs_1.png", error = F) 
+```{r vcs1, fig.align='center', out.width='70%', fig.cap='Local version control on a single computer.'}
+knitr::include_graphics("/images/vcs_1.png", error = FALSE)
 ```
 
-```{r vcs2, out.width='50%', fig.align='center', fig.cap='Distributed version control.'}
-knitr::include_graphics("/images/vcs_2.png", error = F)
+```{r vcs2, fig.align='center', out.width='70%', fig.cap='Distribted version control with a remote repository.'}
+knitr::include_graphics("/images/vcs_2.png", error = FALSE)
 ```
 
 ## `git`
@@ -62,7 +62,7 @@ staging area
 
 Now you are ready to start to learn by doing. So follow along with the next few steps on a repository that you can try this out on. One that has a couple of subdirectories of plain text files that you can experiment with, and not one of the directories you have installed from the templates, as those are already `git` repositories.
 
-To get started you first initialize a directory with a `git` repository by opening a terminal, changing the directory to whatever directory you want to track and running `git init`. The terminal should return `Initialized empty Git repository in /Users/timothyelder/Documents/YOUR-DIRECTORY/.git/`. That is the path to the specific `.git` repo directory within your directory that will store all the information about the files you track. If you remember what we learned in [Chapter 2](chapter-2), directories and files that begin with a period are hidden from view in a regular Finder or File Explorer windor. You can now run `git status` to ensure that it is running and it should print out all the flles in the directory and its subdirectories. They should all be in red because you haven't added anything yet to the repository.
+To get started you first initialize a directory with a `git` repository by opening a terminal, changing the directory to whatever directory you want to track and running `git init`. The terminal should return `Initialized empty Git repository in /Users/timothyelder/Documents/YOUR-DIRECTORY/.git/`. That is the path to the specific `.git` repo directory within your directory that will store all the information about the files you track. If you remember what we learned in [Chapter 2](chapter-2), directories and files that begin with a period are hidden from view in a regular Finder or File Explorer window. You can now run `git status` to ensure that it is running and it should print out all the files in the directory and its subdirectories. They should all be in red because you haven't added anything yet to the repository.
 
 When you are working on a project with plain text software like LaTeX, they generate lots of extra files that you don't really need but that help the software typeset your documents. Sometimes you also have `.log` files that you don't want to be tracked in your version history. Luckily, `git` has a system for ignoring specific file names and file types. To do that we are going to create another hidden file. You can create this file using a text editor or directly in your terminal with `vim`. We are going to cerate a `.gitignore` file which `git` recognizes and uses to ignore certain files.
 
@@ -114,35 +114,35 @@ Now when you work on your files you should start to get into the habit of making
 
 After you have a group of files being tracked and a few commits made you'll have a version history that looks a little like Figure \@ref(fig:vcs3). In this figure we have a repository with three files and five commits. `git` prizes efficiency so it does two important things: first, it doesn't keep exact copies of the files that you are tracking but a complete log of all the changes, so the full information about the file is conserved while the size is not. Second, it only stores new information when a file is changed. So in Figure \@ref(fig:vcs3) between the first and second commits, only files A and C had any changes and the delta between the two files are sotred while no new information is lofgged in file B because no changes ocurred. Between commmits 2 and 3 changes only occurred in file C. File B only gets a change at commit 4 and so it is updated from the initial version.
 
-```{r vcs3, fig.cap='How versions are stored over time as you make `commits`'}
-knitr::include_graphics("/images/vcs_3.png", error = F)
+```{r vcs3, fig.align='center', fig.cap='How versions are stored over time as you make `commits`'}
+knitr::include_graphics("/images/vcs_3.png", error = FALSE)
 ```
 
 Another way of visualizing this can be found in Figure \@ref(fig:vcs4), where instead of showing the changes between different commits across files, it shows the snapshots of the repository, as it might appear in your finder, but with the extra time dimension to show changes over the commits. As you can see in each of the commits all the files appear because none of them get deleted. You should note that their version numbers change to reflect the changes that occurred in Figure \@ref(fig:vcs3). Files A nd C become files A1 and C1 between commit 1 and 2 while file B remains unchanged. File C1 becomes File C2 between commit 2 and 3, and so on and so forth.
 
-This is in part indicative of the underlying strengths of `git`: rather than copying files endlessly, `git` compares files and their changes, storing the deltas between versions so there is a complete history of the files and how they have changed over time. There is some cryptography under the hood that ensures everything is as it should be and generates a key for each commit and allows you to retrieve files from commits using these keys. It can be a little confusing to deal with this kind of system at first but it quickly becomes second nature once you start using it regulalry.
+This is in part indicative of the underlying strengths of `git`: rather than copying files endlessly, `git` compares files and their changes, storing the deltas between versions so there is a complete history of the files and how they have changed over time. There is some cryptography under the hood that ensures everything is as it should be and generates a key for each commit and allows you to retrieve files from commits using these keys. It can be a little confusing to deal with this kind of system at first but it quickly becomes second nature once you start using it regularly.
 
-```{r vcs4, fig.cap='Another way of thinking about how versions are stored over time.'}
-knitr::include_graphics("/images/vcs_4.png", error = F)
+```{r vcs4, fig.align='center', fig.cap='Another way of thinking about how versions are stored over time.'}
+knitr::include_graphics("/images/vcs_4.png", error = FALSE)
 ```
 
-In Figure \@ref(fig:vcs5) we visualize how the process of working in this work flow looks. You are working in your project directory (the working directory at the left hand side of the figure) and once you are ready to make a commit, you add the files you want (the `git add` arrow in the center of the figure) to the staging area, where they wait to actually be added to the version data base (the `.git repository` on the right).
+In Figure \@ref(fig:vcs5) we visualize how the process of working in this work flow looks. You are working in your prject directory (the working directory at the left hand side of the figure) and once you are ready to make a commit, you add the files you want (the `git add` arrow in the center of the figure) to the staging area, where they wait to actually be added to the version data base (the `.git repository` on the right).
 
-There is one addition to this figure that we have not covered which is the `git checkout` command. `git checkout` is a part of the branching capability that `git` has which allows you to create parallel versions of your project to experiment with. This is most helpful to quantitative people who are going to be having lots of code files that they are working with.
+There is one addition to this figure that we have not covered which is the `git checkout` command. `git checkout` is a part of the branching capability that `git` has which allows you to create parallell versions of hyour project to experiment with. This is most helpful to quantitative people who are going to be having lots of code files that they are working with.
 
-```{r vcs5, fig.cap='`git` workflow with only local repository.'}
-knitr::include_graphics("/images/vcs_5.png", error = F)
+```{r vcs5, fig.align='center', fig.cap='`git` workflow with only local repository.'}
+knitr::include_graphics("/images/vcs_5.png", error = FALSE)
 ```
 
-For example, in one of my projects, I had a lot of scripts that handled all sorts of data cleaning and generation tasks, and they were all written iteratively so that they all relied upon one another in a slightly confusing network of code. I wanted to ensure that the process for data generation was streamlined, but I wanted to be able to ensure that I was able to generate the data the same way I had before, so whatever new procedure I had could be checked against the original. To do that I created a branch of my project directory that allowed me to significantly change the scripts without having any fear that I might lose something, and without having to literally copy the folder and keep extra versions of things on my computer.
+For example, in one of my projects, I had a lot of scripts that handled all sorts of data cleaning and generation tasks, and they were all written iteratively so that they all relied upon one another in a slighlty confusing network of code. I wanted to ensure that the process for data generation was streamlined, but I wanted to be able to ensure that I was able to generate the data the same way I had before, so whatever new procedure I had could be checked against the original. To do that I created a branch of my project directory that allowed me to significantly change the scripts without having any fear that I might lose something, and without having to literally copy the folder and keep extra versions of things on my computer.
 
-```{r branching, fig.cap='Branching versions of a project repository'}
-knitr::include_graphics("/images/git_branching.png", error = F)
+```{r branching, fig.align='center', fig.cap='Branching versions of a project repository.'}
+knitr::include_graphics("/images/git_branching.png", error = FALSE)
 ```
 
 ## GitHub
 
-GitHub is the cloud-based service that complements `git`. If you sign-up for a free account you can create remote repositories to backup your local repositories. This has two helpful use cases: for one you can ensure that no matter what happens to your local files you will still have a complete history of your project stored remotely. Further, you can use it to collaborate with colleagues remotely.
+GitHub is the cloud-based service that complements `git`. If you sign-up for a free account you can create remote repositories to backup your local repositoeies. This has two helpful use cases: for one you can ensure that no matter what happens to your local files you will still have a complete history of your project stored remotely. Further, you can use it to collaborate with colleagues remotely.
 
 Now there are a few extra pieces of jargon to learn now:
 
@@ -161,15 +161,15 @@ remote
 HEAD
 : The canonical top level commit of a repo.
 
-```{r vcs6, fig.cap='`git` workflow with local repository and remote repositories.'}
-knitr::include_graphics("/images/vcs_6.png", error = F)
+```{r vcs6, fig.align='center', fig.cap='`git` workflow with local repository and remote repositories.'}
+knitr::include_graphics("/images/vcs_6.png", error = FALSE)
 ```
 
 ### `git config`
 
 Once you have an account with GitHub you'll need to tell your local installation of `git` what your credentials are. This is referred to as your `git config`. You'll need to do this only once and make sure you know your GitHub username and the email that you use for your account.
 
-You can list your current `config` settings by running `git config --list`. To get specific settings you can run `git config --get user.email`. If you haven't set up these settings they should return nothing. What we want to do is to set your `config` settings so that no matter where you are working on your computer, `git` knows what your config settings are, these are referred to as your `global` settings.
+You can list your current `config` settings by running `git config --list`. To get specific settings you can run `git config --get user.email`. If you haven't set up these settings they should return nothing. What we want to do is to set your `config` settings so that no matter where you are working on your computer, `git` knows what your confg settings are, these are referred to as your `global` settings.
 
 For me, I set these settings using the following commands.
 
@@ -190,13 +190,13 @@ Make sure that you have already installed git to your computer and signed up for
 
 {{< hint warning >}}
 **Save Personal Access Token**  
-Be sure to save your Personal Access Token somewhere on your computer because you won't be able to see it again after making it.
+Be sure to save your Personal Access Token somewhere on your computer because you won’t be able to see it again after making it.
 {{< /hint >}}
 
 1. go to the home page of your github profile and on the upper right hand corner click the icon that has a picture, at the bottom click settings as in Figure \@ref(fig:settings).
 
-```{r settings, fig.cap='A GitHub profile page with publicly available repos.'}
-knitr::include_graphics("/images/git_settings.png", error = F)
+```{r settings, fig.align='center', fig.cap='A GitHub profile page with publicly available repos.'}
+knitr::include_graphics("/images/git_settings.png", error = FALSE)
 ```
 
 2. On the left hand sign of the screen there are a list of options, at the bottom is an entry called `< > Developer settings`. Click on it.
@@ -205,8 +205,8 @@ knitr::include_graphics("/images/git_settings.png", error = F)
 
 4. On the top right hand screen click on generate new token and pick the "classic" option. See Figure \@ref(fig:pat).
 
-```{r pat, fig.cap='Settings for your personal access token.'}
-knitr::include_graphics("/images/pat_git.png", error = F)
+```{r pat, fig.align='center', fig.cap='Settings for your personal access token.'}
+knitr::include_graphics("/images/pat_git.png", error = FALSE)
 ```
 
 5. Give the token a name in the "Note" field, mine is "my_access_token", set the expiration to "90 Days" and then click through all the options below that. Then generate the token and **note** the token that is returned to you. *You must note down this token* as you will not be able to see it again and you will need it. But do not fear, if you forget it, lose it or fail to write it down, you can regenerate the token. It will be redundant, but far from catastrophic.

@@ -8,9 +8,9 @@ bookToc: false
 source('../../../setup.R') 
 ```
 
-# Dynamic Documents with RMarkdown {#sec:beaut}
+# Dynamic Documents with RMarkdown
 
-```{r} 
+```{r}
 # Anscombe's Quartet Data
 anscombe_tidy <- anscombe %>%
   mutate(observation = seq_len(n())) %>%
@@ -18,18 +18,7 @@ anscombe_tidy <- anscombe %>%
   separate(key, c("variable", "set"), 1, convert = TRUE) %>%
   mutate(set = c("I", "II", "III", "IV")[set]) %>%
   spread(variable, value)
-
-anscombe_1 <- anscombe_tidy %>%
-  filter(set == "I")
-
-anscombe_2 <- anscombe_tidy %>%
-  filter(set == "II")
-
-anscombe_3 <- anscombe_tidy %>%
-  filter(set == "III")
-
-anscombe_4 <- anscombe_tidy %>%
-  filter(set == "IV")
+  
 ```
 
 If the last chapter was the heart of the PlainText Working Group, this is the capillaries flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures. This processes go hand in hand and we are going to be using the latter as a use case for the former. That is to say we are going to use figure creation to learn why and how to use a dynamic document format like RMarkdown.
@@ -44,11 +33,18 @@ The most important thing a document format like this is used for is creating rep
 
 The dynamic document lets you create the figure or run the model and create the table of results directly inside the document. That way when, after submitting the document to a journal or your PI or advisor, and they come back and ask why a scatter plot looks the way it does, or how a particular coefficient was generated, you can look at the exact model or figure creation procedures used to make that part of the document. That is important for scientific scrutiny but also helpful for you to save time. If you are working on the code at the same time you are writing your manuscript and want to keep figures up to date with the text, you don't have to keep copy pasting the right figures or models to the proper location. They will automatically update when you change the code.
 
-Transparency is important: fraud in science is a problem^[There have been a few recent and unfortunate examples that are worth reading about including: @singal_case_2015, @bhattacharjee_mind_2013, @scheiber_harvard_2023.], and we are all upstanding scholars and won't attempt to commit fraud, but there may come a time when someone levels an unwarranted broadside against you regarding a paper or finding you published; this has become something of a trope in the field of psychology today with "methodological terrorists" and "scientific vigilantes", but overall the trend of ensuring that work is conducted in an ethical way is good. Being able to distribute code that actually generated your findings right along with the prose of your document is a helpful way of encouraging transparency. It will actually make you think about your work differently knowing that someone could download the source files of your project and examine the methodological decisions you made.
+Transparency is important: fraud in science is a problem, and I don't doubt the scientific integrity of you the reader, but there may come a time when someone levels an unwarranted broadside against you regarding a paper or finding you published; this has become something of a trope in the field of psychology today with ["methodological terrorists"](https://datacolada.org/wp-content/uploads/2016/09/Fiske-presidential-guest-column_APS-Observer_copy-edited.pdf) and ["scientific vigilantes"](https://www.vox.com/unexplainable/23945153/how-to-catch-a-scientific-fraud), but overall the trend of ensuring that work is conducted in an ethical way is good. Being able to distribute code that actually generated your findings right along with the prose of your document is a helpful way of encouraging transparency. It will actually make you think about your work differently knowing that someone could download the source files of your project and examine the methodological decisions you made.
+
+{{< hint info >}}
+**Trivia**  
+The number of fraudulent or fabricated findings that make it into print is undetermined but there have been some signficant cases recently that have garnered a great deal of attention including in [psychology](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html), [political science](https://www.thecut.com/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html), and most recently at Harvard with a researcher who studyies [honesty](https://www.nytimes.com/2023/06/24/business/economy/francesca-gino-harvard-dishonesty.html).
+{{< /hint >}}
 
 There also may come a time when you feel the need to return to work you did in the past. Maybe you are finally putting together a book project that is going to make a grand theoretical and methodological contribution to the field and it will require you to marshall all your past findings. It will be a big step to have a document that explicitly tells you what you did in the course of publishing your material, and you won't have to spend endless time theorizing about your past intentions examining random source files in an old directory you pulled off a hard drive from an old computer. I have had a fair number of experiences of learning a new trick for making a figure that I then used in a later project. Having the code with the figure makes it easy to identify what code I want to emulate.
 
 ## RMarkdown Features
+
+Everything else in your document is what I think is reasonably called "Prose", that is just like you would in a regular Markdown file, you use all the alphanumeric characters to create natural language and an argument that you would in any plain text file. There the Markdown conventions you need to be aware of for representing style and including citations. Here is a table that shows some of the basic Markdown syntax for review.
 
 ### Code Chunks
 
@@ -75,75 +71,54 @@ require(knitr)
 opts_chunk$set(echo = FALSE,
                results = "hide",
                message = FALSE,
-               warning = FALSE,
-               dev = "png",
-               dpi = 300)
+               warning = FALSE)
 
 ```
 
 There are a few things to note about this code chunk. For one it is *named*: directly after the language is declared with `r` there is the word `Setup` which is the name of the code chunk. Then there are the actual options for this "Setup" code chunk and then the R argument `opts_chunk$set` which actually sets the default chunk options for the rest of the code chunks, so you don't have to include those arguments later.
 
-### Prose
-
-Everything else in your document is what I think is reasonably called "Prose", that is just like you would in a regular Markdown file, you use all the alphanumeric characters to create natural language and an argument that you would in any plain text file. There the Markdown conventions you need to be aware of for representing style and including citations. Here is a table that shows some of the basic Markdown syntax for review.
-
-**TABLE OF MARKDOWN SYNTAX**
-
 ### Citations
 
 Another key part of academic writing is including citations to other works that inform your research. To do this you will need to use a `.bib` file which is generated using a bibliographic software like [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/). I highly recommend using a `.bib` file because it saves a lot of time formatting and creating the proper list of cited references.
 
-To include citations in your `.Rmd` file you will need to specify where your `.bib` file is located by specifying its path in the YAML header at the top of the document. We have an example `.bib` file included in the directory that contains this source file called `plaintext.bib` with just a few sources in it. You then reference an item in that `.bib` file by writing an @ symbol followed by the "citation key" of the item you want to cite, like this `@durkheim_division_2008` which renders a citation like this @durkheim_division_2008. All the citations that you use in your document will appear at the end of your paper, and including a `# References` section at the bottom of your RMarkdown or Markdown document will add a section heading before the bibliography is printed.
+To include citations in your `.Rmd` file you will need to specify where your `.bib` file is located by specifying its path in the YAML header at the top of the document. We have an example `.bib` file included in the directory that contains this source file called `plaintext.bib` with just a few sources in it. You then reference an item in that `.bib` file by writing an @ symbol followed by the "citation key" of the item you want to cite, like this `@durkheim_division_2008` which renders a citation like this Durkheim ([1893] 2008). All the citations that you use in your document will appear at the end of your paper, and including a `# References` section at the bottom of your RMarkdown or Markdown document will add a section heading before the bibliography is printed.
 
 There are a variety of ways in which you can customize your bibliography so it matches the proper format of whatever journal you might be submitting to. That will require that you use something called a [`CSL`](https://citationstyles.org/) file, which can also be included in the YAML header at the top of your document. There are a lot of CSL files people have created for the various citation conventions, and there is probably one available for the journal you'll be submitting to. You can find some [here](https://github.com/citation-style-language/styles).
 
 ### Loading Data
 
-To demonstrate the principles of good figure creation and the actual process by which you do it in `R` using `ggplot` we are going to be looking at some data from the Chicago Transit Authority about ridership on Chicago's "L" Trains.\marginnote{Much of this document, including this sentence, was written on the Brown Line between Harold Washington Library and Damen Ave.}
+To demonstrate the principles of good figure creation and the actual process by which you do it in `R` using `ggplot` we are going to be looking at some data from the Chicago Transit Authority about ridership on Chicago's "L" Trains. When working in an RMarkdown document, a good practice to follow is to load your data upfront, transform it, then you can use it anywhere else in your document. We aren't going to be doing that here because I want to demonstrate what we are doing as we go, but as a general rule when you work with your documents, include the calls to the libraries you need in a single code chunk, when you load data and create functions when you need and include comments.
 
-When working in an RMardkown document, a good practice to follow is to load your data upfront, transform it, then you can use it anywhere else in your document. We aren't going to be doing that here because I want to demonstrate what we are doing as we go, but as a general rule when you work with your documents, include the calls to the libraries you need in a single code chunk, when you load data and create functions when you need and include comments.
+{{< hint info >}}
+**Trivia**  
+Much of this document, including this sentence, was written on the Brown Line between Harold Washington Library and Damen Ave.
+{{< /hint >}}
 
-```{r Data, echo = TRUE}
+```{r Data, echo = TRUE, eval=TRUE}
 library(tidyverse)
 library(ggpubr)
 library(ggrepel)
 library(zoo)
 
 # Load CTA Station Data
-cta_stations <- read_csv("/Users/timothyelder/Documents/plaintext/data/cta_stations.csv")
+cta_stations <- read_csv("~/Documents/plaintext/data/cta_stations.csv")
 
 cta_stations$north <- as.factor(cta_stations$north)
-cta_stations$year  <- as.factor(cta_stations$year)
+cta_stations$year  <- as.factor(cta_stations$year) 
 
 # Load CTA Ridership Data
-cta_rides <- read_csv("/Users/timothyelder/Documents/plaintext/data/cta_rides.csv", show_col_types = FALSE)
+cta_rides <- read_csv("~/Documents/plaintext/data/cta_rides.csv")
 
 # Load Approval Ratings Data
-approval <- read_csv("/Users/timothyelder/Documents/plaintext/data/approval_polls.csv", show_col_types = FALSE)
+approval <- read_csv("~/Documents/plaintext/data/approval_polls.csv")
 
 # Load and transform State of the Union Data
-sou <- read_csv("/Users/timothyelder/Documents/plaintext/data/sou-length.csv", show_col_types = FALSE)
+sou <- read_csv("~/Documents/plaintext/data/sou-length.csv")
 sou$President <- str_extract(sou$President, "(\\b\\w+\\b)+$")
 sou$Date <- as.Date(sou$Date, format = "%m/%d/%Y")
 ```
 
 ### Anscombe's Quartet
-
-```{r Anscombe1, fig.height=1, fig.width=1, fig.cap="Weak Linear Relationship"}
-ggplot(anscombe_1, aes(x, y)) +
-    geom_point(size = 0.5) +
-    geom_smooth(method = "lm", se = FALSE, linewidth = 0.5) +
-    theme_void() +
-    theme(text = element_text(size = 5))
-```
-
-```{r Anscombe2, fig.height=1, fig.width=1, fig.cap="Curvilinear Relationship"}
-ggplot(anscombe_2, aes(x, y)) +
-    geom_point(size = 0.5) +
-    geom_smooth(method = "lm", se = FALSE, linewidth = 0.5) +
-    theme_void() +
-    theme(text = element_text(size = 5))
-```
 
 We use visualization for a few different purposes: for one, we use visualizations to quickly make a point about our data. It just so happens that human being's dominant sense is vision, and a visualization is an excellent way of mapping numeric values to visual features that can be quickly processed by your reader. We also use visualizations to learn things about our data as we are analyzing it. And we can learn things from visualizations that you can't learn from basic summary statistics.
 
@@ -153,25 +128,18 @@ Francis Anscombe constructed 4 datasets, each of which are composed of eleven ob
 
 In the first there is a weak linear relationships between the two variables, while in the second the relationship is curvilinear. In the third the relationship is very linear with a single troubling outlier that might be driving a particularly strong correlation. And in the fourth, there seems to be something a little wrong with the data.
 
-```{r Anscombe3, fig.height=1, fig.width=1, fig.cap = "Linear relationship with outlier"}
-ggplot(anscombe_3, aes(x, y)) +
-  geom_point(size = 0.5) +
-  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5) +
-  theme_void() +
-  theme(text = element_text(size = 5))
-```
-
-```{r Anscombe4, fig.height=1, fig.width=1, fig.cap = "Miscoded Variable"}
-ggplot(anscombe_4, aes(x, y)) +
-  geom_point(size = 0.5) +
-  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5) +
-  theme_void() +
-  theme(text = element_text(size = 5))
+```{r Anscombe1, fig.cap = "Anscombe's Quartet"}
+ggplot(anscombe_tidy, aes(x, y)) +
+    geom_point(size = 5) +
+    geom_smooth(method = "lm", se = FALSE, linewidth = 2) +
+    theme(text = element_text(size = 5)) +
+    facet_wrap(~set) +
+    theme_minimal()
 ```
 
 ## `ggplot`
 
-`ggplot` is a library in R that was designed on the basis of a book that was written in the 1990s called *The Grammar of Graphics* [@wilkinson_grammar_1999], thus the "gg" in `ggplot`. It is the standard of figure creation in R and is what we are going to be using here. There are also other libraries that have adopted the `ggplot` conventions and applied them to other kinds of figures not covered in the original package like `ggtree` for phylogenetic plots, `ggnet` for network data, and `ggridges` for ridge plots.
+`ggplot` is a library in R that was designed on the basis of a book that was written in the 1990s called [*The Grammar of Graphics*](https://www.google.com/books/edition/The_Grammar_of_Graphics/ZiwLCAAAQBAJ?hl=en), thus the "gg" in `ggplot`. It is the standard library for figure creation in R and is what we are going to be using here. There are also other libraries that have adopted the `ggplot` conventions and applied them to other kinds of figures not covered in the original package like `ggtree` for phylogenetic plots, `ggnet` for network data, and `ggridges` for ridge plots.
 
 There is a *grammar* to `ggplot` that once you acquire will allow you to make all sorts of compelling and visually parsimonious plots. The basic setup is thus:
 
@@ -207,7 +175,7 @@ ggplot(data = cta_rides, aes(x = rides)) + geom_histogram()
 
 A histogram gives some immediate information about the distribution of daily rides across all the stations in the dataset: in this case it shows that daily ridership across the stations is highly positively skewed, with most stations falling on the left side of the X axis with a very long sparse right tail. But there are some issues with this plot: each bar represents a different "bin" with the height corresponding to the number of times that value appears in the data. The bins are a uniform color so it is hard to tell them apart. Also, the axes are hard to read.
 
-```{r CTA-Hist-Integers, echo = TRUE, eval=TRUE}
+```{r CTA-Hist-Integers, echo = TRUE}
 ggplot(data = cta_rides, aes(x = rides)) +
   geom_histogram(fill = "dodgerblue", color = "black", alpha = 0.5) +
   theme(text = element_text(size = 20))
@@ -319,7 +287,7 @@ ggplot(data = cta_stations, aes(x = north, y = mean_annual)) +
 
 A few things should jump out to you: there does seem to be a difference between the two focal categories (opting in v. opting out) but the amount of variance in the two is different. What more there is a third inexplicable category. Apparently not every country has data on whether they have an opt in or out policy and so there is missing data. It is also important to note that we are pooling all the data across all the years observations occurred. Whether or not that is a defensible visualization strategy will be a matter of debate.
 
-A principle that we are going to cover is that making a good figure helps you visualize where your data *is* [@martin_thinking_2018]. The box and whisker plot obscures where each data point actually is. So let's do two things: drop the missing data, and use a different geom that is going to let us see where each data point is. To do that we use a function that drops missing data (`na.omit()`) and a different `geom`. This time we use `geom_scatter` to make a scatter plot.
+A principle that we are going to cover is that making a good figure helps you visualize where your data *is*. The box and whisker plot obscures where each data point actually is. So let's do two things: drop the missing data, and use a different geom that is going to let us see where each data point is. To do that we use a function that drops missing data (`na.omit()`) and a different `geom`. This time we use `geom_scatter` to make a scatter plot.
 
 A scatter plot lets you see every data point but the categorical variable makes all the data points line up and we can't see where every data point is. Considering that the X axis is a categorical (really a nominal) level variable and the specific position along that axis is not really meaningful we can "jitter" the points to let us see where they are along the Y axis. This is another geom that we can add to the plot which will randomly scramble the position along the X axis between a specific range.
 
@@ -337,7 +305,7 @@ ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
   geom_jitter(width = 0.1)
 ```
 
-There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let's clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, legend title and change the plots *theme*. The theme styles the general appearance of the plot, and in this case we are going to change the plot background from the standard `ggplot` grey to a clean white.\footnote{I once heard a professor deride the "ggplotification" of social scientific visualizations, and specifically the signature grey background.}
+There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let's clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, legend title and change the plots *theme*. The theme styles the general appearance of the plot, and in this case we are going to change the plot background from the standard `ggplot` grey to a clean white.
 
 ```{r, label = "My Label", out.width="\\textwidth"}
 ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
@@ -349,7 +317,7 @@ ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
        subtitle = "Comparison between Southside and North Side CTA Stations",
        color = "Year") +
   theme_bw() +
-  theme(text = element_text(size = 20))
+  theme(text = element_text(size = 10))
 ```
 
 ## Comments for Code
@@ -359,6 +327,11 @@ There is a convention in computer science to include "comments" in your code, pr
 1. Showing what you did: If you fully adopt an open science posture to your own research and writing you'll probably disseminate a curated dataset and the source files that generate all your findings, including the RMarkdown file of your actual article. Providing informative comments to your code will make it clearer what you did and why to whomever is really interested in understanding what you did.
 2. Knowing what you did: The more important reason, or at least the reason that is going to be most useful to you, is that you need to know what *YOU* did. You are going to put the project down and go on vacation or work on other things and you'll need to get back and know what you were doing. Most of the time, really nearly all the time, you are the only one who needs to know what was happening in your document and so write comments knowing what you'll need to know in the future.
 
-## What is Beautiful is Reproducible
-
-Summary of the Chapter.
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        {{< button relref="chapter-5" >}}Previous{{< /button >}}
+    </div>
+    <div>
+        {{< button relref="chapter-7" >}}Next{{< /button >}}
+    </div>
+</div>
