@@ -22,16 +22,15 @@ A project can be as small as a side-project that goes nowhere, or your dissertat
 Again what constitutes an "Area" is ambiguous and you have to use your own judgement and the final rule of thumb is if you are making progress and getting things done. I usually end up having the same directories at the top of my project directory. These include the following:
 
 ```sh
-timothyelder@MacBook-Pro project-dir % ls
 README.md
 research_log.md
-analysis
-data
-drafts
-figures
-memos
-misc
-scripts
+/analysis
+/data
+/drafts
+/figures
+/memos
+/misc
+/scripts
 ```
 The two files at the top of this list are what are called Markdown files, a simple markup language. The `README.md` file includes an explanation of what the project is, what data it uses, and any required software while the `research_log.md` includes entries about what is going on in the project and my laments about the world and my own research. The rest are sub-directories that contain different parts of the project. In the `data` directory naturally is all my data (both quantitative and qualitative), while the `drafts` directory has all the drafts for the different formal pieces of writing coming from the project. Informal pieces of writing that are likely only to be seen by myself, my advisors, or collaborators are stored in the `memos` directory. `figures` includes all the images that are generated from the data or that might be included in papers, slides, etc.. Whether the project is purely qualitative or not, I inevitably write some scripts in R, python or shell and they go in the `scripts` folder and `misc` is a garbage can of all the things I don't need now but am not confident I will never need again.
 
@@ -45,9 +44,12 @@ This goes hand in hand with the first two points but I want to emphasize that cr
 >
 > --- Phil Karlton
 
-When you are naming directories and files, it is always best to make things explicit. If the directory holds data call it `data`. If the directory contains images of documents from the Florida Office of Insurance Regulation in Tallahassee, call the directory `images_florida_insurance_regulation`. If the file is your dissertation latex file call it `dissertation.tex`. Choosing symbolic names, or anything cryptic makes parsing files difficult, particularly if you take a break from a project for a few weeks and need to get back to it.
+When you are naming directories and files, it is always best to make things explicit. If the directory holds data call it `data`. If the directory contains images of documents from the Florida Office of Insurance Regulation in Tallahassee, call the directory `images_fl_tallahassee_insurance_regulation`. If the file is your dissertation latex file call it `dissertation.tex`. Choosing symbolic names, or anything cryptic makes parsing files difficult, particularly if you take a break from a project for a few weeks and need to get back to it.
 
-**IMPORTANT NOTE:** It is really important that when you are naming things, including files and directories, that you don't use spaces or slashes in the names. This is because spaces and other characters like slashes are read by your computer as meaningful to how it reads different files. If you use them then errors will be raised and things won't work.
+{{< hint warning >}}
+**Naming things**  
+It is really important that when you are naming things, including files and directories, that you don't use spaces or slashes in the names. Slashes are used in paths to delimit directories from each other and so will lead to errors and spaces are hard to include on the terminal when writing commands.
+{{< /hint >}}
 
 ## Some Examples
 

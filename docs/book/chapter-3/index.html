@@ -11,13 +11,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://introtoplaintext.com/docs/book/chapter-3/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-12-16T16:52:32-06:00" />
+<meta property="article:modified_time" content="2023-12-17T09:02:15-06:00" />
 <title>Project Organization | Introduction to Plaintext for Research and Writing</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a4cb4677d8c12f5916d64ef38a810b10df8e44264c3d4d7cdd73e0882feb4f03.js" integrity="sha256-pMtGd9jBL1kW1k7zioELEN&#43;ORCZMPU183XPgiC/rTwM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.9eaaa94f391d0dfec33a57d6ebc170c35bc63fa990c9457579d563022ea4d227.js" integrity="sha256-nqqpTzkdDf7DOlfW68Fww1vGP6mQyUV1edVjAi6k0ic=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
 
@@ -346,16 +346,15 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#each-area-of-a-project-should-have-its-own-sub-directory">#</a>
 </h3>
 <p>Again what constitutes an &ldquo;Area&rdquo; is ambiguous and you have to use your own judgement and the final rule of thumb is if you are making progress and getting things done. I usually end up having the same directories at the top of my project directory. These include the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>timothyelder@MacBook-Pro project-dir % ls
-</span></span><span style="display:flex;"><span>README.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>README.md
 </span></span><span style="display:flex;"><span>research_log.md
-</span></span><span style="display:flex;"><span>analysis
-</span></span><span style="display:flex;"><span>data
-</span></span><span style="display:flex;"><span>drafts
-</span></span><span style="display:flex;"><span>figures
-</span></span><span style="display:flex;"><span>memos
-</span></span><span style="display:flex;"><span>misc
-</span></span><span style="display:flex;"><span>scripts
+</span></span><span style="display:flex;"><span>/analysis
+</span></span><span style="display:flex;"><span>/data
+</span></span><span style="display:flex;"><span>/drafts
+</span></span><span style="display:flex;"><span>/figures
+</span></span><span style="display:flex;"><span>/memos
+</span></span><span style="display:flex;"><span>/misc
+</span></span><span style="display:flex;"><span>/scripts
 </span></span></code></pre></div><p>The two files at the top of this list are what are called Markdown files, a simple markup language. The <code>README.md</code> file includes an explanation of what the project is, what data it uses, and any required software while the <code>research_log.md</code> includes entries about what is going on in the project and my laments about the world and my own research. The rest are sub-directories that contain different parts of the project. In the <code>data</code> directory naturally is all my data (both quantitative and qualitative), while the <code>drafts</code> directory has all the drafts for the different formal pieces of writing coming from the project. Informal pieces of writing that are likely only to be seen by myself, my advisors, or collaborators are stored in the <code>memos</code> directory. <code>figures</code> includes all the images that are generated from the data or that might be included in papers, slides, etc.. Whether the project is purely qualitative or not, I inevitably write some scripts in R, python or shell and they go in the <code>scripts</code> folder and <code>misc</code> is a garbage can of all the things I don&rsquo;t need now but am not confident I will never need again.</p>
 <h3 id="hierarchical-is-better-than-horizontal">
   Hierarchical is Better than Horizontal
@@ -370,8 +369,12 @@ https://github.com/alex-shpak/hugo-book
 <p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
 <p>&mdash; Phil Karlton</p>
 </blockquote>
-<p>When you are naming directories and files, it is always best to make things explicit. If the directory holds data call it <code>data</code>. If the directory contains images of documents from the Florida Office of Insurance Regulation in Tallahassee, call the directory <code>images_florida_insurance_regulation</code>. If the file is your dissertation latex file call it <code>dissertation.tex</code>. Choosing symbolic names, or anything cryptic makes parsing files difficult, particularly if you take a break from a project for a few weeks and need to get back to it.</p>
-<p><strong>IMPORTANT NOTE:</strong> It is really important that when you are naming things, including files and directories, that you don&rsquo;t use spaces or slashes in the names. This is because spaces and other characters like slashes are read by your computer as meaningful to how it reads different files. If you use them then errors will be raised and things won&rsquo;t work.</p>
+<p>When you are naming directories and files, it is always best to make things explicit. If the directory holds data call it <code>data</code>. If the directory contains images of documents from the Florida Office of Insurance Regulation in Tallahassee, call the directory <code>images_fl_tallahassee_insurance_regulation</code>. If the file is your dissertation latex file call it <code>dissertation.tex</code>. Choosing symbolic names, or anything cryptic makes parsing files difficult, particularly if you take a break from a project for a few weeks and need to get back to it.</p>
+<blockquote class="book-hint warning">
+  <strong>Naming things</strong><br>
+It is really important that when you are naming things, including files and directories, that you don&rsquo;t use spaces or slashes in the names. Slashes are used in paths to delimit directories from each other and so will lead to errors and spaces are hard to include on the terminal when writing commands.
+</blockquote>
+
 <h2 id="some-examples">
   Some Examples
   <a class="anchor" href="#some-examples">#</a>
@@ -446,9 +449,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/52de0d966df5bdfb842fcf3c773e1e559c2ad65e" title='Last modified by TimothyElder | December 16, 2023' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/193b0fdd355235d7c8d7a6ed8e3da498defb94b0" title='Last modified by TimothyElder | December 17, 2023' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 16, 2023</span>
+      <span>December 17, 2023</span>
     </a>
   </div>
 

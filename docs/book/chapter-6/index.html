@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dynamic Documents with RMarkdown # If the last chapter was the heart of the PlainText Working Group, this is the capillaries flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures.">
+<meta name="description" content="Dynamic Documents with RMarkdown # If the last chapter was the heart of the plaint text paradigm for research and writing, this is the vital life force flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Dynamic Documents" />
-<meta property="og:description" content="Dynamic Documents with RMarkdown # If the last chapter was the heart of the PlainText Working Group, this is the capillaries flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures." />
+<meta property="og:description" content="Dynamic Documents with RMarkdown # If the last chapter was the heart of the plaint text paradigm for research and writing, this is the vital life force flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://introtoplaintext.com/docs/book/chapter-6/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-12-16T18:21:42-06:00" />
+<meta property="article:modified_time" content="2023-12-17T09:02:15-06:00" />
 <title>Dynamic Documents | Introduction to Plaintext for Research and Writing</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a4cb4677d8c12f5916d64ef38a810b10df8e44264c3d4d7cdd73e0882feb4f03.js" integrity="sha256-pMtGd9jBL1kW1k7zioELEN&#43;ORCZMPU183XPgiC/rTwM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.9eaaa94f391d0dfec33a57d6ebc170c35bc63fa990c9457579d563022ea4d227.js" integrity="sha256-nqqpTzkdDf7DOlfW68Fww1vGP6mQyUV1edVjAi6k0ic=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
 
@@ -306,8 +306,8 @@ https://github.com/alex-shpak/hugo-book
   Dynamic Documents with RMarkdown
   <a class="anchor" href="#dynamic-documents-with-rmarkdown">#</a>
 </h1>
-<p>If the last chapter was the heart of the PlainText Working Group, this is the capillaries flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures. This processes go hand in hand and we are going to be using the latter as a use case for the former. That is to say we are going to use figure creation to learn why and how to use a dynamic document format like RMarkdown.</p>
-<p>To learn the principles of good figure design and how to actually make figures in R with <code>ggpplot</code>. You can follow along with the source code that generates a nearly identical document as this in the <code>plaintext</code> repo we downloaded earlier, in the <code>example-rMarkdown</code> directory. If you follow along, you are going to be interacting with the document and running some code. After running through the document we are going to be rendering to PDF but along the way we are working in what is called the source file, the <code>.Rmd</code> file. Before moving on to how to do these things I want to get clear on what precisely we are talking about, and then why you should use these tools. I have spared few opportunities to evangelize for the plain text way of doing things but I do think the logic of using something like RMarkdown does require some further explanation.</p>
+<p>If the last chapter was the heart of the plaint text paradigm for research and writing, this is the vital life force flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures. This processes go hand in hand and we are going to be using the latter as a use case for the former. That is to say we are going to use figure creation to learn why and how to use a dynamic document format like RMarkdown.</p>
+<p>To learn the principles of good figure design and how to actually make figures in R with <code>ggpplot</code>. You can follow along with the source code that generates a nearly identical document as this in the <code>pwg-template</code> repo we downloaded earlier, in the <code>example-rmarkdown</code> directory. If you follow along, you are going to be interacting with the document and running some code. After running through the document we are going to be rendering to PDF but along the way we are working in what is called the source file, the <code>.Rmd</code> file. Before moving on to how to do these things I want to get clear on what precisely we are talking about, and then why you should use these tools. I have spared few opportunities to evangelize for the plain text way of doing things but I do think the logic of using something like RMarkdown does require some further explanation.</p>
 <h2 id="what-is-rmarkdown">
   What is RMarkdown
   <a class="anchor" href="#what-is-rmarkdown">#</a>
@@ -318,7 +318,7 @@ https://github.com/alex-shpak/hugo-book
   <a href="https://datacolada.org/wp-content/uploads/2016/09/Fiske-presidential-guest-column_APS-Observer_copy-edited.pdf">&ldquo;methodological terrorists&rdquo;</a> and 
   <a href="https://www.vox.com/unexplainable/23945153/how-to-catch-a-scientific-fraud">&ldquo;scientific vigilantes&rdquo;</a>, but overall the trend of ensuring that work is conducted in an ethical way is good. Being able to distribute code that actually generated your findings right along with the prose of your document is a helpful way of encouraging transparency. It will actually make you think about your work differently knowing that someone could download the source files of your project and examine the methodological decisions you made.</p>
 <blockquote class="book-hint info">
-  <strong>Trivia</strong><br>
+  <strong>Trivia</strong>
 The number of fraudulent or fabricated findings that make it into print is undetermined but there have been some signficant cases recently that have garnered a great deal of attention including in 
   <a href="https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html">psychology</a>, 
   <a href="https://www.thecut.com/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html">political science</a>, and most recently at Harvard with a researcher who studyies 
@@ -361,7 +361,7 @@ The number of fraudulent or fabricated findings that make it into print is undet
 </h3>
 <p>To demonstrate the principles of good figure creation and the actual process by which you do it in <code>R</code> using <code>ggplot</code> we are going to be looking at some data from the Chicago Transit Authority about ridership on Chicago&rsquo;s &ldquo;L&rdquo; Trains. When working in an RMarkdown document, a good practice to follow is to load your data upfront, transform it, then you can use it anywhere else in your document. We aren&rsquo;t going to be doing that here because I want to demonstrate what we are doing as we go, but as a general rule when you work with your documents, include the calls to the libraries you need in a single code chunk, when you load data and create functions when you need and include comments.</p>
 <blockquote class="book-hint info">
-  <strong>Trivia</strong><br>
+  <strong>Trivia</strong>
 Much of this document, including this sentence, was written on the Brown Line between Harold Washington Library and Damen Ave.
 </blockquote>
 
@@ -433,7 +433,7 @@ Much of this document, including this sentence, was written on the Brown Line be
 </span></span></code></pre></div><img src="/docs/book/chapter-6_files/figure-html/CTA-Hist-Integers-1.png" width="3600" />
 <p>We can change the colors of the bars and the size of the axis labels by specifying a few more arguments in <code>ggplot</code>  We can increase the text size with the <code>theme</code> function as well as adding color arguments to the <code>geom_histogram</code> function. The fill and color arguments refer to the inside color of the bars and the outline of them respectively. The alpha changes the opacity of the bars which also makes it a little nicer to look at.</p>
 <blockquote class="book-hint warning">
-  <strong>Themes</strong><br>
+  <strong>Themes</strong>
 The visualizations you see here might look slightly different than ones you make unless you provide an extra &ldquo;theme&rdquo; layer to your <code>ggplot</code>. Themes are ways of changing the visual properties of your plots; for instance the base theme for <code>ggplot</code> has a rather unattractive grey background. Overall I think that the &ldquo;minimal&rdquo; theme is superior and you can use it by adding <code>theme_minimal()</code> to your plot.
 </blockquote>
 
@@ -457,7 +457,7 @@ The visualizations you see here might look slightly different than ones you make
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ungroup</span>()
 </span></span></code></pre></div><p>Now we grab the top 20 stations by the number of mean monthly riders before sub-setting the complete data frame to a smaller one to visualize. We then calculate a rolling mean so it is easier to visualize, otherwise the data would look very chaotic.</p>
 <blockquote class="book-hint info">
-  <strong>Helpful Hint</strong><br>
+  <strong>Helpful Hint</strong>
 In R you can arbitrarily break up code across lines to keep it &ldquo;tidy&rdquo;. The style conventions in R is to keep lines under 80 characters long, that way when you view them in a text editor, they are completely visible without scrolling horizontally.
 </blockquote>
 
@@ -485,7 +485,7 @@ In R you can arbitrarily break up code across lines to keep it &ldquo;tidy&rdquo
 <img src="/docs/book/chapter-6_files/figure-html/Labeled-Lines-1.png" alt="Now we can see who is who and what is what. Sort of." width="3600" />
 <p class="caption"><span id="fig:Labeled-Lines"></span>Figure 4: Now we can see who is who and what is what. Sort of.</p>
 </div>
-Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle. And again we increase the text size for legibility.
+Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> station_roll_stats,
 </span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> monthly_average,
 </span></span><span style="display:flex;"><span>           group <span style="color:#f92672">=</span> stationname, color <span style="color:#f92672">=</span> stationname)) <span style="color:#f92672">+</span>
@@ -493,15 +493,14 @@ Now we can see what is going on a little bit better but interpreting the plot is
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Daily Ridership&#34;</span>,
 </span></span><span style="display:flex;"><span>       x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
 </span></span><span style="display:flex;"><span>       title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Daily CTA Ridership Over Time&#34;</span>,
-</span></span><span style="display:flex;"><span>       color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Station&#34;</span>) <span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(text <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>       color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Station&#34;</span>)
 </span></span></code></pre></div><div class="figure">
-<img src="/docs/book/chapter-6_files/figure-html/Labeled-Plot-1.png" alt="Properly labeled axes and a title help to make the figure more interpretable immediately to the reader" width="3600" />
-<p class="caption"><span id="fig:Labeled-Plot"></span>Figure 5: Properly labeled axes and a title help to make the figure more interpretable immediately to the reader</p>
+<img src="/docs/book/chapter-6_files/figure-html/Labeled-Plot-1.png" alt="Properly labeled axes and a title help to make the figure more interpretable immediately to the reader." width="3600" />
+<p class="caption"><span id="fig:Labeled-Plot"></span>Figure 5: Properly labeled axes and a title help to make the figure more interpretable immediately to the reader.</p>
 </div>
 <p>That looks more like a real plot but we might want to actually take a look at the individual stations to see what is going on in each of them and see if there are any particularly surprising changes over time. As the figure stands above, that is somewhat obscured. We could do that by breaking up the data using filters and create one plot per station but that is tedious. Luckily, <code>ggplot</code> has another function that allows you to create a <em>paneled</em> figure, so that a single plot is made for each station. We do this by using the <code>facet_wrap</code> function.</p>
 <blockquote class="book-hint warning">
-  <strong><code>facet_wrap</code></strong><br>
+  <strong><code>facet_wrap</code></strong>
 There is a tilde before the variable we are grouping the data by for the panelling. That essentially tells the function to &ldquo;group by&rdquo; that variable and plot the X and Y axis.
 </blockquote>
 
@@ -527,23 +526,29 @@ Now that helps to see how ridership rates vary over time for each station with a
 <p>A principle that we are going to cover is that making a good figure helps you visualize where your data <em>is</em>. The box and whisker plot obscures where each data point actually is. So let&rsquo;s use a different geom that is going to let us see where each data point is. To do that we use a different <code>geom</code>, <code>geom_scatter</code>, to make a scatter plot.</p>
 <p>A scatter plot lets you see every data point but the categorical variable makes all the data points line up and we can&rsquo;t see where every data point is. Considering that the X axis is a nominal variable and the specific position along that axis is not really meaningful we can &ldquo;jitter&rdquo; the points to let us see where they are along the Y axis. This is another <code>geom</code> that we can add to the plot which will randomly scramble the position along the X axis between a specific range.</p>
 <img src="/docs/book/chapter-6_files/figure-html/unnamed-chunk-4-1.png" width="3600" />
-<p>This looks much better and we can see some interesting things between the two countries. There does seem to be a difference between the two groups: the countries that require citizens to opt in to organ donation do tend to have a lower rate than those that require citizens to opt out, and they are much more concentrated around what is probably the mean. <em>But</em>, there are only a few observations below the probable mean of the Opt In group. These are what could be driving down the mean value and the difference between the groups.\footnote{I know that I am playing fast and loose here with the comparisons and that a conscientious social scientist, like you, would do a few tests before this visualization and after to interrogate the differences. But we are learning about figure creation so we want to make figures.}</p>
-<p>There is another variable in the dataset that we can use to help interrogate the differences between these two groups. The dataset includes a variable (<code>world</code>) that captures a typology outlined by Esping-Andersen in <em>The Three Worlds of Welfare Capitalism</em> which identifies three types of welfare state regimes by which advanced capitalist democracies can be categorized. These include: liberal, conservative, and social democratic. I&rsquo;m not very familiar with what these specifically mean but we can add this to our plot to learn another feature of figure design. We can color the individual points by which category they fall in to. To do this we add another argument, <code>color</code>, to the aesthetic function in the call to <code>ggplot</code>.</p>
+<p>This looks much better and we can see some interesting things between the two sides of the city. There does seem to be a difference between the two groups: there seem to be more stations on the Northside and they have some of the highest ridership in the city. The relative differences in the number of observations between the two groups could be driving the observed relationship. I know that I am playing fast and loose here with the comparisons and that a conscientious social scientist, like you, would do a few tests before this visualization and after to interrogate the differences. But we are learning about figure creation so we want to make figures.</p>
+<p>There is another variable in the dataset that we can use to help interrogate the differences between these two groups. We can color the individual points by which category they fall in to. To do this we add another argument, <code>color</code>, to the aesthetic function in the call to <code>ggplot</code>.</p>
 <div class="figure">
 <img src="/docs/book/chapter-6_files/figure-html/Jittered-Scatter-Colors-1.png" alt="There are notable differences in terms of the two groups and the different categories of welfare state regimes." width="3600" />
 <p class="caption"><span id="fig:Jittered-Scatter-Colors"></span>Figure 7: There are notable differences in terms of the two groups and the different categories of welfare state regimes.</p>
 </div>
-<p>There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let&rsquo;s clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, and legend title.</p>
+<p>We are going to add proper axis labels, a title, and legend title.</p>
 <img src="/docs/book/chapter-6_files/figure-html/My Label-1.png" width="\textwidth" />
-<h2 id="comments-for-code">
-  Comments for Code
-  <a class="anchor" href="#comments-for-code">#</a>
-</h2>
-<p>There is a convention in computer science to include &ldquo;comments&rdquo; in your code, prose style notes that annotate your code and make it clearer what you did and why. You indicate a comment in R by including a pound or hashtag (#) at the beginning of the line and the same for Python. It is important to include comments in your code for two reasons:</p>
+<blockquote class="book-hint info">
+  <p><strong>Comments for Code</strong>
+There is a convention in computer science to include &ldquo;comments&rdquo; in your code, prose style notes that annotate your code and make it clearer what you did and why. You indicate a comment in R by including a pound or hashtag (#) at the beginning of the line and the same for Python. It is important to include comments in your code for two reasons:</p>
 <ol>
 <li>Showing what you did: If you fully adopt an open science posture to your own research and writing you&rsquo;ll probably disseminate a curated dataset and the source files that generate all your findings, including the RMarkdown file of your actual article. Providing informative comments to your code will make it clearer what you did and why to whomever is really interested in understanding what you did.</li>
 <li>Knowing what you did: The more important reason, or at least the reason that is going to be most useful to you, is that you need to know what <em>YOU</em> did. You are going to put the project down and go on vacation or work on other things and you&rsquo;ll need to get back and know what you were doing. Most of the time, really nearly all the time, you are the only one who needs to know what was happening in your document and so write comments knowing what you&rsquo;ll need to know in the future.</li>
 </ol>
+
+</blockquote>
+
+<h2 id="rendering-document">
+  Rendering document
+  <a class="anchor" href="#rendering-document">#</a>
+</h2>
+<p>Once you have written your document and are ready to compile it to a format for distribution you will have to run a little R code. You can do this either from an R session or from the terminal in the directory that has your document in it. From an R session you would run <code>rmarkdown::render('draft.Rmd')</code> and from the terminal <code>Rscript -e &quot;rmarkdown::render('draft.Rmd')&quot;</code>.</p>
 <div style="display: flex; justify-content: space-between;">
     <div>
         
@@ -579,9 +584,9 @@ Now that helps to see how ridership rates vary over time for each station with a
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/1d637749347dbd2bf17319cfc7a43e8cf1709a09" title='Last modified by TimothyElder | December 16, 2023' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/TimothyElder/intro2plaintext/commit/193b0fdd355235d7c8d7a6ed8e3da498defb94b0" title='Last modified by TimothyElder | December 17, 2023' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 16, 2023</span>
+      <span>December 17, 2023</span>
     </a>
   </div>
 

@@ -5,7 +5,7 @@ bookToc: false
 ---
 
 ```{r setup, include=FALSE}
-source('../../../setup.R') 
+source('../../../setup.R')
 ```
 
 # Dynamic Documents with RMarkdown
@@ -18,7 +18,7 @@ anscombe_tidy <- anscombe %>%
   separate(key, c("variable", "set"), 1, convert = TRUE) %>%
   mutate(set = c("I", "II", "III", "IV")[set]) %>%
   spread(variable, value)
-  
+
 ```
 
 If the last chapter was the heart of the plaint text paradigm for research and writing, this is the vital life force flowing through that heart: making sure that your arguments are rendered beautifully in a document that can readily prove to others that you conscientiously executed good social scientific research. We are going to approach two very exciting topics: the first is creating dynamic documents with RMarkdown. The second is creating beautiful and reproducible figures. This processes go hand in hand and we are going to be using the latter as a use case for the former. That is to say we are going to use figure creation to learn why and how to use a dynamic document format like RMarkdown.
@@ -34,7 +34,7 @@ The most important thing a document format like this is used for is creating rep
 Transparency is important: fraud in science is a problem, and I don't doubt the scientific integrity of you the reader, but there may come a time when someone levels an unwarranted broadside against you regarding a paper or finding you published; this has become something of a trope in the field of psychology today with ["methodological terrorists"](https://datacolada.org/wp-content/uploads/2016/09/Fiske-presidential-guest-column_APS-Observer_copy-edited.pdf) and ["scientific vigilantes"](https://www.vox.com/unexplainable/23945153/how-to-catch-a-scientific-fraud), but overall the trend of ensuring that work is conducted in an ethical way is good. Being able to distribute code that actually generated your findings right along with the prose of your document is a helpful way of encouraging transparency. It will actually make you think about your work differently knowing that someone could download the source files of your project and examine the methodological decisions you made.
 
 {{< hint info >}}
-**Trivia**  
+**Trivia**
 The number of fraudulent or fabricated findings that make it into print is undetermined but there have been some signficant cases recently that have garnered a great deal of attention including in [psychology](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html), [political science](https://www.thecut.com/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html), and most recently at Harvard with a researcher who studyies [honesty](https://www.nytimes.com/2023/06/24/business/economy/francesca-gino-harvard-dishonesty.html).
 {{< /hint >}}
 
@@ -80,7 +80,7 @@ This "Setup" code chunk loads the R package that handles converting the document
 To demonstrate the principles of good figure creation and the actual process by which you do it in `R` using `ggplot` we are going to be looking at some data from the Chicago Transit Authority about ridership on Chicago's "L" Trains. When working in an RMarkdown document, a good practice to follow is to load your data upfront, transform it, then you can use it anywhere else in your document. We aren't going to be doing that here because I want to demonstrate what we are doing as we go, but as a general rule when you work with your documents, include the calls to the libraries you need in a single code chunk, when you load data and create functions when you need and include comments.
 
 {{< hint info >}}
-**Trivia**  
+**Trivia**
 Much of this document, including this sentence, was written on the Brown Line between Harold Washington Library and Damen Ave.
 {{< /hint >}}
 
@@ -174,7 +174,7 @@ ggplot(data = cta_rides, aes(x = rides)) +
 We can change the colors of the bars and the size of the axis labels by specifying a few more arguments in `ggplot`  We can increase the text size with the `theme` function as well as adding color arguments to the `geom_histogram` function. The fill and color arguments refer to the inside color of the bars and the outline of them respectively. The alpha changes the opacity of the bars which also makes it a little nicer to look at.
 
 {{< hint warning >}}
-**Themes**  
+**Themes**
 The visualizations you see here might look slightly different than ones you make unless you provide an extra "theme" layer to your `ggplot`. Themes are ways of changing the visual properties of your plots; for instance the base theme for `ggplot` has a rather unattractive grey background. Overall I think that the "minimal" theme is superior and you can use it by adding `theme_minimal()` to your plot.
 {{< /hint >}}
 
@@ -223,7 +223,7 @@ station_roll_stats <- top_20 %>%
 ```
 
 {{< hint info >}}
-**Helpful Hint**  
+**Helpful Hint**
 In R you can arbitrarily break up code across lines to keep it "tidy". The style conventions in R is to keep lines under 80 characters long, that way when you view them in a text editor, they are completely visible without scrolling horizontally.
 {{< /hint >}}
 
@@ -251,9 +251,9 @@ ggplot(data = station_roll_stats,
            group = stationname, color = stationname)) +
   geom_line()
 ```
-Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle. And again we increase the text size for legibility.
+Now we can see what is going on a little bit better but interpreting the plot is still pretty hard. To help your reader grasp the plot immediately it is best to provide informative axis labels. The default behavior of `ggplot` is to just use the variable that is mapped to that axis as the label but we can specify what to actually call it with another layer to the plot. This time it isn't a `geom` function we call but a unique function called `labs` which allows you to add X and Y axis labels, a title, subtitle.
 
-```{r Labeled-Plot, echo = TRUE, fig.cap = "Properly labeled axes and a title help to make the figure more interpretable immediately to the reader"}
+```{r Labeled-Plot, echo = TRUE, fig.cap = "Properly labeled axes and a title help to make the figure more interpretable immediately to the reader."}
 ggplot(data = station_roll_stats,
        aes(x = date, y = monthly_average,
            group = stationname, color = stationname)) +
@@ -261,14 +261,13 @@ ggplot(data = station_roll_stats,
   labs(y = "Daily Ridership",
        x = "Year",
        title = "Daily CTA Ridership Over Time",
-       color = "Station") +
-  theme(text = element_text(size = 10))
+       color = "Station")
 ```
 
 That looks more like a real plot but we might want to actually take a look at the individual stations to see what is going on in each of them and see if there are any particularly surprising changes over time. As the figure stands above, that is somewhat obscured. We could do that by breaking up the data using filters and create one plot per station but that is tedious. Luckily, `ggplot` has another function that allows you to create a *paneled* figure, so that a single plot is made for each station. We do this by using the `facet_wrap` function.
 
 {{< hint warning >}}
-**`facet_wrap`**  
+**`facet_wrap`**
 There is a tilde before the variable we are grouping the data by for the panelling. That essentially tells the function to "group by" that variable and plot the X and Y axis.
 {{< /hint >}}
 
@@ -303,16 +302,16 @@ ggplot(data = cta_stations, aes(x = north, y = mean_annual)) +
   geom_jitter(width = 0.1)
 ```
 
-This looks much better and we can see some interesting things between the two countries. There does seem to be a difference between the two groups: the countries that require citizens to opt in to organ donation do tend to have a lower rate than those that require citizens to opt out, and they are much more concentrated around what is probably the mean. *But*, there are only a few observations below the probable mean of the Opt In group. These are what could be driving down the mean value and the difference between the groups.\footnote{I know that I am playing fast and loose here with the comparisons and that a conscientious social scientist, like you, would do a few tests before this visualization and after to interrogate the differences. But we are learning about figure creation so we want to make figures.}
+This looks much better and we can see some interesting things between the two sides of the city. There does seem to be a difference between the two groups: there seem to be more stations on the Northside and they have some of the highest ridership in the city. The relative differences in the number of observations between the two groups could be driving the observed relationship. I know that I am playing fast and loose here with the comparisons and that a conscientious social scientist, like you, would do a few tests before this visualization and after to interrogate the differences. But we are learning about figure creation so we want to make figures.
 
-There is another variable in the dataset that we can use to help interrogate the differences between these two groups. The dataset includes a variable (`world`) that captures a typology outlined by Esping-Andersen in *The Three Worlds of Welfare Capitalism* which identifies three types of welfare state regimes by which advanced capitalist democracies can be categorized. These include: liberal, conservative, and social democratic. I'm not very familiar with what these specifically mean but we can add this to our plot to learn another feature of figure design. We can color the individual points by which category they fall in to. To do this we add another argument, `color`, to the aesthetic function in the call to `ggplot`.
+There is another variable in the dataset that we can use to help interrogate the differences between these two groups. We can color the individual points by which category they fall in to. To do this we add another argument, `color`, to the aesthetic function in the call to `ggplot`.
 
 ```{r Jittered-Scatter-Colors, fig.cap = "There are notable differences in terms of the two groups and the different categories of welfare state regimes."}
 ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
   geom_jitter(width = 0.1)
 ```
 
-There are some notable and interesting differences on the basis of both the opt in/out comparison and the different welfare state regimes. There are many more Corporatist regimes in the Opt Out category (particularly with high rates of organ donation) compared to the Social Democrats in the same group. Let's clean up the figure to make it more immediately interpretable for a possible reader. We are going to add proper axis labels, a title, and legend title.
+We are going to add proper axis labels, a title, and legend title.
 
 ```{r, label = "My Label", out.width="\\textwidth"}
 ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
@@ -320,15 +319,15 @@ ggplot(data = cta_stations, aes(x = north, y = mean_annual, color = year)) +
   scale_y_continuous(labels = scales::comma) +
   labs(y = "Mean Annual Ridership",
        x = "Southside/Northside",
-       title = "Rate of Donation ",
-       subtitle = "Comparison between Southside and North Side CTA Stations",
+       title = "Daily Ridership",
+       subtitle = "Comparison between Southside and Northside CTA Stations",
        color = "Year") +
   theme_bw() +
   theme(text = element_text(size = 10))
 ```
 
 {{< hint info >}}
-**Comments for Code**  
+**Comments for Code**
 There is a convention in computer science to include "comments" in your code, prose style notes that annotate your code and make it clearer what you did and why. You indicate a comment in R by including a pound or hashtag (#) at the beginning of the line and the same for Python. It is important to include comments in your code for two reasons:
 
 1. Showing what you did: If you fully adopt an open science posture to your own research and writing you'll probably disseminate a curated dataset and the source files that generate all your findings, including the RMarkdown file of your actual article. Providing informative comments to your code will make it clearer what you did and why to whomever is really interested in understanding what you did.
